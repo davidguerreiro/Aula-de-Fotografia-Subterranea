@@ -1,0 +1,46 @@
+
+.panel {
+	position: fixed;
+	left: -15.6em;
+	width: 15.6em;
+}
+
+.wrap {
+	position: relative;
+}
+
+.panel-right {
+	position: fixed;
+	right: -15.6em;
+	width: 15.6em;
+}
+
+.menu-mobile {
+	background-color: $mobile-menu-background-color;
+
+  ul {
+   list-style: none; 
+   padding: $mobile-menu-padding 0 0 $mobile-menu-padding;
+	}
+
+	ul li a {
+		display: block;
+		color: white;
+		text-decoration: none;
+		padding: 12px 0;
+		font-size: $mobile-font-size;
+		 -webkit-transition: padding-left linear 0.2s;
+		 transition : padding-left linear 0.2s;
+
+		 &:hover {
+		 	padding-left: 10px;
+		 }
+	}
+
+	ul li a i {
+		padding-right: 8px;
+		color: $mobile-light-color;
+	}
+
+
+}

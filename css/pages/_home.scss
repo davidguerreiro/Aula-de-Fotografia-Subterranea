@@ -1,0 +1,106 @@
+
+.posts-container {
+
+	 &__element {
+	 	
+
+	 	h2, h3 {
+	 		font-family: 'Anton', sans-serif;
+	 		text-align: center;
+      padding: 25px 0;
+	 	}
+    
+    h2 {
+    	font-size: 34px;
+    }
+
+    h3 {
+    	font-size: 28px;
+    }
+
+	 }
+
+	 &__wrapper {
+
+	 	  p, span {
+	 		  line-height: 1.45;
+        padding: 8px 0;
+	 	  }
+
+	 	  img {
+	 	  	width:  100%;
+	 	  	height: auto;
+	 	  }
+
+	 }
+
+	 &__data {
+	 	padding: 20px 0 20px 13px;
+	 	font-size: 15px;
+    overflow: hidden;
+    clear: both;
+    list-style: none;
+    background-color: #000000;
+    color: #FFFFFF;
+
+    li {
+    	float: left;
+    	padding: 5px 15px 5px 8px;
+      width: 250px;
+
+    	i {
+    		padding-right: 10px;
+    		color: $black-orange;
+    	}
+
+      a {
+        text-decoration: none;
+        color: $black-orange;
+
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
+	 }
+
+   &__content {
+    padding: 22px $main-padding;
+    font-size: $main-content-font;
+   }
+
+
+}
+
+.image-link {
+   display: inline-block;
+   width: 100%;
+   text-decoration: none;
+   vertical-align: bottom;
+
+   img {
+   	width: 100%;
+   	height: auto;
+   	vertical-align: bottom;
+   }
+
+}
+
+.main-link {
+  display: block;
+  color: #FFFFFF;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background-color: $black-blue;
+  text-decoration: none;
+  -webkit-transition: background-color linear 0.5s;
+  transition : background-color linear 0.5s;
+}
+
+.main-link:hover {
+  background-color: #1300F0;
+}

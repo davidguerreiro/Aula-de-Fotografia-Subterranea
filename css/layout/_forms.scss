@@ -1,0 +1,33 @@
+
+/* Mobile search form */
+.mobile-search-form {
+	padding: $mobile-menu-padding 0 0 $mobile-menu-padding;
+
+  input[type='text'] {
+  	background-color: transparent;
+  	color: white;
+  	padding: 0 0 8px 5px;
+  	border: none;
+  	border-bottom: 1px #5A63A3 solid;
+  	font-size: $mobile-font-size;
+  	max-width: 180px;
+  	-webkit-transition: border-bottom-color linear 0.2s;
+		 transition : border-bottom-color linear 0.2s;
+
+  	&:focus{
+  	 outline: none;
+     border-bottom-color: $mobile-light-color;
+  	}
+
+  }
+
+  a {
+  	color: $mobile-light-color;
+
+  	i {
+  		padding: 5px 0 0 8px;
+  	}
+  }
+
+}
+
