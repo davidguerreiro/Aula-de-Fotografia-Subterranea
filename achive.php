@@ -3,11 +3,33 @@
 /**
  * Template for archive page
  * 
- * @package 
+ * Gallery CPT list items should be displayed here.
+ * 
+ * @package aula
  */
 
 get_header();
 
-// display modules here
+ // module 017.
+ include( locate_template( 'modules/m017-page-header.php' ) );
 
-get_footer();
+ ?>
+
+ <div class="content-section">
+ <?php
+ 
+ // TODO: Display posts here.
+
+ // display sidebar
+ get_sidebar();
+ 
+ ?>
+
+ </div>
+
+<?php
+
+ // module 013.
+ include( locate_template( 'modules/m013-newsletter-section.php' ) );
+
+ get_footer();

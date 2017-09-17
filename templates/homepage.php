@@ -12,7 +12,44 @@
 
 get_header();
 
-// display modules here
+?>
+
+<div class="content-section">
+
+<?php
+
+// module 002.
+include( locate_template( 'modules/m002-header-video.php' ) ); 
+
+// module 004.
+include( locate_template( 'modules/m004-featured-post.php' ) );
+
+// module 005.
+include( locate_template( 'modules/m005-main-posts-area.php' ) );
+
+// module 007.
+include( locate_template( 'modules/m007-gallery-section.php' ) );
+
+// module 005.
+include( locate_template( 'modules/m005-main-posts-area.php' ) );
+
+// module 006.
+include( locate_template( 'modules/m006-load-more.php' ) );
+
+// display sidebar
+get_sidebar();
+
+?>
+
+</div>
+
+<?php
+
+// module 012.
+include( locate_template( 'modules/m012-facebook-group.php' ) );
+
+// module 013.
+include( locate_template( 'modules/m013-newsletter-section.php' ) );
 
 get_footer();
  
