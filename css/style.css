@@ -803,15 +803,24 @@ body {
     max-width: 60%;
     padding-left: 20px; }
 
-.m2__main-menu {
+.m2__video {
+  padding-top: 22px;
+  object-fit: initial;
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  max-height: 350px; }
+
+.m3__main-menu {
   overflow: hidden;
   clear: left;
   display: block;
   list-style: none;
   margin: 15px 0 0 20px; }
-  .m2__main-menu li {
+  .m3__main-menu li {
     float: left; }
-    .m2__main-menu li a {
+    .m3__main-menu li a {
       display: block;
       text-decoration: none;
       font-size: 2em;
@@ -819,7 +828,7 @@ body {
       color: #000000;
       transition: all 0.5s ease;
       -webkit-transition: all 0.5s ease; }
-      .m2__main-menu li a:hover {
+      .m3__main-menu li a:hover {
         color: #6A7EFF; }
 
 /*# sourceMappingURL=style.css.map */

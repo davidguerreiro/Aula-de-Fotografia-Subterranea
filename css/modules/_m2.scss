@@ -1,28 +1,12 @@
 .m2 {
 
-    &__main-menu {
-        overflow: hidden;
-        clear: left;
-        display: block; 
-        list-style: none;
-        margin: 15px 0 0 20px;
-
-        li {
-            float: left;
-
-            a {
-                display: block;
-                text-decoration: none;
-                font-size: 2em;
-                padding: 0 12px;
-                color: #000000;
-                transition: all 0.5s ease;
-                -webkit-transition: all 0.5s ease;
-
-                &:hover {
-                    color: #6A7EFF;
-                }
-            }
-        }
+    &__video {
+        padding-top: 22px;
+        object-fit: initial;
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        max-height: 350px;
     }
 }

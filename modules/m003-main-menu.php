@@ -8,9 +8,9 @@
 
  ?>
 
- <div class="module m2">
+ <div class="module m3">
      <nav>
-        <ul class=m2__main-menu>
+        <ul class=m3__main-menu>
             <li>
                 <a href="#">Inicio</a>
             </li>
