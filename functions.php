@@ -14,6 +14,9 @@
     // font awesome
     wp_enqueue_style( '_font-awesome', get_template_directory_uri() . '/css/awesome/css/font-awesome.min.css', array(), false, 'all' );
 
+    // google fonts
+    wp_enqueue_style( '_google-fonts', "https://fonts.googleapis.com/css?family=Asap|PT+Sans+Caption", array(), false, 'all' );
+
   }
 
   add_action( 'wp_enqueue_scripts', 'aula_enqueue_scripts' );

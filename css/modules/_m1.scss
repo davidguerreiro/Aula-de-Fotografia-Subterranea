@@ -11,8 +11,10 @@
     }
 
     &__site-title {
-        font-size: 3em;
-        float: right;
-        max-width: 45%;
+        font-family: 'PT Sans Caption', sans-serif;
+        font-size: 4.1em;
+        float: left;
+        max-width: 60%;
+        padding-left: 20px;
     }
 }
