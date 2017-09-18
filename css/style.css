@@ -803,4 +803,23 @@ body {
     max-width: 60%;
     padding-left: 20px; }
 
+.m2__main-menu {
+  overflow: hidden;
+  clear: left;
+  display: block;
+  list-style: none;
+  margin: 15px 0 0 20px; }
+  .m2__main-menu li {
+    float: left; }
+    .m2__main-menu li a {
+      display: block;
+      text-decoration: none;
+      font-size: 2em;
+      padding: 0 12px;
+      color: #000000;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease; }
+      .m2__main-menu li a:hover {
+        color: #6A7EFF; }
+
 /*# sourceMappingURL=style.css.map */
