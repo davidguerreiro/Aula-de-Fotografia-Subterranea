@@ -1,10 +1,4 @@
-/* Main site variables      */
-/* Main site colors          */
-/* Sidebar nested list colors */
 /* Variables for mobile menu*/
-/*
-
-*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -729,21 +723,6 @@ ul, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
-.footer {
-  background-color: #000000;
-  color: #FFFFFF; }
-  .footer__list {
-    padding: 10px 0; }
-    .footer__list li {
-      padding: 8px 0 8px 10px; }
-    .footer__list a {
-      text-decoration: none;
-      color: #F24200; }
-      .footer__list a:hover {
-        text-decoration: underline; }
-  .footer .left {
-    padding-top: 15px; }
-
 /* Mobile search form */
 .mobile-search-form {
   padding: 20px 0 0 20px; }
@@ -764,53 +743,6 @@ ul, h2, h3, h4, h5, h6 {
     color: #8C99FC; }
     .mobile-search-form a i {
       padding: 5px 0 0 8px; }
-
-.header {
-  clear: both;
-  overflow: hidden;
-  padding-top: 5px; }
-  .header__block {
-    float: left; }
-
-h1 {
-  font-family: 'Anton', sans-serif;
-  font-size: 18px;
-  padding-left: 5px; }
-
-.mobile-logo {
-  max-width: 35px;
-  max-height: 35px;
-  padding-top: 9px; }
-
-.mobile-link {
-  display: block;
-  font-size: 25px;
-  color: black;
-  padding: 12px 15px 15px 15px; }
-
-.menu-desktop {
-  display: none; }
-
-video {
-  width: 100%;
-  height: auto;
-  max-height: 450px;
-  object-fit: fill; }
-
-.overlap__wrapper {
-  position: relative; }
-
-.video-text {
-  position: absolute;
-  display: block;
-  font-size: 26px;
-  bottom: 25%;
-  left: 50%;
-  color: white; }
-  .video-text p {
-    position: relative;
-    left: -52%;
-    bottom: -25%; }
 
 .panel {
   position: fixed;
@@ -843,159 +775,5 @@ video {
   .menu-mobile ul li a i {
     padding-right: 8px;
     color: #8C99FC; }
-
-.main-sidebar__block h3 {
-  background-color: #F24200;
-  color: #FFFFFF;
-  padding: 18px 0; }
-  .main-sidebar__block h3 i {
-    padding: 0 10px;
-    font-size: 25px; }
-.main-sidebar__content {
-  padding: 22px 12px; }
-  .main-sidebar__content p {
-    font-size: 16px;
-    line-height: 1.45;
-    padding: 8px; }
-    .main-sidebar__content p .quote {
-      font-size: 12px; }
-
-.sidelist-wrapper {
-  display: block;
-  width: 100%;
-  color: #FFFFFF;
-  overflow: hidden;
-  clear: both;
-  padding: 8px 0; }
-  .sidelist-wrapper span {
-    padding: 15px 0;
-    padding-right: 10px;
-    padding-left: 10px;
-    float: right;
-    color: #000000;
-    border-left: 1px solid #000000;
-    font-weight: bold; }
-  .sidelist-wrapper__post-title {
-    font-family: 'Anton', sans-serif;
-    display: inline-block;
-    color: #000000;
-    text-decoration: none;
-    padding: 12px 0 0 10px;
-    font-size: 17px; }
-
-.sidebar-image {
-  width: 100%;
-  height: auto; }
-
-.quote {
-  font-size: 12px !important; }
-
-.facebook-wrapper a {
-  background-color: #3b5998;
-  color: #FFFFFF;
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  -webkit-transition: background-color linear 0.5s;
-  transition: background-color linear 0.5s; }
-  .facebook-wrapper a:hover {
-    background-color: #242E82; }
-.facebook-wrapper__normal-link {
-  width: 100%;
-  padding: 25px 0;
-  font-size: 19px;
-  font-weight: bold; }
-.facebook-wrapper__face-link {
-  padding: 30px 0 35px 0;
-  font-size: 65px; }
-
-.history li {
-  display: block;
-  overflow: hidden; }
-.history a {
-  display: block;
-  width: 100%;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 15px 0 15px 10px;
-  -webkit-transition: background-color linear 0.3s;
-  transition: background-color linear 0.3s; }
-.history__year {
-  background-color: #350172; }
-  .history__year:hover {
-    background-color: #180033; }
-.history__month {
-  display: none !important;
-  background-color: #4936F4; }
-  .history__month:hover {
-    background-color: #493695; }
-.history__post {
-  display: none !important;
-  background-color: #4881BF; }
-  .history__post:hover {
-    background-color: #355F8C; }
-
-.posts-container__element h2, .posts-container__element h3 {
-  font-family: 'Anton', sans-serif;
-  text-align: center;
-  padding: 25px 0; }
-.posts-container__element h2 {
-  font-size: 34px; }
-.posts-container__element h3 {
-  font-size: 28px; }
-.posts-container__wrapper p, .posts-container__wrapper span {
-  line-height: 1.45;
-  padding: 8px 0; }
-.posts-container__wrapper img {
-  width: 100%;
-  height: auto; }
-.posts-container__data {
-  padding: 20px 0 20px 13px;
-  font-size: 15px;
-  overflow: hidden;
-  clear: both;
-  list-style: none;
-  background-color: #000000;
-  color: #FFFFFF; }
-  .posts-container__data li {
-    float: left;
-    padding: 5px 15px 5px 8px;
-    width: 250px; }
-    .posts-container__data li i {
-      padding-right: 10px;
-      color: #F24200; }
-    .posts-container__data li a {
-      text-decoration: none;
-      color: #F24200; }
-    .posts-container__data li a:hover {
-      text-decoration: underline; }
-.posts-container__content {
-  padding: 22px 12px;
-  font-size: 18px; }
-
-.image-link {
-  display: inline-block;
-  width: 100%;
-  text-decoration: none;
-  vertical-align: bottom; }
-  .image-link img {
-    width: 100%;
-    height: auto;
-    vertical-align: bottom; }
-
-.main-link {
-  display: block;
-  color: #FFFFFF;
-  font-size: 18px;
-  width: 100%;
-  text-align: center;
-  padding: 25px 0;
-  background-color: #0D00A6;
-  text-decoration: none;
-  -webkit-transition: background-color linear 0.5s;
-  transition: background-color linear 0.5s; }
-
-.main-link:hover {
-  background-color: #1300F0; }
 
 /*# sourceMappingURL=style.css.map */
