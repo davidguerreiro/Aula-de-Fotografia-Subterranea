@@ -29,3 +29,21 @@ function aula_register_cpt() {
 }
 
 add_action( 'init', 'aula_register_cpt' );
+
+/**
+ * Icons - coming from font awesome
+ * 
+ * TODO: Add real icon classes.
+ * 
+ * @param String ( required ) $key
+ * @return String icon_class
+ */
+function aula_get_icon( $key ) {
+	$icons = array(
+		'galleria' 		=> 'fa-graduation-cap',
+		'aula' 				=> 'fa-graduation-cap',
+		'actividades' => 'fa-graduation-cap',
+	);
+
+	return $icons[ $key ];
+}
