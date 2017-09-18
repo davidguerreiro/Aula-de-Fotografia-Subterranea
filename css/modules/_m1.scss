@@ -1,0 +1,18 @@
+.m1 {
+    overflow: hidden;
+    clear: both;
+
+    &__site-logo {
+        width: 45%;
+        max-width: 350px;
+        float: left;
+        margin: 0 auto;
+        padding: 10px 0 0 10px;
+    }
+
+    &__site-title {
+        font-size: 3em;
+        float: right;
+        max-width: 45%;
+    }
+}

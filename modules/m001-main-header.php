@@ -11,8 +11,8 @@
 
  ?>
 
-<div class="m1">
-    <img src="<?php echo esc_url( $logo_image_url ); ?>" class="m11__site-logo" alt="site-logo">
+<div class="module m1">
+    <img src="<?php echo esc_url( $logo_image_url ); ?>" class="m1__site-logo" alt="site-logo">
     <h1 class="m1__site-title">
         <?php echo esc_html( $site_title ); ?>
     </h1>

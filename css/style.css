@@ -723,6 +723,13 @@ ul, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
+html, body {
+  font-size: 16px; }
+
+.module {
+  width: 100%;
+  height: auto; }
+
 /* Mobile search form */
 .mobile-search-form {
   padding: 20px 0 0 20px; }
@@ -775,5 +782,19 @@ ul, h2, h3, h4, h5, h6 {
   .menu-mobile ul li a i {
     padding-right: 8px;
     color: #8C99FC; }
+
+.m1 {
+  overflow: hidden;
+  clear: both; }
+  .m1__site-logo {
+    width: 45%;
+    max-width: 350px;
+    float: left;
+    margin: 0 auto;
+    padding: 10px 0 0 10px; }
+  .m1__site-title {
+    font-size: 3em;
+    float: right;
+    max-width: 45%; }
 
 /*# sourceMappingURL=style.css.map */
