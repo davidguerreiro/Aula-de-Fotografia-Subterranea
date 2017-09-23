@@ -12,14 +12,14 @@
 
 get_header();
 
+// module 002.
+include( locate_template( 'modules/m002-header-video.php' ) ); 
+
 ?>
 
 <div class="content-section">
 
 <?php
-
-// module 002.
-include( locate_template( 'modules/m002-header-video.php' ) ); 
 
 // module 004.
 include( locate_template( 'modules/m004-featured-post.php' ) );
@@ -36,14 +36,14 @@ include( locate_template( 'modules/m005-main-posts-area.php' ) );
 // module 006.
 include( locate_template( 'modules/m006-load-more.php' ) );
 
-// display sidebar
-get_sidebar();
-
 ?>
 
 </div>
 
 <?php
+
+// display sidebar
+get_sidebar();
 
 // module 012.
 include( locate_template( 'modules/m012-facebook-group.php' ) );

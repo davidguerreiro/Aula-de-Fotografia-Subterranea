@@ -13,9 +13,13 @@
  ?>
 
  <div class="module m4">
-    <header class="m4__header">
-        <h2>La cueva de Valporquero</h2>
-    </header>
+    <a href="#" class="wrapper-link">
+        <header class="m4__header" style="background-image : url('http://lorempixel.com/500/300');">
+            <h2>
+                <span>La cueva de Valporquero</span>
+            </h2>
+        </header>
+    </a>
     <section class="m4__post-data">
         <div class="excerpt">
             <p>
@@ -24,23 +28,31 @@
                 mucho texto ?
             </p>
         </div>
-        <div>
-            <ul class="m4__post-info">
+        <div class="post-info-wrapper">
+            <ul>
                 <li>
-                    <i class="fa fa-thumb-tack" aria-hidden="true"></i>
-                    <a href="#">Articulo</a>
+                    <a href="#">
+                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                        Articulo
+                    </a>
                 </li>
                 <li>
-                    <i class="fa fa-sun-o" aria-hidden="true"></i>
-                    <a href="#">Actividades</a>
+                    <a href="#">
+                        <i class="fa fa-sun-o" aria-hidden="true"></i>
+                        Actividades
+                    </a>
                 </li>
                 <li>
-                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                    <span>15-5-2015</span>
+                    <span>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        15-5-2015
+                    </span>
                 </li>
                 <li>
-                    <i class="fa fa-comment-o" aria-hidden="true"></i>
-                    <span>4</span>
+                    <a href="#">
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        4
+                    </a>
                 </li>
             </ul>
         </div>
