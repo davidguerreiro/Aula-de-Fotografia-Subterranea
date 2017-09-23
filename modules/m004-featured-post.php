@@ -8,7 +8,7 @@
  * @package aula/modules
  */
 
- $post_date = date( 'd M' );
+ $post_date = date( 'd-M-Y' );
 
  ?>
 
@@ -45,7 +45,7 @@
                 <li>
                     <span>
                         <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        15-5-2015
+                        <?php echo $post_date; ?>
                     </span>
                 </li>
                 <li>

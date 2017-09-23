@@ -1,0 +1,43 @@
+.m6 {
+
+    overflow: hidden;
+    clear: both;
+
+    &__section {
+        float: left;
+        padding-bottom: $padding-trick;
+        margin-bottom: $margin-trick;
+    }
+
+    &__section-text {
+        width: 60%;
+        background-color: $mobile-menu-background-color;
+
+        p {
+            font-size: 25px;
+            color: #ffffff;
+            padding: 50px 25px;
+        }
+    }
+
+    &__section-link {
+        display: block;
+        text-decoration: none;
+        width: 40%;
+        color: $black-grey;
+        background-color: $mobile-light-color;
+        transition: background-color 0.5s ease;
+        -webkit-transition: background-color 0.5s ease;
+
+        &:hover {
+            background-color: #626BB0;
+        }
+
+        i {
+            margin-right: auto;
+            margin-left: 40%;
+            font-size: 60px;
+            padding: 40px 0;
+        }
+    }
+}

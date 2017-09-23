@@ -1,0 +1,12 @@
+.m5 {
+
+    &__header{
+        height: 200px;
+    }
+
+    &__post-title {
+        color: #ffffff;
+        font-size: 28px;
+        padding: $general-margin-padding $general-margin-padding;
+    }
+}

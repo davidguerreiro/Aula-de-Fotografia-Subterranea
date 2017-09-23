@@ -923,6 +923,43 @@ ul, li {
           .m4__post-data .post-info-wrapper ul li a:hover {
             color: #693A28; }
 
+.m5__header {
+  height: 200px; }
+.m5__post-title {
+  color: #ffffff;
+  font-size: 28px;
+  padding: 25px 25px; }
+
+.m6 {
+  overflow: hidden;
+  clear: both; }
+  .m6__section {
+    float: left;
+    padding-bottom: 500em;
+    margin-bottom: -500em; }
+  .m6__section-text {
+    width: 60%;
+    background-color: #232740; }
+    .m6__section-text p {
+      font-size: 25px;
+      color: #ffffff;
+      padding: 50px 25px; }
+  .m6__section-link {
+    display: block;
+    text-decoration: none;
+    width: 40%;
+    color: #2E3137;
+    background-color: #8C99FC;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease; }
+    .m6__section-link:hover {
+      background-color: #626BB0; }
+    .m6__section-link i {
+      margin-right: auto;
+      margin-left: 40%;
+      font-size: 60px;
+      padding: 40px 0; }
+
 .m8 {
   background-color: red;
   width: 100%;
