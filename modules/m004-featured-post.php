@@ -27,7 +27,20 @@
         <div>
             <ul class="m4__post-info">
                 <li>
-
+                    <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                    <a href="#">Articulo</a>
+                </li>
+                <li>
+                    <i class="fa fa-sun-o" aria-hidden="true"></i>
+                    <a href="#">Actividades</a>
+                </li>
+                <li>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <span>15-5-2015</span>
+                </li>
+                <li>
+                    <i class="fa fa-comment-o" aria-hidden="true"></i>
+                    <span>4</span>
                 </li>
             </ul>
         </div>
