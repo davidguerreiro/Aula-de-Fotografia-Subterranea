@@ -938,7 +938,7 @@ ul, li {
     padding-bottom: 500em;
     margin-bottom: -500em; }
   .m6__section-text {
-    width: 60%;
+    width: 70%;
     background-color: #232740; }
     .m6__section-text p {
       font-size: 25px;
@@ -947,7 +947,7 @@ ul, li {
   .m6__section-link {
     display: block;
     text-decoration: none;
-    width: 40%;
+    width: 30%;
     color: #2E3137;
     background-color: #8C99FC;
     transition: background-color 0.5s ease;
@@ -959,6 +959,47 @@ ul, li {
       margin-left: 40%;
       font-size: 60px;
       padding: 40px 0; }
+
+.m7 {
+  overflow: hidden;
+  clear: both; }
+  .m7__section {
+    float: left;
+    padding-bottom: 500em;
+    margin-bottom: -500em; }
+  .m7__section-text {
+    width: 70%;
+    background-color: #9AA6C0;
+    color: #2E3137; }
+    .m7__section-text h2 {
+      padding: 25px;
+      font-size: 35px; }
+      .m7__section-text h2 i {
+        padding-right: 5px; }
+    .m7__section-text p {
+      line-height: 1.4;
+      padding: 0 0 30px 25px; }
+  .m7__section-link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2E3137;
+    width: 30%;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease; }
+    .m7__section-link:hover {
+      background-color: #000000; }
+    .m7__section-link i {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 90px;
+      padding: 40px 0; }
+    .m7__section-link p {
+      text-align: center;
+      margin-top: -15px;
+      font-size: 25px; }
 
 .m8 {
   background-color: red;

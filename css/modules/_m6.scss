@@ -10,7 +10,7 @@
     }
 
     &__section-text {
-        width: 60%;
+        width: 70%;
         background-color: $mobile-menu-background-color;
 
         p {
@@ -23,7 +23,7 @@
     &__section-link {
         display: block;
         text-decoration: none;
-        width: 40%;
+        width: 30%;
         color: $black-grey;
         background-color: $mobile-light-color;
         transition: background-color 0.5s ease;
