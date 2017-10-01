@@ -45,11 +45,23 @@ include( locate_template( 'modules/m006-load-more.php' ) );
 // display sidebar
 get_sidebar();
 
+?>
+
+<div class="bottom-modules-wrapper">
+
+<?php
+
 // module 012.
 include( locate_template( 'modules/m012-facebook-group.php' ) );
 
 // module 013.
 include( locate_template( 'modules/m013-newsletter-section.php' ) );
+
+?>
+
+</div>
+
+<?php
 
 get_footer();
  

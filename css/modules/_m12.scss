@@ -13,11 +13,17 @@
         width: 70%;
         float: left;
         color: #ffffff
+
+        h2, p {
+            padding: $general-margin-padding;
+        }
     }
 
     &__section-link {
         width: 30%;
         float: right;
         background-color: $fb-background-color;
+
+        
     }
 }

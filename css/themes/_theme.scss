@@ -11,12 +11,18 @@
 .sidebar {
     float: left;
     width: 30%;
-    background-color: $mobile-light-color;
+    background-color: $mobile-menu-background-color;
 }
 
 .content-section, .sidebar {
     padding-bottom: $padding-trick;
     margin-bottom: $margin-trick;
+}
+
+.bottom-modules-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
 }
 
 ul, li {

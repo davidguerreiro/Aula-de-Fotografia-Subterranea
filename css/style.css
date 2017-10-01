@@ -807,11 +807,16 @@ html, body {
 .sidebar {
   float: left;
   width: 30%;
-  background-color: #8C99FC; }
+  background-color: #232740; }
 
 .content-section, .sidebar {
   padding-bottom: 500em;
   margin-bottom: -500em; }
+
+.bottom-modules-wrapper {
+  position: relative;
+  display: block;
+  width: 100%; }
 
 ul, li {
   list-style: none; }
