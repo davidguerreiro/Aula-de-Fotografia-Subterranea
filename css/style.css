@@ -806,7 +806,12 @@ html, body {
 
 .sidebar {
   float: left;
-  width: 30%; }
+  width: 30%;
+  background-color: #8C99FC; }
+
+.content-section, .sidebar {
+  padding-bottom: 500em;
+  margin-bottom: -500em; }
 
 ul, li {
   list-style: none; }
@@ -1010,7 +1015,7 @@ ul, li {
   width: 100%;
   height: auto; }
 .m8__section {
-  /*background-color: #3B416B;*/
+  background-color: #ffffff;
   color: #000000; }
   .m8__section h2 {
     font-size: 25px;
@@ -1109,7 +1114,6 @@ ul, li {
   .m11 h3 i {
     padding-right: 5px; }
 .m11 ul {
-  display: block;
   width: 100%; }
   .m11 ul li span, .m11 ul li a {
     display: block;
@@ -1131,8 +1135,27 @@ ul, li {
   background-color: #00B2A1; }
 .m11__post-list {
   background-color: #FF6319; }
+.m11__month-list, .m11__post-list {
+  display: none; }
 .m11__icon-angle {
   padding-left: 5px;
   font-weight: bold !important; }
+
+.m12 {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  background-color: #365899; }
+  .m12__section {
+    padding-bottom: 500em;
+    margin-bottom: -500em; }
+  .m12__section-text {
+    width: 70%;
+    float: left;
+    color: #ffffff; }
+  .m12__section-link {
+    width: 30%;
+    float: right;
+    background-color: #4267b2; }
 
 /*# sourceMappingURL=style.css.map */

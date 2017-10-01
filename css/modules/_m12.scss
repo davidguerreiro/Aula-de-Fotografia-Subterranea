@@ -1,0 +1,23 @@
+.m12 {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    background-color: $fb-dark-color;
+
+    &__section {
+        padding-bottom: $padding-trick;
+        margin-bottom: $margin-trick;
+    }
+
+    &__section-text {
+        width: 70%;
+        float: left;
+        color: #ffffff
+    }
+
+    &__section-link {
+        width: 30%;
+        float: right;
+        background-color: $fb-background-color;
+    }
+}

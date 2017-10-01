@@ -12,7 +12,6 @@
     }
 
     ul {
-        display: block;
         width: 100%;
 
         li span, li a {
@@ -47,6 +46,10 @@
 
     &__post-list {
         background-color: #FF6319;
+    }
+
+    &__month-list, &__post-list {
+        display: none;
     }
 
     &__icon-angle {
