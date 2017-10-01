@@ -1,5 +1,6 @@
 /* Generl layout colors */
 /* General margin - padding */
+/* General line height */
 /* float columns same size trick */
 /* Variables for mobile menu*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -962,14 +963,14 @@ ul, li {
 
 .m7 {
   overflow: hidden;
-  clear: both; }
+  clear: both;
+  background-color: #9AA6C0; }
   .m7__section {
-    float: left;
     padding-bottom: 500em;
     margin-bottom: -500em; }
   .m7__section-text {
     width: 70%;
-    background-color: #9AA6C0;
+    float: left;
     color: #2E3137; }
     .m7__section-text h2 {
       padding: 25px;
@@ -980,6 +981,7 @@ ul, li {
       line-height: 1.4;
       padding: 0 0 30px 25px; }
   .m7__section-link {
+    float: right;
     display: block;
     position: relative;
     text-decoration: none;
@@ -1001,9 +1003,68 @@ ul, li {
       margin-top: -15px;
       font-size: 25px; }
 
-.m8 {
-  background-color: red;
+.m8 img {
+  display: block;
   width: 100%;
-  height: 200px; }
+  height: auto; }
+.m8__section {
+  /*background-color: #3B416B;*/
+  color: #000000; }
+  .m8__section h2 {
+    font-size: 25px;
+    padding: 25px; }
+  .m8__section p {
+    padding: 0 0 25px 25px;
+    line-height: 1.4;
+    width: 85%; }
+  .m8__section a {
+    display: block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 25px;
+    text-decoration: none;
+    font-size: 22px; }
+
+.m9 a {
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  border-left: 3px solid #2E3137;
+  transition: border-left 0.5s ease;
+  -webkit-transition: border-left 0.5s ease; }
+  .m9 a:hover {
+    border-left: 3px solid #F0640D; }
+.m9__item {
+  overflow: hidden;
+  clear: both; }
+.m9__item-section {
+  float: left;
+  padding-bottom: 500em;
+  margin-bottom: -500em; }
+.m9__item-section-data {
+  background-color: #2E3137;
+  color: #ffffff;
+  width: 70%; }
+  .m9__item-section-data h3 {
+    font-size: 23px;
+    padding: 25px; }
+  .m9__item-section-data p {
+    padding: 0 0 25px 25px; }
+    .m9__item-section-data p i {
+      padding-right: 5px; }
+.m9__item-section-icon {
+  width: 30%;
+  background-color: #9AA6C0;
+  color: #2E3137; }
+  .m9__item-section-icon i {
+    display: block;
+    width: 30%;
+    font-size: 35px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    background-color: #2E3137;
+    color: #9AA6C0;
+    border-radius: 50%; }
 
 /*# sourceMappingURL=style.css.map */

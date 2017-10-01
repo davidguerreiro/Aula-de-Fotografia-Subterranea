@@ -1,16 +1,16 @@
 .m7 {
     overflow: hidden;
     clear: both;
+    background-color: $light-grey;
 
     &__section {
-        float: left;
         padding-bottom: $padding-trick;
         margin-bottom: $margin-trick;
     }
 
     &__section-text {
         width: 70%;
-        background-color: $light-grey;
+        float: left;
         color: $black-grey;
 
         h2 {
@@ -29,6 +29,7 @@
     }
 
     &__section-link {
+        float: right;
         display: block;
         position: relative;
         text-decoration: none;

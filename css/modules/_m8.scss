@@ -1,5 +1,33 @@
 .m8 {
-    background-color: red;
-    width: 100%;
-    height: 200px;
+    
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &__section {
+        /*background-color: #3B416B;*/
+        color: #000000;
+
+        h2 {
+            font-size: 25px;
+            padding: $general-margin-padding;
+        }
+
+        p {
+            padding: 0 0 $general-margin-padding $general-margin-padding;
+            line-height: $general-line-height;
+            width: 85%;
+        }
+
+        a {
+            display: block;
+            background-color: #000000;
+            color: #ffffff;
+            padding: $general-margin-padding;
+            text-decoration: none;
+            font-size: 22px;
+        }
+    }
 }
