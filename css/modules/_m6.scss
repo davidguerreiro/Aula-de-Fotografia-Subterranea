@@ -2,14 +2,15 @@
 
     overflow: hidden;
     clear: both;
+    background-color: $mobile-menu-background-color;
 
     &__section {
-        float: left;
         padding-bottom: $padding-trick;
         margin-bottom: $margin-trick;
     }
 
     &__section-text {
+        float: left;
         width: 70%;
         background-color: $mobile-menu-background-color;
 
@@ -21,6 +22,7 @@
     }
 
     &__section-link {
+        float: right;
         display: block;
         text-decoration: none;
         width: 30%;
