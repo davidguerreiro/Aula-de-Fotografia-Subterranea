@@ -17,7 +17,7 @@
             de las ultimas novedades en Aula de Fotografia Subterranea.
         </p>
         <a href="https://www.facebook.com/groups/AULADEFOTOGRAFIASUBTERRANEA/?fref=ts" class="m12__external-link" target="_blank">
-            Únete
+            Unirse al grupo
         </a>
         <p class="m12__small-text">
             El grupo de Facebook es privado y deberas ser aceptado por

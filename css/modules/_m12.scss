@@ -12,18 +12,39 @@
     &__section-text {
         width: 70%;
         float: left;
-        color: #ffffff
+        color: #ffffff;
+
+        a {
+            display: block;
+            max-width: 100px;
+            text-align: center;
+            border: 1px solid #ffffff;
+            margin: $general-margin-padding;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: $fb-background-color;
+            font-weight: bold;
+            transition: background-color 0.5s ease;
+            -webkit-transition: background-color 0.5s ease;
+
+            &:hover {
+                background-color: #0091C9;
+            }
+        }
 
         h2, p {
             padding: $general-margin-padding;
         }
     }
 
+    &__small-text {
+        font-size: 13px;
+    }
+
     &__section-link {
         width: 30%;
         float: right;
-        background-color: $fb-background-color;
-
-        
+        background-color: $fb-background-color;        
     }
 }

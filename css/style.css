@@ -1158,6 +1158,25 @@ ul, li {
     width: 70%;
     float: left;
     color: #ffffff; }
+    .m12__section-text a {
+      display: block;
+      max-width: 100px;
+      text-align: center;
+      border: 1px solid #ffffff;
+      margin: 25px;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 15px;
+      background-color: #4267b2;
+      font-weight: bold;
+      transition: background-color 0.5s ease;
+      -webkit-transition: background-color 0.5s ease; }
+      .m12__section-text a:hover {
+        background-color: #0091C9; }
+    .m12__section-text h2, .m12__section-text p {
+      padding: 25px; }
+  .m12__small-text {
+    font-size: 13px; }
   .m12__section-link {
     width: 30%;
     float: right;
