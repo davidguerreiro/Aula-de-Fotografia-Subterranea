@@ -52,7 +52,7 @@ get_sidebar();
 <?php
 
 // module 012.
-include( locate_template( 'modules/m012-facebook-group.php' ) );
+// include( locate_template( 'modules/m012-facebook-group.php' ) );
 
 // module 013.
 include( locate_template( 'modules/m013-newsletter-section.php' ) );

@@ -35,7 +35,7 @@
     &__post-data {
         overflow: hidden;
         clear: both;
-        background-color: $black-grey;
+        background-color: #ffffff;
 
         .excerpt {
             float: left;
@@ -48,14 +48,14 @@
                 display: block;
                 padding: $general-margin-padding $general-margin-padding;
                 line-height: 1.5;
-                color: #ffffff;
+                color: #000000;
             }
         }
 
         .post-info-wrapper {
             float: right;
             width: 30%;
-            background-color: $light-grey;
+            background-color: #000000;
             padding-bottom: $padding-trick;
             margin-bottom: $margin-trick;
 
@@ -64,7 +64,7 @@
 
                 li {
                     padding: 5px 0;
-                    color : $black-grey;
+                    color : $link-grey;
                     i {
                         font-size: 22px;
                         width: 25px;
@@ -74,12 +74,12 @@
                     a {
                         text-decoration: none;
                         vertical-align: top;
-                        color: $black-grey;
+                        color: $link-grey;
                         transition: color 0.5s ease;
                         -webkit-transition: color 0.5s ease;
 
                         &:hover {
-                            color: #693A28;
+                            color: #ffffff;
                         }
                     }
                 }
