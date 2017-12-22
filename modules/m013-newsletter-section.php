@@ -6,6 +6,8 @@
  * @package aula/modules
  */
 
+ $nonce = wp_create_nonce( 'newsletter' );
+
  ?>
 
  <div class="module m13">
@@ -21,6 +23,7 @@
     </div>
     <div class="m13__section m13__section--form">
         <form action="" class="newsletter">
+            <input type="hidden" name="nonce" value="<?php echo $nonce; ?>">
             <input type="text" name="email" class="newsletter__text-input" placeholder="Email">
             <input type="submit" value="Subscribirse" class="newsletter__submit-input">
         </form>

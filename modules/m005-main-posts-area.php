@@ -16,7 +16,7 @@ $post_date = date( 'd-M-Y' );
         </header>
     </a>
     <section class="m4__post-data">
-        <a href="#" class0="wrapper-link">
+        <a href="#" class="wrapper-link">
             <div class="excerpt">
                 <h2 class="m5__post-title">Adelante aunque solo tengas una camara</h2>
             </div>
@@ -52,7 +52,7 @@ $post_date = date( 'd-M-Y' );
         </header>
     </a>
     <section class="m4__post-data">
-        <a href="#" class0="wrapper-link">
+        <a href="#" class="wrapper-link">
             <div class="excerpt">
                 <h2 class="m5__post-title">Adelante aunque solo tengas una camara</h2>
             </div>
