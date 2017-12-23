@@ -1283,11 +1283,43 @@ ul, li {
         .m13__section--form input[type="submit"] {
           margin-top: 25px;
           padding: 10px 0;
-          background-color: #AB83F8;
+          background-color: #CA0651;
           color: #ffffff;
           transition: background-color 0.5s ease;
           -webkit-transition: background-color 0.5s ease; }
           .m13__section--form input[type="submit"]:hover {
-            background-color: #41325E; }
+            background-color: #8A0638; }
+
+.m14 {
+  background-color: #232740;
+  color: #ffffff; }
+  .m14 h2 {
+    font-size: 25px;
+    padding: 25px; }
+  .m14__form input {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    margin-left: 25px; }
+    .m14__form input[type="search"] {
+      border: 2px solid #ffffff;
+      border-radius: 10px;
+      padding: 10px; }
+      .m14__form input[type="search"]:hover, .m14__form input[type="search"]:focus {
+        outline: 0; }
+  .m14 .btn-sidebar-submit {
+    display: block;
+    background-color: transparent;
+    margin-left: 25px;
+    border: 2px solid #ffffff;
+    margin-top: 10px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease; }
+    .m14 .btn-sidebar-submit:hover {
+      background-color: #2F227D; }
+  .m14 p {
+    padding: 25px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,51 @@
+.m14 {
+    background-color: $mobile-menu-background-color;
+    color: $white;
+
+    h2 {
+        font-size: 25px;
+        padding: $general-margin-padding;
+    }
+
+    &__form {
+
+        input {
+            display: block;
+            border: 0;
+            background-color: transparent;
+            margin-left: 25px;
+
+            &[type="search"] {
+                border: 2px solid $white;
+                border-radius: 10px;
+                padding: 10px;
+
+                &:hover, &:focus {
+                    outline: 0;
+                }
+            }
+
+        }
+        
+    }
+
+    .btn-sidebar-submit {
+        display: block;
+        background-color: transparent;
+        margin-left: 25px;
+        border: 2px solid $white;
+        margin-top: 10px;
+        padding: 5px 20px;
+        border-radius: 10px;
+        transition: background-color 0.5s ease;
+        -webkit-transition: background-color 0.5s ease;
+
+        &:hover {
+            background-color: #2F227D;
+        }
+    }
+
+    p {
+        padding: $general-margin-padding;
+    }
+}
