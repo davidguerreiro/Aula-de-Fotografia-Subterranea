@@ -1296,17 +1296,19 @@ ul, li {
   .m14 h2 {
     font-size: 25px;
     padding: 25px; }
-  .m14__form input {
-    display: block;
-    border: 0;
-    background-color: transparent;
-    margin-left: 25px; }
-    .m14__form input[type="search"] {
-      border: 2px solid #ffffff;
-      border-radius: 10px;
-      padding: 10px; }
-      .m14__form input[type="search"]:hover, .m14__form input[type="search"]:focus {
-        outline: 0; }
+  .m14__form {
+    padding: 15px 0; }
+    .m14__form input {
+      display: block;
+      border: 0;
+      background-color: transparent;
+      margin-left: 25px; }
+      .m14__form input[type="search"] {
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 10px; }
+        .m14__form input[type="search"]:hover, .m14__form input[type="search"]:focus {
+          outline: 0; }
   .m14 .btn-sidebar-submit {
     display: block;
     background-color: transparent;
@@ -1320,6 +1322,6 @@ ul, li {
     .m14 .btn-sidebar-submit:hover {
       background-color: #2F227D; }
   .m14 p {
-    padding: 25px; }
+    padding: 25px 0 35px 25px; }
 
 /*# sourceMappingURL=style.css.map */

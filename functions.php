@@ -1,5 +1,7 @@
 <?php
 
+ // add featured images support.
+ add_theme_support( 'post-thumbnails' ); 
 
  /**
   * Load css and HTML

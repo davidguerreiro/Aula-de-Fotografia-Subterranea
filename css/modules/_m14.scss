@@ -9,6 +9,8 @@
 
     &__form {
 
+        padding: 15px 0;
+
         input {
             display: block;
             border: 0;
@@ -46,6 +48,6 @@
     }
 
     p {
-        padding: $general-margin-padding;
+        padding: 25px 0 35px 25px;
     }
 }
