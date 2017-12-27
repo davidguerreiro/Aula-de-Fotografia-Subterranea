@@ -14,13 +14,6 @@ get_header();
 
 <?php
 
-/**
- * TODO: Display post title, date, etc
- */
-
- // module 018.
- include( locate_template( 'modules/m018-intro-text.php' ) );
-
  // module 015.
  include( locate_template( 'modules/m015-add-comment.php' ) );
 
