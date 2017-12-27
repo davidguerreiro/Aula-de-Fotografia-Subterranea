@@ -852,6 +852,9 @@ html, body {
   display: block;
   text-decoration: none; }
 
+.post-wrapper {
+  padding: 25px; }
+
 .main {
   overflow: hidden;
   clear: both; }
