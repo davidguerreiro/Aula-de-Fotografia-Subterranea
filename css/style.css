@@ -854,6 +854,33 @@ html, body {
 
 .post-wrapper {
   padding: 25px; }
+  .post-wrapper__post-title {
+    font-size: 40px;
+    padding: 10px 0 20px 0; }
+  .post-wrapper__post-data {
+    padding-bottom: 15px; }
+    .post-wrapper__post-data ul li {
+      display: inline-block;
+      margin-right: 15px; }
+      .post-wrapper__post-data ul li .icon {
+        margin-right: 3px; }
+      .post-wrapper__post-data ul li a {
+        text-decoration: none;
+        color: #AB7312;
+        display: "inline-block"; }
+        .post-wrapper__post-data ul li a::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: #AB7312;
+          margin-top: 5px;
+          transition: width .3s;
+          -webkit-transition: width .3s; }
+        .post-wrapper__post-data ul li a:hover::after {
+          width: 100%; }
+  .post-wrapper__post-content p, .post-wrapper__post-content h1, .post-wrapper__post-content h2, .post-wrapper__post-content h3, .post-wrapper__post-content h4, .post-wrapper__post-content h5, .post-wrapper__post-content h6, .post-wrapper__post-content img {
+    padding-top: 20px; }
 
 .main {
   overflow: hidden;

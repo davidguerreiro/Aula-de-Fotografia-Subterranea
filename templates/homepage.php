@@ -42,7 +42,6 @@ include( locate_template( 'modules/m006-load-more.php' ) );
 
 <?php
 
-// display sidebar
 get_sidebar();
 
 ?>

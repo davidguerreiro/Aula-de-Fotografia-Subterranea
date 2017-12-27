@@ -1,0 +1,5 @@
+
+// calculate width percentaje based on pixels container / element
+@function calc-percent( $target, $container ) {
+    @return ( $target / $container ) * 100%;
+}

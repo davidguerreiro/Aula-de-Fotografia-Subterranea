@@ -3,6 +3,45 @@
     padding: $general-margin-padding;
 
     &__post-title {
+        font-size: 40px;
+        padding: 10px 0 20px 0;
+    }
 
+    &__post-data {
+        padding-bottom: 15px;
+
+        ul li {
+            display: inline-block;
+            margin-right: 15px;
+
+            .icon {
+                margin-right: 3px;
+            }
+
+            a {
+                @include baselink( $brown-link, 'inline-block' );
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background: $brown-link;
+                    margin-top: 5px;
+                    transition: width .3s;
+                    -webkit-transition: width .3s;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__post-content {
+        p, h1, h2, h3, h4, h5, h6, img {
+            padding-top: 20px;
+        }
     }
 }

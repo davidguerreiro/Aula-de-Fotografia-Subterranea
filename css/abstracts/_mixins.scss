@@ -1,0 +1,13 @@
+
+// Float elements wrapper.
+@mixin float-content {
+    overflow: hidden;
+    clear: both;
+}
+
+// link base.
+@mixin baselink( $color: $black, $display : 'inline-block' ) {
+    text-decoration: none;
+    color: $color;
+    display: $display;
+}
