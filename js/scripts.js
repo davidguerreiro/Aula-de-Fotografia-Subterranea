@@ -2,11 +2,11 @@
 $(document).ready( function() {
   
   // init left menu
-  $('#main-menu-link').bigSlide();
+  // $('#main-menu-link').bigSlide();
 
   // auto - expand textarea.
-  ( function () ) {
-    var textarea = document.getElementById( 'comment-textarea' );
+  ( function () {
+    var textarea = document.querySelector('textarea');
     
     textarea.addEventListener('keydown', autosize);
                 

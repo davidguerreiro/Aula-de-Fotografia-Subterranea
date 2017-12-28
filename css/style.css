@@ -1332,9 +1332,13 @@ ul, li {
             border-bottom-color: #2E3137; }
         .m13__section--form input[type="submit"] {
           margin-top: 25px;
+          display: block;
+          max-width: 100%;
+          width: 400px;
           padding: 10px 0;
           background-color: #CA0651;
           color: #ffffff;
+          border: none;
           transition: background-color 0.5s ease;
           -webkit-transition: background-color 0.5s ease; }
           .m13__section--form input[type="submit"]:hover {
@@ -1378,28 +1382,50 @@ ul, li {
   padding: 25px; }
   .m15__title {
     margin-bottom: 15px; }
-  .m15 .comment-form__input-text {
-    display: block;
-    margin: 15px 0;
-    padding: 5px;
-    width: 100%;
-    max-width: 300px;
-    border: none;
-    border-bottom: 1px solid #000000;
-    outline: 0;
-    transition: border-color 0.5s ease;
-    -webkit-transition: border-color 0.5s ease; }
-    .m15 .comment-form__input-text:hover, .m15 .comment-form__input-text:focus {
-      border-color: #CA0651; }
-  .m15 .comment-form__textarea {
-    display: block;
-    margin: 15px 0;
-    padding: 5px;
-    width: 100%;
-    max-width: 300px;
-    border: none;
-    border-bottom: 1px solid #000000;
-    outline: 0;
-    height: 20px; }
+    .m15__title i {
+      padding-right: 5px; }
+  .m15 .comment-form {
+    margin-top: 35px; }
+    .m15 .comment-form input, .m15 .comment-form textarea {
+      margin-top: 40px; }
+    .m15 .comment-form__input-text {
+      display: block;
+      margin: 15px 0;
+      padding: 5px;
+      width: 100%;
+      max-width: 300px;
+      border: none;
+      border-bottom: 1px solid #000000;
+      outline: 0;
+      transition: border-color 0.5s ease;
+      -webkit-transition: border-color 0.5s ease; }
+      .m15 .comment-form__input-text:hover, .m15 .comment-form__input-text:focus {
+        border-color: #CA0651; }
+    .m15 .comment-form__textarea {
+      display: block;
+      margin: 15px 0;
+      padding: 5px;
+      width: 100%;
+      max-width: 300px;
+      border: none;
+      border-bottom: 1px solid #000000;
+      outline: 0;
+      transition: border-color 0.5s ease;
+      -webkit-transition: border-color 0.5s ease;
+      overflow: hidden; }
+      .m15 .comment-form__textarea:hover, .m15 .comment-form__textarea:focus {
+        border-color: #CA0651; }
+    .m15 .comment-form__input-submit {
+      display: block;
+      max-width: 100%;
+      width: 310px;
+      padding: 10px 0;
+      background-color: #4D3B70;
+      color: #ffffff;
+      border: none;
+      transition: background-color 0.5s ease;
+      -webkit-transition: background-color 0.5s ease; }
+      .m15 .comment-form__input-submit:hover {
+        background-color: #2E3137; }
 
 /*# sourceMappingURL=style.css.map */

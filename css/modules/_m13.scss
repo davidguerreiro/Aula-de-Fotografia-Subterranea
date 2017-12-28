@@ -38,8 +38,7 @@
                     background-color: transparent;
                     padding: 5px;
                     border-bottom: 1px solid $light-grey;
-                    transition: border-bottom-color 0.5s ease;
-                    -webkit-transition: border-bottom-color 0.5s ease;
+                    @include do-transition( border-bottom-color );
 
                     &:focus, &:hover {
                         outline: 0;
@@ -49,11 +48,8 @@
 
                 &[type="submit"] {
                     margin-top: 25px;
-                    padding: 10px 0;
-                    background-color: $submit-red;
-                    color: #ffffff;
-                    transition: background-color 0.5s ease;
-                    -webkit-transition: background-color 0.5s ease;
+                    @include base-submit-input( 400px, 10px 0 , $submit-red, $white );
+                    @include do-transition( background-color );
 
                     &:hover {
                         background-color: #8A0638;

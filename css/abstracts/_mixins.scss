@@ -47,3 +47,25 @@
     border-bottom: $border_bottom;
     outline: 0;
 }
+
+// base submit input
+@mixin base-submit-input ( $width : 400px, $padding : 10px 0, $background_color : $white, $color : $black ){
+    display: block;
+    max-width: 100%;
+    width: $width;
+    padding: $padding;
+    background-color: $background_color;
+    color : $color;
+    border : none;
+}
+
+// set border color - used in several animations.
+@mixin set-border-color (  $color : $black ) {
+    border-color: $color;
+}
+
+// execute transition.
+@mixin do-transition ( $property, $time : .5s, $type : ease ) {
+    transition: $property $time $type;
+    -webkit-transition: $property $time $type;
+}

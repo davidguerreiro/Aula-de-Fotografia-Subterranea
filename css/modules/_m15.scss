@@ -3,23 +3,44 @@
 
     &__title {
         margin-bottom: 15px;
+        
+        i {
+            padding-right: 5px;
+        }
     }
 
     .comment-form {
+        margin-top: 35px;
+
+        input, textarea {
+            margin-top: 40px;
+        }
         
         &__input-text {
             @include base-text-input;
-            transition: border-color 0.5s ease;
-            -webkit-transition: border-color 0.5s ease;
+            @include do-transition( border-color );
 
             &:hover, &:focus {
-                border-color: $submit-red;
+                @include set-border-color( $submit-red );
             }
         }
 
         &__textarea {
             @include base-text-input;
-            height: 20px;
+            @include do-transition( border-color );
+            overflow: hidden;
+            &:hover, &:focus {
+                @include set-border-color( $submit-red );
+            }
+        }
+
+        &__input-submit {
+            @include base-submit-input( 310px, 10px 0, $git-purple, $white );
+            @include do-transition( background-color );
+
+            &:hover {
+                background-color: $black-grey;
+            }
         }
     }
 }

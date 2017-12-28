@@ -47,5 +47,6 @@ $logo_image_url = wp_get_attachment_url( 20 );
                 </section>
             </footer>
         </main>
+        <?php wp_footer(); ?>
     </body>
 </html>
