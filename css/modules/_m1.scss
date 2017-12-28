@@ -1,6 +1,5 @@
 .m1 {
-    overflow: hidden;
-    clear: both;
+    @include float-container;
 
     &__site-logo {
         width: 45%;

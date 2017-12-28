@@ -19,22 +19,8 @@
             }
 
             a {
-                @include baselink( $brown-link, 'inline-block' );
-
-                &::after {
-                    content: '';
-                    display: block;
-                    width: 0;
-                    height: 2px;
-                    background: $brown-link;
-                    margin-top: 5px;
-                    transition: width .3s;
-                    -webkit-transition: width .3s;
-                }
-
-                &:hover::after {
-                    width: 100%;
-                }
+                @include baselink( $brown-link );
+                @include link-border-animated( $brown-link );
             }
         }
     }
@@ -42,6 +28,19 @@
     &__post-content {
         p, h1, h2, h3, h4, h5, h6, img {
             padding-top: 20px;
+        }
+
+        p {
+            line-height: $general-line-height;
+        }
+
+        img {
+            @include auto-block;
+        }
+
+        a {
+            @include baselink( $fb-background-color );
+            @include link-border-animated( $fb-background-color, 0 );
         }
     }
 }
