@@ -35,3 +35,15 @@
     display: block;
     margin: 0 auto;
 }
+
+// base text input - textarea
+@mixin base-text-input ( $margin : 15px 0, $padding : 5px, $max_width : 300px, $border_bottom : 1px solid $black ) {
+    display: block;
+    margin: $margin;
+    padding: $padding;
+    width: 100%;
+    max-width: $max_width;
+    border: none;
+    border-bottom: $border_bottom;
+    outline: 0;
+}

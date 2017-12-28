@@ -1,7 +1,25 @@
 .m15 {
     padding: $general-margin-padding;
 
+    &__title {
+        margin-bottom: 15px;
+    }
+
     .comment-form {
         
+        &__input-text {
+            @include base-text-input;
+            transition: border-color 0.5s ease;
+            -webkit-transition: border-color 0.5s ease;
+
+            &:hover, &:focus {
+                border-color: $submit-red;
+            }
+        }
+
+        &__textarea {
+            @include base-text-input;
+            height: 20px;
+        }
     }
 }

@@ -19,6 +19,9 @@
     // google fonts
     wp_enqueue_style( '_google-fonts', "https://fonts.googleapis.com/css?family=Asap|PT+Sans+Caption", array(), false, 'all' );
 
+    // main scripts
+    wp_enqueue_script( '_main-script', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), true );
+
   }
 
   add_action( 'wp_enqueue_scripts', 'aula_enqueue_scripts' );

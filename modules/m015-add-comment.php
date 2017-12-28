@@ -14,9 +14,8 @@
         Comenta algo
     </h2>
     <form action="" class="comment-form">
-        <input type="text" name="name" placeholder="Nombre" class="commet-form__input-text" required>
-        <textarea name="message" class="comment-form__textarea" required>
-            Message
+        <input type="text" name="name" placeholder="Nombre" class="comment-form__input-text" required>
+        <textarea name="message" class="comment-form__textarea" placeholder="Mensaje" required>
         </textarea>
         <input type="submit" value="Comentar" class="commet-form__input-submit">
     </form>
