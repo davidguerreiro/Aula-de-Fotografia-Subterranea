@@ -18,31 +18,14 @@
         Comentarios
     </h2>
 
-    <div class="comment">
-        <h3>
-            <i class="fa fa-user-circle-o comment__icon" aria-hidden="true"></i>
-            Martin :
-            <span class="comment__date">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                <?php echo $date; ?>
-            </span>
-        </h3>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce egestas posuere fringilla. Curabitur at ullamcorper metus. Quisque eleifend purus eu justo egestas, at feugiat velit fermentum. Etiam eget consectetur purus.
-        </p>
-    </div>
+    <?php
+    // include comments.
+    get_template_part( 'template-parts/comment', 'single-item' );
 
-    <div class="comment">
-        <h3>
-            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-            Alejandro :
-            <span class="comment__date">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                <?php echo $date; ?>
-            </span>
-        </h3>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce egestas posuere fringilla. Curabitur at ullamcorper metus. Quisque eleifend purus eu justo egestas, at feugiat velit fermentum. Etiam eget consectetur purus.
-        </p>
-    </div>
+    get_template_part( 'template-parts/comment', 'single-item' );
+
+    get_template_part( 'template-parts/comment', 'single-item' );
+
+    ?>
+
  </div>
