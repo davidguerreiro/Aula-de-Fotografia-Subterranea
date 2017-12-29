@@ -785,6 +785,7 @@ html, body {
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px; }
+
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, 0, 0); }
@@ -794,6 +795,7 @@ html, body {
     transform: translate3d(-4px, 0, 0); }
   40%, 60% {
     transform: translate3d(4px, 0, 0); } }
+
 /* Mobile search form */
 .mobile-search-form {
   padding: 20px 0 0 20px; }
@@ -1006,6 +1008,7 @@ ul, li {
       opacity: 1;
       font-size: 35px;
       color: #ffffff; }
+
 .m4__post-data {
   overflow: hidden;
   clear: both;
@@ -1047,6 +1050,7 @@ ul, li {
 
 .m5__header {
   height: 250px; }
+
 .m5__post-title {
   color: #000000;
   font-size: 28px;
@@ -1130,6 +1134,7 @@ ul, li {
   display: block;
   width: 100%;
   height: auto; }
+
 .m8__section {
   background-color: #ffffff;
   color: #000000; }
@@ -1157,13 +1162,16 @@ ul, li {
   -webkit-transition: border-left 0.5s ease; }
   .m9 a:hover {
     border-left: 3px solid #F0640D; }
+
 .m9__item {
   overflow: hidden;
   clear: both; }
+
 .m9__item-section {
   float: left;
   padding-bottom: 500em;
   margin-bottom: -500em; }
+
 .m9__item-section-data {
   background-color: #2E3137;
   color: #ffffff;
@@ -1175,6 +1183,7 @@ ul, li {
     padding: 0 0 25px 25px; }
     .m9__item-section-data p i {
       padding-right: 5px; }
+
 .m9__item-section-icon {
   width: 30%;
   background-color: #9AA6C0;
@@ -1229,6 +1238,7 @@ ul, li {
   padding: 25px; }
   .m11 h3 i {
     padding-right: 5px; }
+
 .m11 ul {
   width: 100%; }
   .m11 ul li span, .m11 ul li a {
@@ -1245,14 +1255,19 @@ ul, li {
     padding-left: 10px; }
     .m11 ul li a:hover {
       border-left-color: #00B2A1; }
+
 .m11__year-list {
   background-color: #BE4B15; }
+
 .m11__month-list {
   background-color: #00B2A1; }
+
 .m11__post-list {
   background-color: #FF6319; }
+
 .m11__month-list, .m11__post-list {
   display: none; }
+
 .m11__icon-angle {
   padding-left: 5px;
   font-weight: bold !important; }
@@ -1470,5 +1485,3 @@ ul, li {
     max-width: 600px;
     margin-top: 15px;
     line-height: 1.4; }
-
-/*# sourceMappingURL=style.css.map */
