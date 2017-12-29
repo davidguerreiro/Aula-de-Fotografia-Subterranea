@@ -52,7 +52,7 @@
                     @include do-transition( background-color );
 
                     &:hover {
-                        background-color: #8A0638;
+                        background-color: $dark-red;
                     }
                 }
             }

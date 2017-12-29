@@ -1448,4 +1448,27 @@ ul, li {
       width: 90%;
       margin: 0 auto; }
 
+.m16 .comment {
+  margin: 30px 15px;
+  padding-bottom: 12px; }
+  .m16 .comment__icon {
+    padding-right: 5px;
+    font-size: 30px; }
+  .m16 .comment__date {
+    font-size: 15px;
+    float: right;
+    padding-top: 15px;
+    color: #6b6565; }
+  .m16 .comment h3 {
+    font-size: 25px;
+    border-bottom: 2px solid #8A0638;
+    padding-bottom: 5px;
+    width: 100%;
+    max-width: 400px; }
+  .m16 .comment p {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 15px;
+    line-height: 1.4; }
+
 /*# sourceMappingURL=style.css.map */

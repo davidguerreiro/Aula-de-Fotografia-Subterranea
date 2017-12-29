@@ -7,3 +7,5 @@
  * 
  * @package aula
  */
+
+ include( locate_template( 'modules/m016-comments.php' ) );

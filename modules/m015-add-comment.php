@@ -10,7 +10,7 @@
 
  <div class="module m15">
     <h2 class="m15__title">
-        <i class="fa fa-comment-o icon" aria-hidden="true"></i>
+        <i class="fa fa-commenting-o icon" aria-hidden="true"></i>
         Comenta algo
     </h2>
     <form action="" class="comment-form">

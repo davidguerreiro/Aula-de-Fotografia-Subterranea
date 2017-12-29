@@ -69,3 +69,9 @@
     transition: $property $time $type;
     -webkit-transition: $property $time $type;
 }
+
+// basic width.
+@mixin set-width ( $max_width ) {
+    width: 100%;
+    max-width: $max_width;
+}

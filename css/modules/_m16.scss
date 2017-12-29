@@ -1,0 +1,32 @@
+.m16 {
+    
+    .comment {
+        margin: 30px 15px;
+        padding-bottom: 12px;
+
+        &__icon {
+            padding-right: 5px;
+            font-size: 30px;
+        }
+
+        &__date {
+            font-size: 15px;
+            float: right;
+            padding-top: 15px;
+            color: #6b6565;
+        }
+
+        h3 {
+            font-size: 25px;
+            border-bottom: 2px solid $dark-red;
+            padding-bottom: 5px;
+            @include set-width( 400px );
+        }
+
+        p {
+            @include set-width( 600px );
+            margin-top: 15px;
+            line-height: $general-line-height;
+        }
+    }
+}
