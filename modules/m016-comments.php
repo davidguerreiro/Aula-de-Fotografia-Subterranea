@@ -8,8 +8,6 @@
  * @package aula/modules
  */
 
- $date = date( 'd-m-Y' );
-
  ?>
 
  <div class="module m15 m16">
@@ -19,6 +17,11 @@
     </h2>
 
     <?php
+
+    // no comments.
+    $no_content = 'No hay ningun comentario. Animate y se el primero en comentar esta entrada.';
+    include( locate_template( 'template-parts/content-none.php' ) );
+
     // include comments.
     get_template_part( 'template-parts/comment', 'single-item' );
 

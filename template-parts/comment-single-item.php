@@ -6,7 +6,9 @@
  * @package aula/template-parts
  */
 
- ?>
+$date = date( 'd-m-Y' );
+
+?>
 
 <div class="comment">
     <h3>
