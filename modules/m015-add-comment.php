@@ -18,4 +18,13 @@
         <textarea name="message" class="comment-form__textarea" placeholder="Mensaje" rows="1" required></textarea>
         <input type="submit" value="Comentar" class="comment-form__input-submit">
     </form>
+    <div class="comment-sent">
+        <h3>Enviado !</h3>
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <p>Su comentario ha sido publicado. Haga scroll down para verlo</p>
+    </div>
  </div>
+
+ 
+
+ 

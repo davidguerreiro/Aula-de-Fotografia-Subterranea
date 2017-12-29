@@ -1427,5 +1427,25 @@ ul, li {
       -webkit-transition: background-color 0.5s ease; }
       .m15 .comment-form__input-submit:hover {
         background-color: #2E3137; }
+  .m15 .comment-sent {
+    display: none;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px 10px;
+    border: 1px solid #7DBD73;
+    margin-top: 30px; }
+    .m15 .comment-sent h3 {
+      text-align: center;
+      font-size: 30px; }
+    .m15 .comment-sent i {
+      width: 100%;
+      text-align: center;
+      font-size: 50px;
+      padding: 30px 0;
+      color: #38852B; }
+    .m15 .comment-sent p {
+      line-height: 1.4;
+      width: 90%;
+      margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

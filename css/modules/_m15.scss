@@ -3,7 +3,7 @@
 
     &__title {
         margin-bottom: 15px;
-        
+
         i {
             padding-right: 5px;
         }
@@ -41,6 +41,34 @@
             &:hover {
                 background-color: $black-grey;
             }
+        }
+    }
+
+    .comment-sent {
+        display: none;
+        width: 100%;
+        max-width: 300px;
+        padding: 20px 10px;
+        border: 1px solid #7DBD73;
+        margin-top: 30px;
+
+        h3 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        i {
+            width: 100%;
+            text-align: center;
+            font-size: 50px;
+            padding: 30px 0;
+            color: #38852B;
+        }
+
+        p {
+            line-height: $general-line-height;
+            width: 90%;
+            margin: $auto;
         }
     }
 }
