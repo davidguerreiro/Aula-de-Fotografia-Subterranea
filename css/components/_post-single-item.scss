@@ -1,0 +1,44 @@
+.posts-container {
+    width: 100%;
+    @include float-container;
+}
+
+.post-item {
+    @include set-width( 300px );
+    float: left;
+    margin: 35px 35px 35px 30px;
+    border: 1px solid $link-grey;
+    border-radius: 15px;
+
+    &__image_link {
+        display: block;
+    }
+
+    &__featured-image {
+        @include set-width( 300px );
+        height: auto;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+    &__title-link {
+        @include baselink;
+        width: 80%;
+        padding: 10px;
+    }
+
+    &__data {
+        padding: 10px;
+    }
+
+    &__data--element {
+        padding-bottom: 8px;
+        @include has-icon;
+    }
+
+    &__category-link {
+        @include baselink( $brown-link );
+        @include link-border-animated( $brown-link );
+        @include has-icon;
+    }
+}

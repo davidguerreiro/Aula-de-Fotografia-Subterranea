@@ -75,3 +75,10 @@
     width: 100%;
     max-width: $max_width;
 }
+
+// basic style for icons.
+@mixin has-icon( $margin-right : 5px ) {
+    i {
+        margin-right: 5px;
+    }
+}

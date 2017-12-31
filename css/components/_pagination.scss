@@ -9,15 +9,15 @@
     }
 
     &__link {
-        display: block;
+        @include baselink( $black, block );
         width: 100%;
         font-size: 30px;
-        text-decoration: none;
         padding: 25px 0 25px 25px;
     }
 
     .previous {
         color: $black;
+        border-top: 1px solid #d8d3d3;
 
         i {
             margin-right: 5px;
