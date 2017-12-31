@@ -15,20 +15,25 @@
  ?>
 
  <div class="content-section">
- <?php
- 
- if ( have_posts() ) :
-    while ( have_posts() ) :
-        the_post();
-        get_template_part( 'template-parts/post', 'single-item' );
-    endwhile;
- else :
-    $no_content = "No hay posts para mostrar en esta categoria.";
-    include( locate_template( 'template-parts/content-none.php' ) );
- endif;
+    <?php
+    
+    if ( have_posts() ) :
+        ?>
+        <div class="posts-container">
+        <?php
+        while ( have_posts() ) :
+            the_post();
+            get_template_part( 'template-parts/post', 'single-item' );
+        endwhile;
+    ?>
+        </div>
+    <?php
+    else :
+        $no_content = "No hay posts para mostrar en esta categoria.";
+        include( locate_template( 'template-parts/content-none.php' ) );
+    endif;
 
- ?>
-
+    ?>
  </div>
 
  <?php

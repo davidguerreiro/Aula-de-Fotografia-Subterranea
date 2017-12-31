@@ -7,4 +7,35 @@
  * @package aula/template-parts
  */
 
+ $post_date = date( 'd-m-Y' );
+
  ?>
+
+ <article class="post-item">
+     <a href="#" class="post-item__image-link">
+        <img src="http://lorempixel.com/500/300" alt="">
+    </a>
+     <div class="post-item__data">
+        <a href="#" class="post-item__title-link">
+            <h3 class="post-item__data--title">
+                Adelante aunque solo tengas una camara.
+            </h3>
+        </a>
+        <ul>
+            <li>
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <?php echo $post_date; ?>
+            </li>
+            <li>
+                <a href="post-item_category-link">
+                    <i class="fa fa-sun-o" aria-hidden="true"></i>
+                    Actividades
+                </a>
+            </li>
+            <li>
+                <i class="fa fa-comment-o" aria-hidden="true"></i>
+                5
+            </li>
+        </ul>
+     </div>
+ </article>
