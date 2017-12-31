@@ -2,7 +2,7 @@
 /* General margin - padding */
 /* General line height */
 /* float columns same size trick */
-/* Variables for mobile menu*/
+/* Variables for mobile menu */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -903,6 +903,12 @@ html, body {
       -webkit-transition: width 0.3s; }
     .post-wrapper__post-content a:hover::after {
       width: 100%; }
+
+.no-content-notification {
+  width: 100%;
+  max-width: 600px;
+  display: none;
+  line-height: 1.4; }
 
 .main {
   overflow: hidden;

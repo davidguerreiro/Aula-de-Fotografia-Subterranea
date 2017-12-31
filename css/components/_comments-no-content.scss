@@ -1,3 +1,5 @@
 .no-content-notification {
-    @include 
+    @include set-width( 600px );
+    display: none;
+    line-height: $general-line-height;
 }
