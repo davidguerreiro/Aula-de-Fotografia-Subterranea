@@ -910,6 +910,38 @@ html, body {
   display: none;
   line-height: 1.4; }
 
+.pagination {
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  background-color: #ffffff; }
+  .pagination__link-wrapper {
+    float: left;
+    width: 50%; }
+  .pagination__link {
+    display: block;
+    width: 100%;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 25px 0 25px 25px; }
+  .pagination .previous {
+    color: #000000; }
+    .pagination .previous i {
+      margin-right: 5px;
+      transition: margin-right 0.5s ease;
+      -webkit-transition: margin-right 0.5s ease; }
+    .pagination .previous:hover i {
+      margin-right: 10px; }
+  .pagination .next {
+    color: #ffffff;
+    background-color: #522C70; }
+    .pagination .next i {
+      margin-left: 5px;
+      transition: margin-left 0.5s ease;
+      -webkit-transition: margin-left 0.5s ease; }
+    .pagination .next:hover i {
+      margin-left: 10px; }
+
 .main {
   overflow: hidden;
   clear: both; }
@@ -1497,3 +1529,5 @@ ul, li {
   background-color: #000000;
   padding: 35px 25px;
   font-size: 45px; }
+  .m17__title i {
+    padding-right: 5px; }

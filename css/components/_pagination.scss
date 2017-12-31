@@ -1,0 +1,49 @@
+.pagination {
+    @include float-container;
+    width: 100%;
+    background-color: $white;
+
+    &__link-wrapper {
+        float: left;
+        width: 50%;
+    }
+
+    &__link {
+        display: block;
+        width: 100%;
+        font-size: 30px;
+        text-decoration: none;
+        padding: 25px 0 25px 25px;
+    }
+
+    .previous {
+        color: $black;
+
+        i {
+            margin-right: 5px;
+            @include do-transition( margin-right );
+        }
+
+        &:hover {
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .next {
+        color: $white;
+        background-color: #522C70;
+
+        i {
+            margin-left: 5px;
+            @include do-transition( margin-left );
+        }
+
+        &:hover {
+            i {
+                margin-left: 10px;
+            }
+        }
+    }
+}
