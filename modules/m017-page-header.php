@@ -10,7 +10,7 @@
 
 <div class="module m17">
     <h2 class="m17__title">
-        <i class="" aria-hidden="true"></i>
-        Actividates
+        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        Actividades
     </h2>
 </div>

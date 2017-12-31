@@ -1491,3 +1491,9 @@ ul, li {
     max-width: 600px;
     margin-top: 15px;
     line-height: 1.4; }
+
+.m17__title {
+  color: #ffffff;
+  background-color: #000000;
+  padding: 35px 25px;
+  font-size: 45px; }

@@ -19,17 +19,23 @@ get_header();
  <?php
  
  // TODO: Display posts here.
+ 
+ ?>
+ </div>
+<?php
 
  // display sidebar
  get_sidebar();
- 
+
  ?>
-
- </div>
-
+<div class="bottom-modules-wrapper">
 <?php
 
  // module 013.
  include( locate_template( 'modules/m013-newsletter-section.php' ) );
+
+ ?>
+</div>
+<?php
 
  get_footer();
