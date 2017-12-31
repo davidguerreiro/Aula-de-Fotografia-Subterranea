@@ -6,7 +6,7 @@
 .post-item {
     @include set-width( 300px );
     float: left;
-    margin: 35px 35px 35px 30px;
+    margin: 35px 0 35px 30px;
     border: 1px solid $link-grey;
     border-radius: 15px;
 

@@ -16,6 +16,9 @@
 
  <div class="content-section">
     <?php
+
+    // module 18.
+    include( locate_template( 'modules/m018-intro-text.php' ) );
     
     if ( have_posts() ) :
         ?>

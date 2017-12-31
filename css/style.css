@@ -953,7 +953,7 @@ html, body {
   width: 100%;
   max-width: 300px;
   float: left;
-  margin: 35px 35px 35px 30px;
+  margin: 35px 0 35px 30px;
   border: 1px solid #D4D1C0;
   border-radius: 15px; }
   .post-item__image_link {
@@ -1583,3 +1583,8 @@ ul, li {
   font-size: 45px; }
   .m17__title i {
     padding-right: 5px; }
+
+.m18 p {
+  width: 90%;
+  padding: 35px 0 8px 35px;
+  line-height: 1.4; }
