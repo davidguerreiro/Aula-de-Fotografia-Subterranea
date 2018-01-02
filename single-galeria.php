@@ -29,15 +29,27 @@
  // comments section.
  include( locate_template( 'comments.php' ) );
 
- // get sidebar.
- get_sidebar();
-
  ?>
  </div>
 
  <?php
+
+ // get sidebar.
+ get_sidebar();
+
+?>
+
+<div class="bottom-modules-wrapper">
+
+<?php
  
  // module 013.
  include( locate_template( 'modules/m013-newsletter-section.php' ) );
+
+ ?>
+
+</div>
+
+<?php
 
  get_footer();
