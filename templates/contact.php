@@ -34,10 +34,22 @@ include( locate_template( 'modules/m017-page-header.php' ) );
 
 <?php
 
- // module 012.
- include( locate_template( 'modules/012-facebook-group.php' ) );
+ // get sidebar.
+ get_sidebar();
+
+ ?>
+
+<div class="bottom-modules-wrapper">
+
+<?php
 
  // module 013.
  include( locate_template( 'modules/013-newsletter-section.php' ) );
+
+?>
+
+</div>
+
+<?php
 
 get_footer();
