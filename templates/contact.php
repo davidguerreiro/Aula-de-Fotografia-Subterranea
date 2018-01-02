@@ -25,9 +25,6 @@ include( locate_template( 'modules/m017-page-header.php' ) );
  // module 019.
  include( locate_template( 'modules/m019-contact-form.php' ) );
 
- // get sidebar.
- get_sidebar();
-
 ?>
 
 </div>

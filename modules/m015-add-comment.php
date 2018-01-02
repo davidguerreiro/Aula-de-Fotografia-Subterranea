@@ -6,6 +6,8 @@
  * @package aula/modules
  */
 
+ $nonce = wp_create_nonce( 'comment-form' );
+
  ?>
 
  <div class="module m15">
@@ -14,6 +16,7 @@
         Comenta algo
     </h2>
     <form action="" class="comment-form">
+        <input type="hidden" name="nonce" id="nonce" value="<?php echo $nonce; ?>">
         <input type="text" name="name" placeholder="Nombre" class="comment-form__input-text" required>
         <textarea name="message" class="comment-form__textarea" placeholder="Mensaje" rows="1" required></textarea>
         <input type="submit" value="Comentar" class="comment-form__input-submit">

@@ -31,3 +31,47 @@
 
 }
 
+/* Contact form */
+.contact-form {
+	width: 100%;
+	margin: 30px auto;
+	padding: 30px 0 30px 30px;
+	background-color: #E3BDEA;
+
+	input, textarea {
+		display: block;
+		margin-top: 25px;
+	}
+
+	&__text-input {
+		@include base-submit-input( 300px, 5px, transparent );
+		@include do-transition( border-bottom-color );
+		border-bottom: 2px solid #C393CC;
+
+		&:hover, &:focus {
+			outline: 0;
+			border-bottom-color: $form-pink;
+		}
+	}
+
+	&__textarea {
+		@include base-submit-input( 500px, 5px, transparent );
+		@include do-transition( border-bottom-color );
+		border-bottom: 2px solid #C393CC;
+
+		&:hover, &:focus {
+			outline: 0;
+			border-bottom-color: $form-pink;
+		}
+	}
+
+	&__submit-input {
+		@include base-submit-input( 310px, 10px 0, $form-pink, $white );
+		@include do-transition( background-color );
+		margin: 35px 0 15px 0 !important;
+
+		&:hover {
+			background-color: #621271;
+		}
+	}
+}
