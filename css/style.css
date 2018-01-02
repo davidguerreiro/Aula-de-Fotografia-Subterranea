@@ -1100,6 +1100,15 @@ html, body {
     .gallery-item__view-link:hover i {
       margin-left: 10px; }
 
+.my-gallery {
+  overflow: hidden;
+  clear: both; }
+  .my-gallery__item {
+    float: left; }
+    .my-gallery__item img {
+      width: 200px;
+      height: auto; }
+
 .main {
   overflow: hidden;
   clear: both; }

@@ -1,0 +1,13 @@
+
+.my-gallery {
+    @include float-container;
+
+    &__item {
+        float: left;
+
+        img {
+            width: 200px;
+            height: auto;
+        }
+    }
+}

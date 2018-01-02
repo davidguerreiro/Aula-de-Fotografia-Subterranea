@@ -12,22 +12,53 @@
 
  ?>
 
-<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+<div class="module m20">
 
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="http://lorempixel.com/500/300" itemprop="contentUrl" data-size="600x400">
-            <img src="http://lorempixel.com/500/300" itemprop="thumbnail" alt="Image description" />
-        </a>
-        <figcaption itemprop="caption description"></figcaption>
-    </figure>
+    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="http://lorempixel.com/500/300" itemprop="contentUrl" data-size="600x400">
-            <img src="http://lorempixel.com/500/300" itemprop="thumbnail" alt="Image description" />
-        </a>
-        <figcaption itemprop="caption description"></figcaption>
-    </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
+            <a href="http://lorempixel.com/500/300/sports/david" itemprop="contentUrl" data-size="600x400">
+                <img src="http://lorempixel.com/500/300/sports/david" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description"></figcaption>
+        </figure>
 
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
+            <a href="http://lorempixel.com/500/300/sports/david2" itemprop="contentUrl" data-size="600x400">
+                <img src="http://lorempixel.com/500/300/sports/david2" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description"></figcaption>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
+            <a href="http://lorempixel.com/500/300" itemprop="contentUrl" data-size="600x400">
+                <img src="http://lorempixel.com/500/300" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description"></figcaption>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
+            <a href="http://lorempixel.com/500/300" itemprop="contentUrl" data-size="600x400">
+                <img src="http://lorempixel.com/500/300" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description"></figcaption>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
+            <a href="http://lorempixel.com/500/300" itemprop="contentUrl" data-size="600x400">
+                <img src="http://lorempixel.com/500/300" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description"></figcaption>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
+            <a href="http://lorempixel.com/500/300" itemprop="contentUrl" data-size="600x400">
+                <img src="http://lorempixel.com/500/300" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description"></figcaption>
+        </figure>
+
+    </div>
 
 </div>
   
