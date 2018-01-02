@@ -15,8 +15,7 @@
 }
 
 .content-section, .sidebar {
-    padding-bottom: $padding-trick;
-    margin-bottom: $margin-trick;
+    @include padding-trick;
 }
 
 .bottom-modules-wrapper {

@@ -994,6 +994,60 @@ html, body {
     .post-item__category-link i {
       margin-right: 5px; }
 
+.gallery-item {
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  max-width: 726px;
+  display: block;
+  position: relative;
+  margin: 25px 0 34px 32px;
+  height: 200px;
+  border: 1px solid #D4D1C0; }
+  .gallery-item__section {
+    width: 60%;
+    float: left; }
+  .gallery-item__section--image {
+    width: 40%; }
+  .gallery-item__image {
+    width: 100%;
+    height: 200px; }
+  .gallery-item__title {
+    padding: 15px 0 5px 15px;
+    font-size: 30px; }
+  .gallery-item__data {
+    overflow: hidden;
+    clear: both;
+    padding-left: 15px; }
+    .gallery-item__data li {
+      float: left;
+      padding-right: 10px;
+      font-size: 15px;
+      color: #8C8B83; }
+      .gallery-item__data li i {
+        margin-right: 1px; }
+  .gallery-item__description {
+    width: 90%;
+    padding: 15px 0 0 15px;
+    line-height: 1.4; }
+  .gallery-item__view-link {
+    display: block;
+    position: absolute;
+    width: 58%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 0 10px 15px;
+    margin-top: 2px;
+    background-color: #2E3137;
+    color: #ffffff;
+    text-decoration: none; }
+    .gallery-item__view-link i {
+      margin-left: 5px;
+      transition: margin-left 0.5s ease;
+      -webkit-transition: margin-left 0.5s ease; }
+    .gallery-item__view-link:hover i {
+      margin-left: 10px; }
+
 .main {
   overflow: hidden;
   clear: both; }

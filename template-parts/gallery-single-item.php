@@ -29,14 +29,16 @@
            </li>
         </ul>
         <p class="gallery-item__description">
-            Lorem ipsun sit amet, consectetur adipiscing elit. Fusce egestas posuere fringilla. Curabitur at ullamcorper metus.
+            Lorem ipsun sit amet, consectetur adipiscing elit. Fusce egestas posuere fringilla.
         </p>
         <a href="#" class="gallery-item__view-link">
             View
             <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
      </div>
-     <div class="gallery-single-item__section gallery-single-item__section--image">
-        <img src="http://lorempixel.com/500/300" alt="" class="gallery-item__image">
+     <div class="gallery-item__section gallery-item__section--image">
+         <a href="#">
+            <img src="http://lorempixel.com/300/200" alt="" class="gallery-item__image">
+        </a>
      </div>
  </article>
