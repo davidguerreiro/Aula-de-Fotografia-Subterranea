@@ -11,12 +11,13 @@ function aula_register_cpt() {
 
 		// galerias
     $args = array(
-        'public' 				=> true,
+				'public' 				=> true,
+				'has_archive' 	=> true,
 				'label'  				=> 'Galerias',
 				'menu_icon' 		=> 'dashicons-format-gallery',
 				'menu_position' => 5,
     );
-		register_post_type( 'galleria', $args );
+		register_post_type( 'galeria', $args );
 		
 		// equipo
 		$args = array(
