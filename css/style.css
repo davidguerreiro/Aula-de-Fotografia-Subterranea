@@ -917,7 +917,8 @@ html, body {
   background-color: #ffffff; }
   .pagination__link-wrapper {
     float: left;
-    width: 50%; }
+    width: 50%;
+    height: 84px; }
   .pagination__link {
     text-decoration: none;
     color: #000000;
