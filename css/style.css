@@ -961,8 +961,8 @@ html, body {
 .no-content-notification {
   width: 100%;
   max-width: 600px;
-  display: none;
-  line-height: 1.4; }
+  line-height: 1.4;
+  padding: 15px 0 15px 35px; }
 
 .pagination {
   overflow: hidden;
@@ -1111,6 +1111,47 @@ html, body {
     .my-gallery__item img {
       width: 200px;
       height: auto; }
+
+.search-item {
+  margin: 0 0 30px 35px; }
+  .search-item__wrapper-link {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #D4D1C0;
+    color: #000000;
+    overflow: hidden;
+    clear: both;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease; }
+    .search-item__wrapper-link:hover {
+      background-color: #D4D1C0; }
+  .search-item__title {
+    padding: 15px 0 5px 15px; }
+  .search-item__section {
+    float: left;
+    width: 60%;
+    height: 120px;
+    max-height: 120px; }
+  .search-item__section--icon {
+    width: 40%;
+    background-color: #4D3B70; }
+    .search-item__section--icon i {
+      width: 100%;
+      text-align: center;
+      color: #ffffff;
+      font-size: 50px;
+      padding-top: 30px; }
+  .search-item__data {
+    padding-left: 15px; }
+    .search-item__data li {
+      display: inline-block;
+      margin-right: 5px;
+      font-size: 15px;
+      color: #8C8B83; }
+      .search-item__data li i {
+        margin-right: 1px; }
 
 .main {
   overflow: hidden;
@@ -1706,3 +1747,6 @@ ul, li {
   width: 90%;
   padding: 35px 0 8px 35px;
   line-height: 1.4; }
+
+.m22 {
+  margin: 20px 0; }

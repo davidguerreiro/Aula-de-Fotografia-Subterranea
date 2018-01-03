@@ -8,6 +8,6 @@
 
  if ( isset( $no_content ) && ! empty( $no_content ) ) : ?>
     <p class="no-content-notification">
-        <?php echo esc_html( $no_content ); ?>
+        <?php echo $no_content; ?>
     </p>
 <?php endif; ?>

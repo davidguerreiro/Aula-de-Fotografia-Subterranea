@@ -1,0 +1,54 @@
+.search-item {
+    margin: 0 0 30px 35px;
+
+    &__wrapper-link {
+        display: block;
+        text-decoration: none;
+        width: 100%;
+        max-width: 600px;
+        border: 1px solid $link-grey;
+        color: $black;
+        @include float-container;
+        @include do-transition( background-color );
+
+        &:hover {
+            background-color: $link-grey;
+        }
+    }
+
+    &__title {
+        padding: 15px 0 5px 15px;
+    }
+
+    &__section {
+        float: left;
+        width: 60%;
+        height: 120px;
+        max-height: 120px;
+    }
+
+    &__section--icon {
+        width: 40%;
+        background-color: $git-purple;
+
+        i {
+            width: 100%;
+            text-align: center;
+            color: $white;
+            font-size: 50px;
+            padding-top: 30px;
+        }
+    }
+
+    &__data {
+        padding-left: 15px;
+
+        li {
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 15px;
+            color: #8C8B83;
+            @include has-icon( 1px );
+        }
+    }
+}
