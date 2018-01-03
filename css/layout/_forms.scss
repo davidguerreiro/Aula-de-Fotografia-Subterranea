@@ -75,3 +75,34 @@
 		}
 	}
 }
+
+/* Serach page search form */
+.search-page-form {
+	&__input-text {
+		width: 400px;
+		margin: 35px 5px 0 35px;
+		padding: 7px;
+		border-radius: 15px;
+		border: 1px solid $link-grey;
+		outline: 0;
+		@include do-transition( border-color );
+
+		&:hover, &:focus {
+			border-color: $black;
+		}
+	}
+	
+	.btn-search-page-submit {
+		padding: 7px 25px;
+		margin-left: 10px;
+		border-radius: 10px;
+		border: 1px solid transparent;
+		color: white;
+		background-color: $git-purple;
+		@include do-transition( background-color );
+
+		&:hover {
+			background-color: $form-pink;
+		}
+	}
+}

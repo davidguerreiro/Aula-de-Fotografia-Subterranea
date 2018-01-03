@@ -868,6 +868,31 @@ html, body {
     .contact-form__submit-input:hover {
       background-color: #621271; }
 
+/* Serach page search form */
+.search-page-form__input-text {
+  width: 400px;
+  margin: 35px 5px 0 35px;
+  padding: 7px;
+  border-radius: 15px;
+  border: 1px solid #D4D1C0;
+  outline: 0;
+  transition: border-color 0.5s ease;
+  -webkit-transition: border-color 0.5s ease; }
+  .search-page-form__input-text:hover, .search-page-form__input-text:focus {
+    border-color: #000000; }
+
+.search-page-form .btn-search-page-submit {
+  padding: 7px 25px;
+  margin-left: 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: white;
+  background-color: #4D3B70;
+  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease; }
+  .search-page-form .btn-search-page-submit:hover {
+    background-color: #9846A7; }
+
 .panel {
   position: fixed;
   left: -15.6em;
