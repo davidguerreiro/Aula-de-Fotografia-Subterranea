@@ -6,12 +6,15 @@
  * @package aula
  */
 
- 
+ if ( ! isset( $_GET['s'] ) || $_GET['s'] == '' ) {
+     wp_safe_redirect( get_home_url() );
+     exit;
+ }
 
  get_header();
 
  // module 017.
- include( locate_template( 'm017-page-header.php' ) );
+ include( locate_template( 'modules/m017-page-header.php' ) );
 
  ?>
 
