@@ -6,6 +6,8 @@
  * @package aula
  */
 
+ 
+
  get_header();
 
  // module 017.
@@ -23,18 +25,30 @@
  // module 022.
  include( locate_template( 'modules/m22-search-results.php' ) );
 
- // pagination
- include( locate_template( 'template-parts/pagination.php' ) );
-
- // get sidebar
- get_sidebar();
-
  ?>
  </div>
 
  <?php
 
+ // get sidebar
+ get_sidebar();
+
+ ?>
+
+<div class="bottom-modules-wrapper">
+
+ <?php
+
+ // pagination.
+ include( locate_template( 'template-parts/pagination.php' ) );
+
  // module 013.
  include( locate_template( 'modules/m013-newsletter-section.php' ) );
+
+ ?>
+
+</div>
+
+<?php
 
  get_footer();
