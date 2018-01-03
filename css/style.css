@@ -955,6 +955,9 @@ html, body {
     .post-wrapper__post-content a:hover::after {
       width: 100%; }
 
+.search_term {
+  color: #4267b2; }
+
 .no-content-notification {
   width: 100%;
   max-width: 600px;

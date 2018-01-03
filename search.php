@@ -26,14 +26,14 @@
  include( locate_template( 'modules/m021-search-header.php' ) );
 
  // module 022.
- include( locate_template( 'modules/m22-search-results.php' ) );
+ include( locate_template( 'modules/m022-search-results.php' ) );
 
  ?>
  </div>
 
  <?php
 
- // get sidebar
+ // get sidebar.
  get_sidebar();
 
  ?>
