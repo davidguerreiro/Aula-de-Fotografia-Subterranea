@@ -22,6 +22,9 @@
  
  <?php
 
+ // module 022.
+ include( locate_template( 'modules/m026-search-page-form.php' ) );
+
  // module 021.
  include( locate_template( 'modules/m021-search-header.php' ) );
 
