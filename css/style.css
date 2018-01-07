@@ -869,6 +869,11 @@ html, body {
       background-color: #621271; }
 
 /* Serach page search form */
+.search-page-form__404 {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 30px; }
+
 .search-page-form__input-text {
   width: 400px;
   margin: 35px 5px 0 35px;
@@ -1810,6 +1815,16 @@ ul, li {
 
 .m24__title {
   color: #4D3B70;
-  font-size: 140px;
-  width: 100%;
-  text-align: center; }
+  text-align: center;
+  font-size: 300px !important; }
+
+.m24__number-left {
+  margin-right: -40px; }
+
+.m24__number-right {
+  margin-left: -40px; }
+
+.m25__content {
+  width: 90%;
+  line-height: 1.4;
+  margin: 15px auto 0 auto; }

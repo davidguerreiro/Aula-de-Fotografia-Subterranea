@@ -1,8 +1,16 @@
 .m24 {
+
     &__title {
         color: $git-purple;
-        font-size: 140px;
-        width: 100%;
         text-align: center;
+        font-size: 300px !important;
+    }
+
+    &__number-left {
+        margin-right: -40px;
+    }
+
+    &__number-right {
+        margin-left: -40px;
     }
 }

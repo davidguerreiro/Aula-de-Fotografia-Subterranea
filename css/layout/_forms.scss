@@ -78,6 +78,13 @@
 
 /* Serach page search form */
 .search-page-form {
+
+	&__404 {
+		width: 50%;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+	
 	&__input-text {
 		width: 400px;
 		margin: 35px 5px 0 35px;

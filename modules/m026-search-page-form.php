@@ -6,13 +6,14 @@
  * @package aula/modules
  */
 
- $s_term    = ( isset( $_GET['s'] ) ) ? sanitize_text_field( $_GET['s'] ) : '';
- $nonce     = wp_create_nonce( 'search_page_form' );
+ $s_term        = ( isset( $_GET['s'] ) ) ? sanitize_text_field( $_GET['s'] ) : '';
+ $nonce         = wp_create_nonce( 'search_page_form' );
+ $form_class    = ( is_404() ) ? "search-page-form search-page-form__404" : "search-page-form";
 
  ?>
 
  <div class="module m26">
-    <form action="" method="get" class="search-page-form">
+    <form action="" method="get" class="<?php echo $form_class; ?>">
         <input type="hidden" name="nonce" value="<?php echo $nonce; ?>">
         <input type="search" name="s" value="<?php echo $s_term; ?>"
         class="search-page-form__input-text" 
