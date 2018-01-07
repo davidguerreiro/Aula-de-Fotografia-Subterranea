@@ -1178,6 +1178,38 @@ html, body {
       .search-item__data li i {
         margin-right: 1px; }
 
+.team-item {
+  margin: 26px 0 30px 35px;
+  width: 90%; }
+  .team-item__title {
+    font-size: 30px;
+    margin-bottom: 19px;
+    width: 100%;
+    border-bottom: 1px solid #8A0638;
+    padding-bottom: 3px; }
+  .team-item__wrapper {
+    overflow: hidden;
+    clear: both; }
+  .team-item__section {
+    float: left;
+    width: 40%; }
+  .team-item__section--data {
+    float: right;
+    background-color: #EAF1F9;
+    padding: 20px 40px; }
+  .team-item__image {
+    width: 100%;
+    height: auto; }
+  .team-item__data {
+    margin-bottom: 15px; }
+    .team-item__data li {
+      padding: 10px 0; }
+      .team-item__data li i {
+        font-size: 22px;
+        margin-right: 5px; }
+  .team-item__description {
+    line-height: 1.3; }
+
 .main {
   overflow: hidden;
   clear: both; }
