@@ -17,11 +17,11 @@ include( locate_template( 'modules/m017-page-header.php' ) );
 
 <?php
 
- // module 018.
- include( locate_template( 'modules/m018-intro-text.php' ) );
-
- // get sidebar.
- get_sidebar();
+// display content page.
+while( have_posts() ) {
+    the_post();
+    get_template_part( 'template-parts/content', 'page' );
+}
 
 ?>
 
@@ -29,10 +29,22 @@ include( locate_template( 'modules/m017-page-header.php' ) );
 
 <?php
 
-// module 012.
-include( locate_template( 'modules/m012-facebook-group-text.php' ) );
+// get sidebar.
+get_sidebar();
+
+?>
+
+<div class="bottom-modules-wrapper">
+
+<?php
 
 // module 013.
 include( locate_template( 'modules/m013-newsletter-section.php' ) );
+
+?>
+
+</div>
+
+<?php
 
 get_footer();
