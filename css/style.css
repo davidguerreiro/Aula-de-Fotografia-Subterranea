@@ -872,7 +872,7 @@ html, body {
 .search-page-form__404 {
   width: 50%;
   margin: 0 auto;
-  margin-bottom: 30px; }
+  margin: 30px auto 60px auto; }
 
 .search-page-form__input-text {
   width: 400px;
