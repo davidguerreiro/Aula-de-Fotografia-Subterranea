@@ -9,7 +9,7 @@
  get_header();
 
  // module 024.
- include( locate_template( 'modules/m24-404-header.php' ) );
+ include( locate_template( 'modules/m024-404-header.php' ) );
 
  // module 025.
  include( locate_template( 'modules/m025-404-content.php' ) );
