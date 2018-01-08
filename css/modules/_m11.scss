@@ -19,6 +19,18 @@
             width: 100%;
             padding: $general-margin-padding;
             color: #ffffff;
+
+            &:hover {
+                cursor: pointer;
+
+                i {
+                    -webkit-transform: rotate(90deg);
+                    -moz-transform: rotate(90deg);
+                    -ms-transform: rotate(90deg);
+                    -o-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                }
+            }
         }
 
         li a {
@@ -53,7 +65,8 @@
     }
 
     &__icon-angle {
-        padding-left: $icon-margin-padding;
+        margin-left: 7px;
         font-weight: bold !important;
+        @include do-transition( all, .5s );
     }
 }

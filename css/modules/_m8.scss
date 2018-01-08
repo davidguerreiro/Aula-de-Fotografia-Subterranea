@@ -28,6 +28,17 @@
             padding: $general-margin-padding;
             text-decoration: none;
             font-size: 22px;
+
+            i {
+                margin-left: 5px;
+                @include do-transition( margin-left );
+            }
+
+            &:hover {
+                i {
+                    margin-left: 10px;
+                }
+            }
         }
     }
 }

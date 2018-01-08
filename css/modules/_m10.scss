@@ -33,8 +33,15 @@
 
         i {
             font-size: 20px;
-            padding-left: 5px;
+            margin-left: 5px;
             font-weight: bold;
+            @include do-transition( margin-left );
+        }
+
+        &:hover {
+            i {
+                margin-left: 10px;
+            }
         }
     }
 

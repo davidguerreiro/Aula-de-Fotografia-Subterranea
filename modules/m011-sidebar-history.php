@@ -19,7 +19,7 @@
         <li>
             <span>
                 2017
-                <i class="fa fa-angle-right m11__icon-angle" aria-hidden="true"></i>
+                <i class="fa fa-angle-right m11__icon-angle fa-rotate-45" aria-hidden="true"></i>
             </span>
             <ul class="m11__month-list">
                 <li>
