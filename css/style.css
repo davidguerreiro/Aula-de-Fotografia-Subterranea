@@ -886,6 +886,10 @@ html, body {
   .search-page-form__input-text:hover, .search-page-form__input-text:focus {
     border-color: #000000; }
 
+.search-page-form__input-text--sidebar {
+  width: 200px;
+  margin: 0 0 0 20px; }
+
 .search-page-form .btn-search-page-submit {
   padding: 7px 25px;
   margin-left: 10px;
@@ -1691,8 +1695,8 @@ ul, li {
             background-color: #8A0638; }
 
 .m14 {
-  background-color: #232740;
-  color: #ffffff; }
+  background-color: #ffffff;
+  color: #000000; }
   .m14 h2 {
     font-size: 25px;
     padding: 25px; }

@@ -85,6 +85,7 @@
 		margin: 30px auto 60px auto;
 	}
 
+
 	&__input-text {
 		width: 400px;
 		margin: 35px 5px 0 35px;
@@ -97,6 +98,11 @@
 		&:hover, &:focus {
 			border-color: $black;
 		}
+	}
+
+	&__input-text--sidebar {
+		width: 200px;
+		margin: 0 0 0 20px;
 	}
 	
 	.btn-search-page-submit {
