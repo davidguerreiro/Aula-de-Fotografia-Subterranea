@@ -745,7 +745,7 @@ html, body {
   width: 100%;
   overflow: hidden;
   clear: both;
-  background-color: #ffffff; }
+  background-color: #F6F0FF; }
   .main-footer__section {
     width: 50%;
     float: left; }
@@ -763,7 +763,9 @@ html, body {
       text-align: center; }
   .main-footer__bottom-section {
     overflow: hidden;
-    clear: both; }
+    clear: both;
+    background-color: #ffffff;
+    padding-top: 16px; }
     .main-footer__bottom-section img {
       display: block;
       width: 100px;
@@ -1054,6 +1056,8 @@ html, body {
   width: 100%;
   overflow: hidden;
   clear: both; }
+  .posts-container--home {
+    margin: 25px 0; }
 
 .post-item {
   width: 100%;
@@ -1100,6 +1104,28 @@ html, body {
     .post-item__category-link i {
       margin-right: 5px; }
 
+.read-link {
+  display: block;
+  position: absolute;
+  width: 58%;
+  left: 0;
+  bottom: 0;
+  padding: 10px 0 10px 15px;
+  margin-top: 2px;
+  background-color: #2E3137;
+  color: #ffffff;
+  text-decoration: none; }
+  .read-link i {
+    margin-left: 5px;
+    transition: margin-left 0.5s ease;
+    -webkit-transition: margin-left 0.5s ease; }
+  .read-link:hover i {
+    margin-left: 10px; }
+  .read-link--home {
+    position: initial;
+    width: 100%;
+    margin-top: 40px; }
+
 .gallery-item {
   overflow: hidden;
   clear: both;
@@ -1120,7 +1146,7 @@ html, body {
     height: 200px; }
   .gallery-item__title {
     padding: 15px 0 5px 15px;
-    font-size: 30px; }
+    font-size: 22px; }
   .gallery-item__data {
     overflow: hidden;
     clear: both;
@@ -1341,6 +1367,7 @@ ul, li {
       color: #ffffff; }
 
 .m4__post-data {
+  position: relative;
   overflow: hidden;
   clear: both;
   background-color: #ffffff; }
@@ -1354,7 +1381,8 @@ ul, li {
       display: block;
       padding: 25px 25px;
       line-height: 1.5;
-      color: #000000; }
+      color: #000000;
+      max-height: 102px; }
   .m4__post-data .post-info-wrapper {
     float: right;
     width: 30%;
@@ -1468,7 +1496,8 @@ ul, li {
 
 .m8__section {
   background-color: #ffffff;
-  color: #000000; }
+  color: #000000;
+  border-left: 1px solid #9AA6C0; }
   .m8__section h2 {
     font-size: 25px;
     padding: 25px; }
@@ -1712,7 +1741,8 @@ ul, li {
 
 .m14 {
   background-color: #ffffff;
-  color: #000000; }
+  color: #000000;
+  border-left: 1px solid #9AA6C0; }
   .m14 h2 {
     font-size: 25px;
     padding: 25px; }

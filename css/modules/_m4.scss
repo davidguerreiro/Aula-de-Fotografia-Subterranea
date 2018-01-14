@@ -33,6 +33,7 @@
     }
 
     &__post-data {
+        position: relative;
         overflow: hidden;
         clear: both;
         background-color: #ffffff;
@@ -49,6 +50,7 @@
                 padding: $general-margin-padding $general-margin-padding;
                 line-height: 1.5;
                 color: #000000;
+                max-height: 102px;
             }
         }
 

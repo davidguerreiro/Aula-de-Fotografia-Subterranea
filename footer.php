@@ -7,6 +7,7 @@
  */
 
 $logo_image_url = wp_get_attachment_url( 20 );
+$year           = date( 'Y' );
 
  ?>
 
@@ -41,7 +42,7 @@ $logo_image_url = wp_get_attachment_url( 20 );
                     <p>
                         Aula de Fotografia Subterranea
                         </br>
-                        &copy; 2014 - 2017
+                        &copy; 2014 - <?php echo $year; ?>
                     </p>
 
                 </section>

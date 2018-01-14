@@ -1,7 +1,12 @@
 .posts-container {
     width: 100%;
     @include float-container;
+
+    &--home {
+        margin: 25px 0;
+    }
 }
+
 
 .post-item {
     @include set-width( 300px );
@@ -40,5 +45,35 @@
         @include baselink( $brown-link );
         @include link-border-animated( $brown-link );
         @include has-icon;
+    }
+}
+
+.read-link {
+    display: block;
+    position: absolute;
+    width: 58%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 0 10px 15px;
+    margin-top: 2px;
+    background-color: $black-grey;
+    color: $white;
+    text-decoration: none;
+
+    i {
+        margin-left: 5px;
+        @include do-transition( margin-left );
+    }
+
+    &:hover {
+        i {
+            margin-left: 10px;
+        }
+    }
+
+    &--home {
+        position: initial;
+        width: 100%;
+        margin-top: 40px;
     }
 }

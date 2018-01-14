@@ -4,7 +4,7 @@
     width: 100%;
     overflow: hidden;
     clear: both;
-    background-color: $white;
+    background-color: #F6F0FF;
 
     &__section {
         width: 50%;
@@ -36,6 +36,8 @@
     &__bottom-section {
         overflow: hidden;
         clear: both;
+        background-color: $white;
+        padding-top: 16px;
 
         img {
             display: block;
@@ -50,6 +52,7 @@
             padding: 14px 0;
             line-height: $general-line-height;
         }
+
     }
 }
 

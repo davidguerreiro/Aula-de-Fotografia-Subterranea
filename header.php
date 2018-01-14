@@ -6,7 +6,7 @@
  * @package aula
  */
 
-// aula_php_display_all_errors();
+ aula_php_display_all_errors();
 
  ?>
 

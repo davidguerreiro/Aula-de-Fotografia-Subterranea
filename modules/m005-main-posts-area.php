@@ -10,6 +10,8 @@ $post_date = date( 'd-M-Y' );
 
  ?>
 
+ <!--
+
  <article class="module m4 m5">
     <a href="#" class="wrapper-link">
         <header class="m4__header m5__header" style="background-image : url('http://lorempixel.com/500/300');">
@@ -32,7 +34,7 @@ $post_date = date( 'd-M-Y' );
                 <li>
                     <span>
                         <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        <?php echo $post_date; ?>
+                        <?php // echo $post_date; ?>
                     </span>
                 </li>
                 <li>
@@ -68,7 +70,7 @@ $post_date = date( 'd-M-Y' );
                 <li>
                     <span>
                         <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        <?php echo $post_date; ?>
+                        <?php //echo $post_date; ?>
                     </span>
                 </li>
                 <li>
@@ -81,3 +83,12 @@ $post_date = date( 'd-M-Y' );
         </div>
     </section>
  </article>
+-->
+
+<div class="posts-container posts-container--home">
+    <?php
+        get_template_part( 'template-parts/post', 'home-single-item' );
+        get_template_part( 'template-parts/post', 'home-single-item' );
+        get_template_part( 'template-parts/post', 'home-single-item' );
+    ?>
+</div>

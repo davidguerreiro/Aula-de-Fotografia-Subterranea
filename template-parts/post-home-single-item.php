@@ -1,6 +1,6 @@
 <?php
 /**
- * Gallery single item
+ * Post homepage single item.
  * 
  * This is the single gallery template.
  * 
@@ -13,7 +13,7 @@
 
  <article class="gallery-item">
      <div class="gallery-item__section">
-        <h3 class="gallery-item__title">Galeria de prueba</h3>
+        <h3 class="gallery-item__title">Adelante aunque solo tengas una camara</h3>
         <ul class="gallery-item__data">
            <li class="gallery-item__data--element">
                 <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -31,8 +31,8 @@
         <p class="gallery-item__description">
             Lorem ipsun sit amet, consectetur adipiscing elit. Fusce egestas posuere fringilla.
         </p>
-        <a href="#" class="read-link">
-            Ver Galeria
+        <a href="#" class="gallery-item__view-link">
+            Leer post
             <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
      </div>

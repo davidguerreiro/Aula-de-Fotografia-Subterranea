@@ -27,6 +27,10 @@
                 de prueba. Esto seria el texto inicial del post. No es esto
                 mucho texto ?
             </p>
+            <a href="#" class="read-link read-link--home">
+                Leer post.
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </a>
         </div>
         <div class="post-info-wrapper">
             <ul>
