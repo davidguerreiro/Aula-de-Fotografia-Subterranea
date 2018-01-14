@@ -28,7 +28,7 @@
                 mucho texto ?
             </p>
             <a href="#" class="read-link read-link--home">
-                Leer post.
+                Leer post
             <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
         </div>
