@@ -21,7 +21,10 @@
 <?php
 
  // module 001.
- include( locate_template( 'modules/m001-main-header.php' ) );
+ //include( locate_template( 'modules/m001-main-header.php' ) );
 
  // module 003.
- include( locate_template( 'modules/m003-main-menu.php' ) );      
+ // include( locate_template( 'modules/m003-main-menu.php' ) );      
+
+ // test new header.
+include( locate_tempalte( 'modules/m027-second-header.php' ) );
