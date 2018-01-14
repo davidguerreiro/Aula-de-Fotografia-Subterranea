@@ -6,6 +6,8 @@
  * @package aula
  */
 
+// aula_php_display_all_errors();
+
  ?>
 
 <!DOCTYPE html>
@@ -27,4 +29,4 @@
  // include( locate_template( 'modules/m003-main-menu.php' ) );      
 
  // test new header.
-include( locate_tempalte( 'modules/m027-second-header.php' ) );
+include( locate_template( 'modules/m027-second-header.php' ) );

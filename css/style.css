@@ -3,6 +3,7 @@
 /* General line height */
 /* float columns same size trick */
 /* Variables for mobile menu */
+/* Responsive */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -939,6 +940,22 @@ html, body {
   display: block;
   text-decoration: none; }
 
+.main-menu ul {
+  padding-top: 28px; }
+  .main-menu ul li {
+    display: inline-block; }
+    .main-menu ul li a {
+      text-decoration: none;
+      color: #000000;
+      display: inline-block;
+      font-size: 20px;
+      padding: 8px;
+      border-bottom: 2px solid #808080;
+      transition: border-bottom-color 0.5s ease;
+      -webkit-transition: border-bottom-color 0.5s ease; }
+      .main-menu ul li a:hover {
+        border-bottom-color: #FF650F; }
+
 .post-wrapper {
   padding: 25px; }
   .post-wrapper__post-title {
@@ -1266,7 +1283,6 @@ ul, li {
     padding-left: 20px; }
 
 .m2__video {
-  padding-top: 22px;
   object-fit: initial;
   display: block;
   width: 100%;
@@ -1852,3 +1868,27 @@ ul, li {
   width: 90%;
   line-height: 1.4;
   margin: 15px auto 0 auto; }
+
+.m27 {
+  overflow: hidden;
+  clear: both;
+  max-width: 1400px; }
+  .m27__section {
+    width: 50%;
+    float: right; }
+  .m27__title-content {
+    overflow: hidden;
+    clear: both;
+    float: left;
+    width: 25%;
+    min-width: 320px; }
+    .m27__title-content img, .m27__title-content h1 {
+      float: left; }
+    .m27__title-content h1 {
+      width: 160px;
+      vertical-align: top;
+      font-size: 30px; }
+    .m27__title-content img {
+      width: 130px;
+      height: auto;
+      padding: 8px 8px 0 8px; }

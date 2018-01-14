@@ -48,3 +48,14 @@ function aula_get_icon( $key ) {
 
 	return $icons[ $key ];
 }
+
+/**
+ * PHP display all errors
+ * 
+ * @return void
+ */
+function aula_php_display_all_errors() {
+	ini_set('display_errors', 1);
+	ini_set('display_startup_errors', 1);
+	error_reporting(E_ALL);
+}

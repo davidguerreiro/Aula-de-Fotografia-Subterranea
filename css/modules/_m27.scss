@@ -1,0 +1,33 @@
+.m27 {
+    @include float-container;
+    max-width: $content-max-width;
+
+    &__section {
+        width: 50%;
+        float: right;
+    }
+
+    &__title-content {
+        @include float-container;
+        float: left;
+        width: 25%;
+        min-width: 320px;
+
+        img, h1 {
+            float: left;
+        }
+
+        h1 {
+            width:  160px;
+            vertical-align:  top;
+            font-size: 30px;
+        }
+
+        img {
+            width: 130px;
+            height: auto;
+            padding: 8px 8px 0 8px;
+        }
+    }
+}
+

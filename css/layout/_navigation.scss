@@ -50,3 +50,26 @@
 	display: block;
 	text-decoration: none;
 }
+
+.main-menu {
+	ul {
+		padding-top: 28px;
+
+		li {
+			display: inline-block;
+
+			a {
+				@include baselink;
+				font-size: 20px;
+				padding: 8px;
+				border-bottom: 2px solid #808080;
+				@include do-transition( border-bottom-color );
+	
+				&:hover {
+					border-bottom-color: #FF650F;
+				}
+
+			}
+		}
+	}
+}
