@@ -2,6 +2,10 @@
     @include float-container;
     max-width: $content-max-width;
 
+    &__title-link {
+        color: $black;
+    }
+
     &__section {
         width: 50%;
         float: right;

@@ -60,10 +60,14 @@ function aula_php_display_all_errors() {
 	error_reporting(E_ALL);
 }
 
+
 /**
- * Create admin options page to
- * be used by ACF.
+ * Create menu hooks.
+ * 
+ * @return void
  */
-if ( function_exists( 'acf_add_options_page' ) ) {
-	acf_add_options_page();
+function aula_init_menus() {
+	register_nav_menu('main-menu', __( 'Main Menu' ) );
 }
+
+add_action( 'init', 'aula_init_menus' );

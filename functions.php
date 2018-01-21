@@ -1,7 +1,15 @@
 <?php
 
  // add featured images support.
- add_theme_support( 'post-thumbnails' ); 
+ add_theme_support( 'post-thumbnails' );
+
+ /**
+ * Create admin options page to
+ * be used by ACF.
+ */
+if ( function_exists( 'acf_add_options_page' ) ) {
+	acf_add_options_page();
+}
 
  /**
   * Load css and HTML
