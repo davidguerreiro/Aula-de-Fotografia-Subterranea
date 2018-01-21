@@ -59,3 +59,11 @@ function aula_php_display_all_errors() {
 	ini_set('display_startup_errors', 1);
 	error_reporting(E_ALL);
 }
+
+/**
+ * Create admin options page to
+ * be used by ACF.
+ */
+if ( function_exists( 'acf_add_options_page' ) ) {
+	acf_add_options_page();
+}
