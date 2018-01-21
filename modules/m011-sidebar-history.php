@@ -17,17 +17,17 @@
     </h3>
     <ul class="m11__year-list">
         <li>
-            <span>
+            <span class="year-parent" data-year="2017">
                 2017
                 <i class="fa fa-angle-right m11__icon-angle fa-rotate-45" aria-hidden="true"></i>
             </span>
-            <ul class="m11__month-list">
+            <ul class="m11__month-list" id="2017-months">
                 <li>
-                    <span> 
+                    <span class="month" data-month="2017-sept"> 
                         - Septiembre 
                         <i class="fa fa-angle-right m11__icon-angle" aria-hidden="true"></i>
                     </span>
-                    <ul class="m11__post-list">
+                    <ul class="m11__post-list" id="2017-sept">
                         <li>
                             <a href="#">- Cueva de Ancares</a>
                         </li>
@@ -37,11 +37,11 @@
                     </ul>
                 </li>
                 <li>
-                    <span> 
+                    <span class="month" data-month="2017-oct"> 
                         - Octubre
                         <i class="fa fa-angle-right m11__icon-angle" aria-hidden="true"></i>
                     </span>
-                    <ul class="m11__post-list">
+                    <ul class="m11__post-list" id="2017-oct">
                         <li>
                             <a href="#">- Cueva de Ancares</a>
                         </li>
@@ -53,17 +53,17 @@
             </ul>
         </li>
         <li>
-            <span>
+            <span class="year-parent" data-year="2016">
                 2016
                 <i class="fa fa-angle-right m11__icon-angle" aria-hidden="true"></i>
             </span>
-            <ul class="m11__month-list">
+            <ul class="m11__month-list" id="2016-months">
                 <li>
-                    <span> 
+                    <span class="month" data-year="2016-sept"> 
                         - Septiembre 
                         <i class="fa fa-angle-right m11__icon-angle" aria-hidden="true"></i>
                     </span>
-                    <ul class="m11__post-list">
+                    <ul class="m11__post-list" id="2016-sept">
                         <li>
                             <a href="#">- Cueva de Ancares</a>
                         </li>
@@ -73,11 +73,11 @@
                     </ul>
                 </li>
                 <li>
-                    <span>
+                    <span class="month" data-year="2016-oct">
                          - Octubre 
                          <i class="fa fa-angle-right m11__icon-angle" aria-hidden="true"></i>
                     </span>
-                    <ul class="m11__post-list">
+                    <ul class="m11__post-list" id="2016-oct">
                         <li>
                             <a href="#"> - Cueva de Ancares</a>
                         </li>

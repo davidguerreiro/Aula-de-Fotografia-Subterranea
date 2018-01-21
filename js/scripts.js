@@ -6,9 +6,11 @@ $(document).ready( function() {
 
   // auto - expand textarea.
   ( function () {
-    var textarea = document.querySelector('textarea');
+    var textarea = ( document.querySelector('textarea') ) ? document.querySelector('textarea') : false;
     
-    textarea.addEventListener('keydown', autosize);
+    if ( textarea !== false ) {
+        textarea.addEventListener('keydown', autosize);
+    }
                 
     function autosize(){
       var el = this;
@@ -231,5 +233,27 @@ $(document).ready( function() {
       initPhotoSwipeFromDOM('.my-gallery');
 
     })();
+
+    var do_slide = function( list ) {
+        if ( list.css('display') == 'none' ) {
+            list.slideDown();
+        } else {
+            list.slideUp();
+        }
+    }
+
+    // Sidebar history.
+    $('.year-parent').click( function(){
+        const year = $(this).data('year');
+        const $month_list = $('#' + year + '-months');
+        do_slide( $month_list );
+    });
+
+    $('.month').click( function(){
+        const month = $(this).data('month');
+        const $posts_list = $('#' + month );
+        do_slide( $posts_list );
+    });
+
   
 });
