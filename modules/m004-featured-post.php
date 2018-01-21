@@ -3,8 +3,6 @@
 /**
  * Module 004 - Featured post
  * 
- * TODO: Add post data elements in ul.
- * 
  * @package aula/modules
  */
 
