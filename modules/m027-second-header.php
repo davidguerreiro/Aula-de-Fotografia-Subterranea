@@ -29,26 +29,5 @@ $args = array(
     </a>
     <div class="m27__section">
         <?php echo wp_nav_menu( $args ); ?>
-        <!--
-        <nav class="main-menu">
-            <ul>
-                <li>
-                    <a href="#">Fotografia</a>
-                </li>
-                <li>
-                    <a href="#">Aula</a>
-                </li>
-                <li>
-                    <a href="#">Actividades</a>
-                </li>
-                <li>
-                    <a href="#">Equipo</a>
-                </li>
-                <li>
-                    <a href="#">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-        -->
     </div>
 </div>
