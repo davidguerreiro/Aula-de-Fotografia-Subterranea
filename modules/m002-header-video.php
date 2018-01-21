@@ -6,7 +6,7 @@
  * @package aula/modules
  */
 
- $video_url = wp_get_attachment_url( 22 );
+ $video_url = get_field( 'm02_video', 'option' );
 
  ?>
  <div class="module m2">
