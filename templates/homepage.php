@@ -10,7 +10,7 @@
  * @package aula/templates
  */
 
-aula_php_display_all_errors();
+// aula_php_display_all_errors();
 
 get_header();
 

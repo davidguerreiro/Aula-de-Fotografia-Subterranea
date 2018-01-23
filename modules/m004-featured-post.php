@@ -10,7 +10,7 @@
 
  $display = true;
 
- if ( isset( $home_posts ) && $home_posts->have_posts() ) : 
+ if ( isset( $home_posts ) && isset( $home_posts_displayed ) && $home_posts->have_posts() ) : 
     while( $home_posts->have_posts() && $display ) : 
     $home_posts->the_post();
     $post_id            = get_the_ID();
@@ -86,7 +86,8 @@
     </section>
  </div>
  <?php 
- $display = false;
+ $display                = false;
+ $home_posts_displayed[] = $post_id;
  endwhile;
  unset( $post_id );
  unset( $featured_post_image_url );
