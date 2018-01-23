@@ -38,6 +38,10 @@
         clear: both;
         background-color: #ffffff;
 
+        .excerpt-wrapper {
+            padding: $general-margin-padding;
+        }
+
         .excerpt {
             float: left;
             width: 70%;
@@ -47,7 +51,6 @@
             p {
                 width: 80%;
                 display: block;
-                padding: $general-margin-padding $general-margin-padding;
                 line-height: 1.5;
                 color: #000000;
                 max-height: 102px;

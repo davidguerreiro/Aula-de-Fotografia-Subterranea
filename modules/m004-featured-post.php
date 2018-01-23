@@ -3,47 +3,72 @@
 /**
  * Module 004 - Featured post
  * 
+ * $home_posts query coming form parent template.
+ * 
  * @package aula/modules
  */
 
- $post_date = date( 'd-M-Y' );
+ $display = true;
 
- ?>
+ if ( isset( $home_posts ) && $home_posts->have_posts() ) : 
+    while( $home_posts->have_posts() && $display ) : 
+    $home_posts->the_post();
+    $post_id            = get_the_ID();
+    $post_type          = get_post_type( $post_id );
+    $post_date          = get_the_date();
+    $permalink          = get_the_permalink();
+    $comments           = get_approved_comments($post_id);
+
+    // category.
+    if ( $post_type == 'post' ) {
+        $post_type_label    = 'Articulo';
+        $categories         = get_the_category();
+    } else {
+        $post_type_label = ucfirst( $post_type );
+    }
+
+    $featured_post_image_url = get_the_post_thumbnail_url( $post_id, 'large' );
+    $style                   = ( ! empty( $featured_post_image_url ) ) ? "background-image : url('" . $featured_post_image_url . "');" : '';
+    ?>
 
  <div class="module m4">
-    <a href="#" class="wrapper-link">
-        <header class="m4__header" style="background-image : url('http://lorempixel.com/500/300');">
+    <a href="<?php echo $permalink; ?>" class="wrapper-link">
+        <header class="m4__header" style="<?php echo $style; ?>">
             <h2>
-                <span>La cueva de Valporquero</span>
+                <span>
+                    <?php echo get_the_title(); ?>
+                </span>
             </h2>
         </header>
     </a>
     <section class="m4__post-data">
         <div class="excerpt">
-            <p>
-                Podemos considerar esto como el contenido del post
-                de prueba. Esto seria el texto inicial del post. No es esto
-                mucho texto ?
-            </p>
-            <a href="#" class="read-link read-link--home">
+            <div class="excerpt-wrapper">
+                <p>
+                    <?php echo get_the_excerpt(); ?>
+                </p>
+            </div>
+            <a href="<?php echo $permalink; ?>" class="read-link read-link--home read-link--featured-post">
                 Leer post
             <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+            </a>
         </div>
         <div class="post-info-wrapper">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="<?php echo get_post_type_archive_link( $post_type ); ?>">
                         <i class="fa fa-thumb-tack" aria-hidden="true"></i>
-                        Articulo
+                        <?php echo $post_type_label; ?>
                     </a>
                 </li>
+                <?php if ( isset( $categories ) && ! empty( $categories ) && is_array( $categories ) ) : ?>
                 <li>
-                    <a href="#">
+                    <a href="<?php echo get_category_link( $categories[0]->term_id ); ?>">
                         <i class="fa fa-sun-o" aria-hidden="true"></i>
-                        Actividades
+                        <?php echo $categories[0]->name; ?>
                     </a>
                 </li>
+                <?php endif; ?>
                 <li>
                     <span>
                         <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -51,12 +76,31 @@
                     </span>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="<?php echo $permalink; ?>">
                         <i class="fa fa-comment-o" aria-hidden="true"></i>
-                        4
+                        <?php echo count( $comments ); ?>
                     </a>
                 </li>
             </ul>
         </div>
     </section>
  </div>
+ <?php 
+ $display = false;
+ endwhile;
+ unset( $post_id );
+ unset( $featured_post_image_url );
+ unset( $display );
+ unset( $style );
+ unset( $permalink );
+ unset( $post_type );
+ unset( $comments );
+ unset( $post_date );
+ unset( $post_title );
+
+ if ( isset( $categories ) ) {
+     unset( $categories );
+ }
+endif; 
+
+?>

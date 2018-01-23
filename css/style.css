@@ -1125,6 +1125,8 @@ html, body {
     position: initial;
     width: 100%;
     margin-top: 40px; }
+  .read-link--featured-post {
+    margin-top: 10px; }
 
 .gallery-item {
   overflow: hidden;
@@ -1371,6 +1373,8 @@ ul, li {
   overflow: hidden;
   clear: both;
   background-color: #ffffff; }
+  .m4__post-data .excerpt-wrapper {
+    padding: 25px; }
   .m4__post-data .excerpt {
     float: left;
     width: 70%;
@@ -1379,7 +1383,6 @@ ul, li {
     .m4__post-data .excerpt p {
       width: 80%;
       display: block;
-      padding: 25px 25px;
       line-height: 1.5;
       color: #000000;
       max-height: 102px; }

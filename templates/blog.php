@@ -3,6 +3,8 @@
 /**
  * Template to display listing posts
  * 
+ * Template name: Blog
+ * 
  * @package aula
  * 
  */

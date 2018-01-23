@@ -9,21 +9,21 @@
  */
 function aula_register_cpt() {
 
-	// galerias
+	// galerias.
     $args = array(
-				'public' 		=> true,
-				'has_archive' 	=> true,
-				'label'  		=> 'Galerias',
-				'menu_icon' 	=> 'dashicons-format-gallery',
-				'menu_position' => 5,
+		'public' 		=> true,
+		'has_archive' 	=> true,
+		'label'  		=> 'Galerias',
+		'menu_icon' 	=> 'dashicons-format-gallery',
+		'menu_position' => 5,
     );
 	register_post_type( 'galeria', $args );
 		
-	// equipo
+	// equipo.
 	$args = array(
-      	'public' 				=> true,
-		'label'  				=> 'Equipo',
-		'menu_icon' 		=> 'dashicons-id-alt',
+      	'public' 		=> true,
+		'label'  		=> 'Equipo',
+		'menu_icon' 	=> 'dashicons-id-alt',
 		'menu_position' => 5,
     );
 	register_post_type( 'equipo', $args );

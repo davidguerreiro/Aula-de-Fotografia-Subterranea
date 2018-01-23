@@ -10,6 +10,8 @@
  * @package aula/templates
  */
 
+aula_php_display_all_errors();
+
 get_header();
 
 // module 002.
@@ -20,6 +22,15 @@ include( locate_template( 'modules/m002-header-video.php' ) );
 <div class="content-section">
 
 <?php
+
+// posts to be displayed across de homepage modules.
+$args = array(
+    'post_type'         => array( 'post', 'galerias' ),
+    'posts_per_page'    => 7,
+    'post_status'       => 'publish',
+);
+$home_posts             = new WP_Query( $args );
+$home_posts_displayed   = array();
 
 // module 004.
 include( locate_template( 'modules/m004-featured-post.php' ) );
@@ -35,6 +46,9 @@ include( locate_template( 'modules/m005-main-posts-area.php' ) );
 
 // module 006.
 include( locate_template( 'modules/m006-load-more.php' ) );
+
+unset( $home_posts );
+unset( $home_posts_displayed );
 
 ?>
 
