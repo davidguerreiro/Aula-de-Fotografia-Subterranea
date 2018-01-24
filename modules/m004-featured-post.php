@@ -12,23 +12,22 @@
 
  if ( isset( $home_posts ) && isset( $home_posts_displayed ) && $home_posts->have_posts() ) : 
     while( $home_posts->have_posts() && $display ) : 
-    $home_posts->the_post();
-    $post_id            = get_the_ID();
-    $post_type          = get_post_type( $post_id );
-    $post_date          = get_the_date();
-    $permalink          = get_the_permalink();
-    $comments           = get_approved_comments($post_id);
+        $home_posts->the_post();
+        $post_id            = get_the_ID();
+        $post_type          = get_post_type( $post_id );
+        $permalink          = get_the_permalink();
+        $comments           = get_approved_comments($post_id);
 
-    // category.
-    if ( $post_type == 'post' ) {
-        $post_type_label    = 'Articulo';
-        $categories         = get_the_category();
-    } else {
-        $post_type_label = ucfirst( $post_type );
-    }
+        // category.
+        if ( $post_type == 'post' ) {
+            $post_type_label    = 'Articulo';
+            $categories         = get_the_category();
+        } else {
+            $post_type_label = ucfirst( $post_type );
+        }
 
-    $featured_post_image_url = get_the_post_thumbnail_url( $post_id, 'large' );
-    $style                   = ( ! empty( $featured_post_image_url ) ) ? "background-image : url('" . $featured_post_image_url . "');" : '';
+        $featured_post_image_url = get_the_post_thumbnail_url( $post_id, 'large' );
+        $style                   = ( ! empty( $featured_post_image_url ) ) ? "background-image : url('" . $featured_post_image_url . "');" : '';
     ?>
 
  <div class="module m4">
@@ -72,7 +71,7 @@
                 <li>
                     <span>
                         <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        <?php echo $post_date; ?>
+                        <?php echo get_the_date(); ?>
                     </span>
                 </li>
                 <li>
@@ -96,12 +95,8 @@
  unset( $permalink );
  unset( $post_type );
  unset( $comments );
- unset( $post_date );
- unset( $post_title );
 
  if ( isset( $categories ) ) {
      unset( $categories );
  }
 endif; 
-
-?>

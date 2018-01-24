@@ -1163,7 +1163,8 @@ html, body {
   .gallery-item__description {
     width: 90%;
     padding: 15px 0 0 15px;
-    line-height: 1.4; }
+    line-height: 1.4;
+    max-height: 63px; }
   .gallery-item__view-link {
     display: block;
     position: absolute;
