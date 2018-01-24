@@ -1469,7 +1469,9 @@ ul, li {
         padding-right: 5px; }
     .m7__section-text p {
       line-height: 1.4;
-      padding: 0 0 30px 25px; }
+      padding: 0 0 30px 25px;
+      width: 90%;
+      min-height: 126px; }
   .m7__section-link {
     float: right;
     display: block;

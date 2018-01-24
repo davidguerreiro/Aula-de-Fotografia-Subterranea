@@ -27,6 +27,7 @@
             unset( $post_id );
         }
         unset( $i );
+        wp_reset_postdata();
         
     ?>
 </div>

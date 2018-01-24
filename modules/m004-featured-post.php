@@ -99,4 +99,5 @@
  if ( isset( $categories ) ) {
      unset( $categories );
  }
+ wp_reset_postdata();
 endif; 
