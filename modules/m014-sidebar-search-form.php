@@ -6,12 +6,21 @@
  * @package aula/modules
  */
 
- $nonce = wp_create_nonce( 'sidebar_search' );
+ if ( isset( $args  ) ) :
+    $key        = 'widget_' . $args['widget_id'];
+    $title      = get_field( 'm14_title', $key );
+    $text       = get_field( 'm14_text', $key );
+    $nonce      = wp_create_nonce( 'sidebar_search' );
+
 
  ?>
 
  <div class="module m14">
-     <h2>Busqueda</h2>
+    <?php if ( ! empty( $title ) ) : ?>
+        <h2>
+            <?php echo esc_html( $title ); ?>
+        </h2>
+    <?php endif; ?>
      <!--
      <form action="" method="get" class="m14__form">
          <input type="hidden" name="nonce" value="<?php // echo $nonce; ?>">
@@ -28,9 +37,12 @@
         $is_sidebar = true;
         include( locate_template( 'modules/m026-search-page-form.php' ) );
         unset( $is_sidebar );
+
+        if ( ! empty( $text ) ) :
     ?>
      <p>
-         No te hace falta entrar en una cueva para encontrar algo en esta
-         pagina, al menos por ahora.
+         <?php echo esc_html( $text ); ?>
      </p>
+        <?php endif; ?>
  </div>
+ <?php endif; ?>
