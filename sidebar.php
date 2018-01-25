@@ -27,7 +27,7 @@ dynamic_sidebar( 'main-sidebar' );
 // include( locate_template( 'modules/m009-sidebar-most-popular-posts.php' ) );
 
 // module 010.
-include( locate_template( 'modules/m010-sidebar-facebook-group.php' ) );
+// include( locate_template( 'modules/m010-sidebar-facebook-group.php' ) );
 
 // module 011.
 include( locate_template( 'modules/m011-sidebar-history.php' ) );

@@ -6,7 +6,6 @@
  * @package aula/modules
  */
 
-
  ?>
 
  <div class="module m12">
@@ -30,3 +29,4 @@
         </a>
     </div>
  </div>
+<?php endif; ?>
