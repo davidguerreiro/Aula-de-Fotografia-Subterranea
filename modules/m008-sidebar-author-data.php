@@ -5,23 +5,51 @@
  * 
  * This module is only used on the sidebar
  * 
+ * This template is loaded by widget so $args
+ * variable comes from WP_Widgets::widget method.
+ * 
  * @package aula/modules
  */
 
- $admin_image = wp_get_attachment_url( 24 );
+if ( isset( $args ) ) :
+ $key       = 'widget_' . $args['widget_id'];
+ $title     = get_field( 'm8_title', $key );
+ $image     = get_field( 'm8_image', $key );
+ $content   = get_field( 'm8_text', $key );
+ $link      = get_field( 'm8_link', $key );
+ $link_text = get_field( 'm8_link_text', $key );
 
  ?>
 
  <div class="module m8">
-     <img src="<?php echo $admin_image; ?>" alt="">
+    <?php if ( ! empty( $image ) && is_array( $image ) ) : ?>
+         <img src="<?php echo $image['sizes']['large']; ?>" alt="">
+    <?php endif; ?>
      <div class="m8__section">
-         <h2>Angel Rodriguez Cascallana</h2>
-         <p>
-            Angel Avelino Rodríguez Cascallana es el fundador, director y principal administrador del Aula de Fotografía Subterranea. Con mas de 2 décadas de experiencia en el mundo de la fotografía subterranea, ha decidido fundar este espacio en internet para compartir todos sus conocimientos y dar consejos a todos aquellos interesados en el mundo de la espeleología y la fotografía.
-         </p>
-         <a href="#">
-            Ver equipo 
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+         <?php if ( ! empty( $title ) ) : ?>
+            <h2>
+                <?php echo esc_html( $title ); ?>
+            </h2>
+        <?php endif; 
+        if ( ! empty( $content ) ) : ?>
+            <p>
+                <?php echo esc_html( $content ); ?>
+            </p>
+        <?php endif;
+        if ( ! empty( $link ) && ! empty( $link_text ) ) : ?>
+            <a href="<?php echo esc_url( $link ); ?>">
+                <?php echo esc_html( $link_text ); ?> 
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+        <?php endif; ?>
      </div>
  </div>
+
+<?php 
+unset( $key );
+unset( $title );
+unset( $image );
+unset( $content );
+unset( $link );
+unset( $link_text );
+endif; ?>

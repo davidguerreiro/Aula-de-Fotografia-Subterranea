@@ -50,3 +50,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
  */
  include get_template_directory() . '/inc/extras.php';
 
+/**
+ * Widgets class file
+ */
+include get_template_directory() . '/inc/class/widgets.php';
