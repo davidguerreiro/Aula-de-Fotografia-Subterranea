@@ -45,4 +45,14 @@
      </p>
         <?php endif; ?>
  </div>
- <?php endif; ?>
+ <?php 
+unset( $key );
+unset( $title );
+unset( $text );
+unset( $nonce );  
+endif; 
+ if ( isset( $args ) ) {
+     unset( $args );
+ }
+
+ ?>

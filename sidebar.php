@@ -21,10 +21,10 @@ dynamic_sidebar( 'main-sidebar' );
 // include( locate_template( 'modules/m008-sidebar-author-data.php' ) );
 
 // module 014.
-include( locate_template( 'modules/m014-sidebar-search-form.php' ) );
+// include( locate_template( 'modules/m014-sidebar-search-form.php' ) );
 
 // module 009.
-include( locate_template( 'modules/m009-sidebar-most-popular-posts.php' ) );
+// include( locate_template( 'modules/m009-sidebar-most-popular-posts.php' ) );
 
 // module 010.
 include( locate_template( 'modules/m010-sidebar-facebook-group.php' ) );
