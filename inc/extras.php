@@ -71,3 +71,32 @@ function aula_init_menus() {
 }
 
 add_action( 'init', 'aula_init_menus' );
+
+/**
+ * Get history posts
+ * 
+ * @return Array $data
+ */
+function aula_get_history_posts() {
+	$data 	= array();
+	$args 	= array(
+		'post_type' 		=> array( 'post', 'galeria' ),
+		'posts_per_page' 	=> -1,
+		'post_status' 		=> 'publish',
+		'orderby'			=> 'date',
+		'order'				=> 'ASC',
+	);
+	$posts = new WP_Query( $args );
+
+	while ( $posts->have_posts() ) {
+		$posts->the_post();
+		$parsed_date 	= strtotime( get_the_date() );
+		$post_data 		= array(
+			'title' 	=> get_the_title(),
+			'permalink' => get_permalink(),
+		);
+		$data[ date( 'Y', $parsed_date ) ][ date( 'F', $parsed_date ) ][] = $post_data;
+	}
+	wp_reset_postdata();
+	return $data;
+}

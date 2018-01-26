@@ -28,5 +28,4 @@
             <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
     </div>
- </div>
-<?php endif; ?>
+</div>
