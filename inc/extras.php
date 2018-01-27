@@ -100,3 +100,44 @@ function aula_get_history_posts() {
 	wp_reset_postdata();
 	return $data;
 }
+
+/**
+ * Get page title icon
+ * 
+ * Mostly used in module 17
+ * 
+ * @param String ( required ) $title Page title.
+ * @return String $icon_class
+ */
+function aula_get_page_icon_class( $title ) {
+	$icon_class = 'fa-file-text-o';
+
+	switch ( $title ) {
+		case 'galeria' :
+			$icon_class = 'fa-camera-retro';
+			break;
+		case 'actividades' :
+			$icon_class = 'fa-sun-o';
+			break;
+		case 'aula' :
+			$icon_class = 'fa-map-o';
+			break;
+		case 'equipo' :
+			$icon_class = 'fa-users';
+			break;
+		case 'contacto' :
+			$icon_class = 'fa-envelope-o';
+			break;
+		case 'search' :
+			$icon_class = 'fa-search';
+			break;
+		case 'newsletter' :
+			$icon_class = 'fa-paper-plane-o';
+			break;
+		default : 
+			$icon_class = 'fa-file-text-o';
+			break;
+	}
+
+	return $icon_class;
+}
