@@ -19,7 +19,9 @@ get_header();
  <?php
  
  // module 018 intro text.
+ $intro_text = get_field( 'actividates_texto_de_introduccion', 'option' );
  include( locate_template( 'modules/m018-intro-text.php' ) );
+ unset( $intro_text );
 
  if ( have_posts() ) : ?>
     <div class="posts-container">
