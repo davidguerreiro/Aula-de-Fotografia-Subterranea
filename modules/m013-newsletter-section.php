@@ -6,25 +6,29 @@
  * @package aula/modules
  */
 
- $nonce = wp_create_nonce( 'newsletter' );
+ $title         = get_field( 'm13_title', 'option' );
+ $text          = get_field( 'm13_text', 'option' );
+ $action_url    = add_query_arg( 'na', 's', get_home_url() . '/' );
 
  ?>
 
  <div class="module m13">
     <div class="m13__section m13__section--text">
-        <h3>No te pierdas nada</h3>
-        <p>
-            Suscribete a nuestro servicio de email automatico.
-            Recibiras una notification en tu email cada vez que
-            una nueva entrada o una nueva galeria es publicada en
-            Aula de Fotografia Subterranea. Dejanos tu email en el
-            siguiente formulario.
-        </p>
+        <?php if ( ! empty( $title ) ) : ?>
+            <h3>
+                <?php echo esc_html( $title ); ?>
+            </h3>
+        <?php endif; 
+        
+        if ( ! empty( $text ) ) : ?>
+            <p>
+                <?php echo esc_html( $text ); ?>
+            </p>
+        <?php endif; ?>
     </div>
     <div class="m13__section m13__section--form">
-        <form action="" class="newsletter">
-            <input type="hidden" name="nonce" value="<?php echo $nonce; ?>">
-            <input type="text" name="email" class="newsletter__text-input" placeholder="Email">
+        <form method="post" action="<?php echo $action_url; ?>" class="newsletter" onsubmit="return newsletter_check(this)">
+            <input class="newsletter__text-input" type="email" name="ne" required="" placeholder="Email">
             <input type="submit" value="Subscribirse" class="newsletter__submit-input">
         </form>
     </div>

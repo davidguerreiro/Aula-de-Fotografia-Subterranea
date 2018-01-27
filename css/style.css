@@ -1265,6 +1265,9 @@ html, body {
   .team-item__description {
     line-height: 1.3; }
 
+.newsletter-return-link {
+  margin-top: 25px; }
+
 .main {
   overflow: hidden;
   clear: both; }
@@ -1722,13 +1725,13 @@ ul, li {
         width: 400px;
         margin: 15px auto;
         border: 0; }
-        .m13__section--form input[type="text"] {
+        .m13__section--form input[type="email"] {
           background-color: transparent;
           padding: 5px;
           border-bottom: 1px solid #9AA6C0;
           transition: border-bottom-color 0.5s ease;
           -webkit-transition: border-bottom-color 0.5s ease; }
-          .m13__section--form input[type="text"]:focus, .m13__section--form input[type="text"]:hover {
+          .m13__section--form input[type="email"]:focus, .m13__section--form input[type="email"]:hover {
             outline: 0;
             border-bottom-color: #2E3137; }
         .m13__section--form input[type="submit"] {
