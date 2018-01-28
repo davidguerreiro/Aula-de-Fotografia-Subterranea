@@ -143,3 +143,29 @@ function aula_get_page_icon_class( $title ) {
 
 	return $icon_class;
 }
+
+/**
+*
+* This function changes the logo in the wp-login page
+*
+* @return void
+*/
+
+function aula_login_logo() {
+	
+		$logo_url = wp_get_attachment_url( 1267 );
+		?>
+			<style type="text/css">
+	
+				#login h1 a, .login h1 a {
+					background-image: url(<?php echo $logo_url; ?>);
+					background-size: 200px;
+					height: 200px;
+					width: 200px;
+				}
+	
+			</style>
+		<?php
+	}
+	
+add_action( 'login_enqueue_scripts', 'aula_login_logo' );

@@ -4,7 +4,9 @@
     width: 100%;
     overflow: hidden;
     clear: both;
-    background-color: #F6F0FF;
+    /*background-color: #F6F0FF;*/
+    background-color: #423e3e;
+    color: $white;
 
     &__section {
         width: 50%;
@@ -17,12 +19,10 @@
                 padding: 10px;
 
                 a {
-                    color: #6C3BCC;
+                    color: $footer-link;
                     text-decoration: none;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                    display: inline-block;
+                    @include link-border-animated( $footer-link, 0 );
                 }
             }
         }
@@ -36,7 +36,7 @@
     &__bottom-section {
         overflow: hidden;
         clear: both;
-        background-color: $white;
+        // background-color: $white;
         padding-top: 16px;
 
         img {
@@ -58,10 +58,19 @@
 
 .git-link {
     display: block;
-    width: 80px;
+    width: 180px;
     margin: $auto;
     font-size: 100px;
     color: $git-purple;
+    background-color: $white;
+    border-radius: 50%;
+    padding: 10px;
+
+    i {
+        display: inline-block;
+        width: 178px;
+        text-align: center;
+    }
 
     &:hover {
         animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;

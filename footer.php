@@ -6,7 +6,7 @@
  * @package aula
  */
 
-$logo_image_url         = wp_get_attachment_url( 20 );
+$logo_image_url         = wp_get_attachment_url( 1267 );
 $year                   = date( 'Y' );
 $legal_page             = get_page_by_title( 'Aviso Legal' );
 $legal_page_link        = ( ! empty( $legal_page ) && ! is_null( $legal_page ) ) ? get_permalink( $legal_page ) : '';
