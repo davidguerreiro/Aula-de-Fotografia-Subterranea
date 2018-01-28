@@ -6,8 +6,10 @@
  * @package aula
  */
 
-$logo_image_url = wp_get_attachment_url( 20 );
-$year           = date( 'Y' );
+$logo_image_url         = wp_get_attachment_url( 20 );
+$year                   = date( 'Y' );
+$legal_page             = get_page_by_title( 'Aviso Legal' );
+$legal_page_link        = ( ! empty( $legal_page ) && ! is_null( $legal_page ) ) ? get_permalink( $legal_page ) : '';
 
  ?>
 
@@ -16,22 +18,24 @@ $year           = date( 'Y' );
                     <ul>
                         <li>
                             Administrado por 
-                            <a href="#" target="_blank">Angel Cascallana</a>
+                            <a href="https://www.facebook.com/angelavelinor" target="_blank">Angel Cascallana</a>
                         </li>
                         <li>
                             Desarrollado por
-                            <a href="#" target="_blank">David Guerreiro</a>
+                            <a href="https://github.com/davidguerreiro" target="_blank">David Guerreiro</a>
                         </li>
-                        <li>
-                            <a href="#" target="_blank">Aviso Legal</a>
-                        </li>
+                        <?php if ( ! empty( $legal_page_link ) ) : ?>
+                            <li>
+                                <a href="<?php echo $legal_page_link; ?>" target="_blank">Aviso Legal</a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </section>
                 <section class="main-footer__section">
                     <p>
                         This is an open source project. Collaborate with us on Github !
                     </p>
-                    <a href="#" class="git-link" title="Collaborate with us!" target="_blank">
+                    <a href="https://github.com/davidguerreiro/Aula-de-Fotografia-Subterranea" class="git-link" title="Collaborate with us!" target="_blank">
                         <i class="fa fa-github-alt" aria-hidden="true"></i>
                     </a>
                 </section>
