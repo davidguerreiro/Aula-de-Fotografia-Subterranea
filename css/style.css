@@ -976,6 +976,10 @@ html, body {
       .main-menu ul li a:hover {
         border-bottom-color: #FF650F; }
 
+.link-disabled {
+  color: #808080 !important;
+  cursor: default; }
+
 .post-wrapper {
   padding: 25px; }
   .post-wrapper__post-title {

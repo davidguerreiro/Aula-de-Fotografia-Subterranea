@@ -255,5 +255,10 @@ $(document).ready( function() {
         do_slide( $posts_list );
     });
 
+    // disable link
+    $('.link-disabled').click( function(e){
+        e.preventDefault();
+     });
+
   
 });
