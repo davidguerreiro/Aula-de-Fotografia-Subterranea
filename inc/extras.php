@@ -27,6 +27,7 @@ function aula_register_cpt() {
 		'label'  		=> 'Equipo',
 		'menu_icon' 	=> 'dashicons-id-alt',
 		'menu_position' => 5,
+		'supports'		=> array( 'title', 'editor', 'thumbnail' ),
     );
 	register_post_type( 'equipo', $args );
 }

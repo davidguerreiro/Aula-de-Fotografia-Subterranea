@@ -4,5 +4,10 @@
         width: 90%;
         padding: 35px 0 8px 35px;
         line-height: $general-line-height;
+
+        a {
+            @include baselink( $fb-background-color );
+            @include link-border-animated( $fb-background-color, 0 );
+        }
     }
 }

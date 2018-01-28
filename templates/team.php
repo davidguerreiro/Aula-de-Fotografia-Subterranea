@@ -20,13 +20,18 @@ include( locate_template( 'modules/m017-page-header.php' ) );
 <div class="content-section">
 
 <?php
- 
- // module 018.
- include( locate_template( 'modules/m018-intro-text.php' ) );
 
- // module 023.
- include( locate_template( 'modules/m023-team-members.php' ) );
+if ( have_posts() ) :
+    while ( have_posts() ): 
+        the_post();
+        $intro_text = apply_filters( 'the_content', get_the_content() );
+        // module 018.
+        include( locate_template( 'modules/m018-intro-text.php' ) );
 
+        // module 023.
+        include( locate_template( 'modules/m023-team-members.php' ) );
+    endwhile;
+endif;
 ?>
 
 </div>
