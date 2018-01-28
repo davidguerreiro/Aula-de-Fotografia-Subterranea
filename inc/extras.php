@@ -17,6 +17,7 @@ function aula_register_cpt() {
 		'menu_icon' 	=> 'dashicons-format-gallery',
 		'menu_position' => 5,
 		'supports'		=> array( 'title', 'editor', 'thumbnail' ),
+		'taxonomies'	=> array( 'category' ),
     );
 	register_post_type( 'galeria', $args );
 		

@@ -7,8 +7,25 @@
         padding: 10px 0 20px 0;
     }
 
+    &__read-more{
+        width: 137px;
+        margin-left: auto;
+        margin-right: 10px;
+        display: block !important;
+        margin-top: 30px;
+        font-size: 25px;
+
+        i {
+            padding-left: 10px;
+        }
+    }
+
     &__post-data {
         padding-bottom: 15px;
+
+        ul {
+            padding-left: 5px;
+        }
 
         ul li {
             display: inline-block;
@@ -42,5 +59,11 @@
             @include baselink( $fb-background-color );
             @include link-border-animated( $fb-background-color, 0 );
         }
+    }
+
+    &__featured-image{
+        width: 100%;
+        max-width: 820px;
+        height: auto;
     }
 }

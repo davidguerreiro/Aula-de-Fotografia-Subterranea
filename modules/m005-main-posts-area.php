@@ -10,7 +10,7 @@
  $i = 0;
  if ( isset( $home_posts ) && isset( $home_posts_displayed ) && $home_posts->have_posts() ) : ?>
 
-<div class="posts-container posts-container--home">
+<div class="posts-container">
     <?php
         while ( $home_posts->have_posts() && $i < 3 ) {
             $home_posts->the_post();
@@ -21,7 +21,7 @@
                 continue;
             } else {
                 $home_posts_displayed[] = $post_id;
-                get_template_part( 'template-parts/post', 'home-single-item' );
+                get_template_part( 'template-parts/post', 'single-item' );
                 $i++;
             }
             unset( $post_id );
