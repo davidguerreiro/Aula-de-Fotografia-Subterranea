@@ -35,8 +35,10 @@
                 
                 if ( ! empty( $email ) ) : ?>
                     <li>
-                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        <?php echo esc_html( $email ); ?>
+                        <a href="mailto:<?php echo $email; ?>" class="animated-bottom-link" target="_blank">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <?php echo esc_html( $email ); ?>
+                        </a>
                     </li>
                 <?php endif; 
                 

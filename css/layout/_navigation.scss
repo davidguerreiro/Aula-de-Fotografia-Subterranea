@@ -78,3 +78,8 @@
 	color: #808080 !important;
 	cursor: default;
 }
+
+.animated-bottom-link {
+	@include baselink( $fb-background-color );
+	@include link-border-animated( $fb-background-color, 0 );
+}
