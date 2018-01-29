@@ -8,6 +8,12 @@
  * @package aula/modules
  */
 
+ if ( ! isset( $post_id ) ) {
+     $post_id = get_the_ID();
+ }
+
+ $comments = get_approved_comments( $post_id );
+
  ?>
 
  <div class="module m15 m16">
@@ -19,15 +25,14 @@
     <?php
 
     // no comments.
-    $no_content = 'No hay ningun comentario. Animate y se el primero en comentar esta entrada.';
-    include( locate_template( 'template-parts/content-none.php' ) );
-
-    // include comments.
-    get_template_part( 'template-parts/comment', 'single-item' );
-
-    get_template_part( 'template-parts/comment', 'single-item' );
-
-    get_template_part( 'template-parts/comment', 'single-item' );
+    if ( ! is_array( $comments ) || is_wp_error( $comments ) || empty( $comments ) ) {
+        $no_content = 'No hay ningun comentario. Animate y se el primero en comentar esta entrada.';
+        include( locate_template( 'template-parts/content-none.php' ) );
+    } else {
+        foreach ( $comments as $comment ) {
+            include( locate_template( 'template-parts/comment-single-item.php' ) );
+        }
+    }
 
     ?>
 

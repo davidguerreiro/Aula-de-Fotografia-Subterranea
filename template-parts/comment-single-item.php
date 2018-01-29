@@ -6,20 +6,20 @@
  * @package aula/template-parts
  */
 
-$date = date( 'd-m-Y' );
+if ( isset( $comment ) && ! empty( $comment ) ) : ?>
 
-?>
 
 <div class="comment">
     <h3>
         <i class="fa fa-user-circle-o comment__icon" aria-hidden="true"></i>
-         Martin :
+         <?php echo ucfirst( esc_html( $comment->comment_author ) ) ?> :
         <span class="comment__date">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <?php echo $date; ?>
+            <?php echo date( 'd F Y', strtotime( $comment->comment_date ) ); ?>
         </span>
     </h3>
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce egestas posuere fringilla. Curabitur at ullamcorper metus. Quisque eleifend purus eu justo egestas, at feugiat velit fermentum. Etiam eget consectetur purus.
+        <?php echo esc_html( $comment->comment_content ); ?>
     </p>
 </div>
+<?php endif; ?>
