@@ -1,7 +1,4 @@
 <?php
-
-// custom posts types
-
 /**
  * Register CPT
  *
@@ -33,24 +30,6 @@ function aula_register_cpt() {
 }
 
 add_action( 'init', 'aula_register_cpt' );
-
-/**
- * Icons - coming from font awesome
- * 
- * TODO: Add real icon classes.
- * 
- * @param String ( required ) $key
- * @return String icon_class
- */
-function aula_get_icon( $key ) {
-	$icons = array(
-		'galleria' 		=> 'fa-graduation-cap',
-		'aula' 			=> 'fa-graduation-cap',
-		'actividades' 	=> 'fa-graduation-cap',
-	);
-
-	return $icons[ $key ];
-}
 
 /**
  * PHP display all errors
@@ -113,35 +92,17 @@ function aula_get_history_posts() {
  * @return String $icon_class
  */
 function aula_get_page_icon_class( $title ) {
-	$icon_class = 'fa-file-text-o';
+	$icons = array(
+		'galeria' 		=> 'fa-camera-retro',
+		'aula' 			=> 'fa-map-o',
+		'actividades' 	=> 'fa-sun-o',
+		'equipo'		=> 'fa-users',
+		'contacto'		=> 'fa-envelope-o',
+		'search'		=> 'fa-search',
+		'newsletter'	=> 'fa-paper-plane-o',
+	);
 
-	switch ( $title ) {
-		case 'galeria' :
-			$icon_class = 'fa-camera-retro';
-			break;
-		case 'actividades' :
-			$icon_class = 'fa-sun-o';
-			break;
-		case 'aula' :
-			$icon_class = 'fa-map-o';
-			break;
-		case 'equipo' :
-			$icon_class = 'fa-users';
-			break;
-		case 'contacto' :
-			$icon_class = 'fa-envelope-o';
-			break;
-		case 'search' :
-			$icon_class = 'fa-search';
-			break;
-		case 'newsletter' :
-			$icon_class = 'fa-paper-plane-o';
-			break;
-		default : 
-			$icon_class = 'fa-file-text-o';
-			break;
-	}
-
+	$icon_class = ( isset( $icons[ $title ] ) ) ? $icons[ $title ] : 'fa-file-text-o';
 	return $icon_class;
 }
 
@@ -170,3 +131,89 @@ function aula_login_logo() {
 	}
 	
 add_action( 'login_enqueue_scripts', 'aula_login_logo' );
+
+/**
+ * Process contact form and send email to admins
+ * 
+ * @return Array $response
+ */
+function aula_process_contact_form() {
+
+	// correct form validation.
+	if ( ! isset( $_POST['action'] ) || ! isset( $_POST['nonce'] ) || ! isset( $page_id ) ) {
+		return;
+	}
+
+	if ( $_POST['action'] != 'contact-form' || ! wp_verify_nonce( $_POST['nonce'], 'contact-form' ) ) {
+		return;
+	}
+
+	if ( ! isset( $_POST['name'] ) || ! isset( $_POST['message'] ) ) {
+		return;
+	}
+	$page_id = (int) $_POST['page_id'];
+
+	// validate data.
+	$name 		= sanitize_text_field( $_POST['name'] );
+	$message 	= sanitize_text_field( $_POST['message'] );
+	$user_email = ( isset( $_POST['email'] ) && ! empty( $_POST['email'] ) && is_email( $_POST['email'] ) ) ? sanitize_email( $_POST['email'] ) : false;
+
+	if ( empty( $name ) ) {
+		aula_redirect_user( $page_id, 'empty-name' );
+	}
+
+	if ( empty( $message ) ) {
+		aula_redirect_user( $page_id, 'empty-message' );
+	}
+
+	if ( $user_email !== false ) {
+		$name .= ' ( ' . $user_email . ')';
+	}
+	
+	// email only send to admins.
+	$args = array(
+		'role' => 'administrator',
+	);
+	$admins 		= get_users( $args );
+	$admin_emails 	= array();
+	foreach ( $admins as $admin_data ) {
+		$admin_emails[] = $admin_data->user_email;
+	}
+
+	// send email.
+	$to 		= implode( ',', $admin_emails );
+	$subject 	= 'Nuevo mensaje de Aula de Fotografia Subterranea';
+	$headers 	= array( 'Content-Type: text/html; charset=UTF-8' );
+	$body = "
+	 <p>Has recibido un nuevo mensaje de <b>" . $name . "</b> enviado desde la
+	 pagina de contacto de Aula de Fotografia Subterranea.</p>
+	<br/>
+	 <p>'" . $message . "'</p>";
+	
+	if ( wp_mail( $to, $subject, $body, $headers ) !== false ) {
+		aula_redirect_user( $page_id, 'message-sent' );
+	}
+	aula_redirect_user( $page_id, 'error-message' );
+}
+
+add_action( 'init', 'aula_process_contact_form' );
+
+/**
+ * User internal redirection to posts - pages.
+ * Used to send notifications across redirections
+ * after forms are filled, validated and sent.
+ * 
+ * @param int $post_id Post / Page to be redirected. Default 0.
+ * @param String $not Notification to be sent. Default null.
+ * @return void
+ */
+function aula_redirect_user( $post_id = 0, $not = null ) {
+	$base_url ( $post_id > 0 ) ? get_permalink( $post_id ) : get_home_url();
+	
+	if ( ! is_null( $not ) ) {
+		$base_url = add_query_arg( 'not', $not, $base_url );
+	}
+
+	wp_safe_redirect( $base_url );
+	exit;
+}

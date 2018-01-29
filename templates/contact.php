@@ -18,13 +18,19 @@ include( locate_template( 'modules/m017-page-header.php' ) );
 <div class="content-section">
 
 <?php
- 
- // module 018.
- include( locate_template( 'modules/m018-intro-text.php' ) );
+ if ( have_posts() ) :
+    while ( have_posts() ) :
+        the_post();
 
- // module 019.
- include( locate_template( 'modules/m019-contact-form.php' ) );
+        // module 018.
+        $intro_text = apply_filters( 'the_content', get_the_content() );
+        include( locate_template( 'modules/m018-intro-text.php' ) );
 
+        // module 019.
+        include( locate_template( 'modules/m019-contact-form.php' ) );
+    endwhile;
+    wp_reset_postdata();
+endif;
 ?>
 
 </div>
@@ -41,7 +47,7 @@ include( locate_template( 'modules/m017-page-header.php' ) );
 <?php
 
  // module 013.
- include( locate_template( 'modules/013-newsletter-section.php' ) );
+ include( locate_template( 'modules/m013-newsletter-section.php' ) );
 
 ?>
 
