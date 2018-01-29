@@ -9,11 +9,13 @@
 
 ?>
 
-<div class="module notification">
-    <p class="notifications notification__success">
+<div class="module m18">
+    <p class="notification notification__success">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
         Tu mensaje se ha enviado correctamente.
     </p>
-    <p class="notifications notification__error">
+    <p class="notification notification__error">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
         El campo del nombre esta vacion.
     </p>
 </div>

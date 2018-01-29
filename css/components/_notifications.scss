@@ -1,0 +1,17 @@
+
+.notification {
+    font-size: 30px;
+
+    i {
+        font-size: 35px;
+        padding-right: 3px;
+    }
+
+    &__success i {
+        color: $green;
+    }
+
+    &__error i {
+        color: $red;
+    }
+}

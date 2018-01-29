@@ -1318,6 +1318,16 @@ html, body {
     line-height: 1.3;
     padding-bottom: 12px; }
 
+.notification {
+  font-size: 30px; }
+  .notification i {
+    font-size: 35px;
+    padding-right: 3px; }
+  .notification__success i {
+    color: #008000; }
+  .notification__error i {
+    color: #c71515; }
+
 .newsletter-return-link {
   margin-top: 25px; }
 
