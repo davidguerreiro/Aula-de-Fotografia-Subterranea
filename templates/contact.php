@@ -21,7 +21,8 @@ include( locate_template( 'modules/m017-page-header.php' ) );
  if ( have_posts() ) :
     while ( have_posts() ) :
         the_post();
-
+        // module 028.
+        include( locate_template( 'modules/m028-notifications.php' ) );
         // module 018.
         $intro_text = apply_filters( 'the_content', get_the_content() );
         include( locate_template( 'modules/m018-intro-text.php' ) );

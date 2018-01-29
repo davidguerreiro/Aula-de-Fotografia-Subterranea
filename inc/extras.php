@@ -217,3 +217,36 @@ function aula_redirect_user( $post_id = 0, $not = null ) {
 	wp_safe_redirect( $base_url );
 	exit;
 }
+
+/**
+ * Display user notification
+ * 
+ * @param String ( required ) $key Notification key
+ * @return Array $not_data
+ */
+function aula_display_user_notification( $key ) {
+	$not_data = array(
+		'message' 	=> '',
+		'type' 		=> 'error',
+	);
+
+	switch( $key ) {
+		case 'empty-name' :
+			$not_data['message'] = 'El campo del nombre es obligatorio';
+			break;
+		case 'empty-message' :
+			$not_data['message'] = 'El campo del mensaje es obligatorio';
+			break;
+		case 'error-message' :
+			$not_data['message'] = 'Ha habido un error en el servidor. Prueba a mandar el mensaje otra vez y si el error persiste contacte via email con el adminsitrador del sitio';
+			break;
+		case 'message-sent' :
+			$not_data['message'] = 'Su mensaje se ha enviado con exito';
+			$not_data['type']	 = 'success';
+			break;
+		default :
+			$not_data['message'] = 'Ha habido un error en el servidor. Prueba a mandar el mensaje otra vez y si el error persiste contacte via email con el adminsitrador del sitio';
+			break;
+	}
+	return $not_data;
+}  

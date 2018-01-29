@@ -71,7 +71,8 @@
                     </li>
                 <?php endif; ?>
                 <li>
-                    <i class="fa fa-comment-o icon" aria-hidden="true"></i> 5
+                    <i class="fa fa-comment-o icon" aria-hidden="true"></i>
+                    <?php echo ' ' .  count( $comments ); ?>
                 </li>
             </ul>
         </section>

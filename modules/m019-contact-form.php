@@ -6,8 +6,8 @@
  * @package aula/modules
  */
  
- $page_id = get_queried_object_id();
- $nonce = wp_create_nonce( 'contact-form' );
+ $page_id   = get_queried_object_id();
+ $nonce     = wp_create_nonce( 'contact-form' );
 
  ?>
 
