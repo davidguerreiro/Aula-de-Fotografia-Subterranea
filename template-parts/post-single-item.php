@@ -58,6 +58,10 @@
         <section class="post-wrapper__post-data">
             <ul>
                 <li>
+                    <i class="fa fa-pencil icon" aria-hidden="true"></i>
+                    <?php echo get_the_author(); ?>
+                </li>
+                <li>
                     <i class="fa fa-clock-o icon" aria-hidden="true"></i>
                     <?php echo get_the_date(); ?>
                 </li>

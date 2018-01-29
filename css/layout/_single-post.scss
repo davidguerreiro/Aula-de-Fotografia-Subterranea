@@ -53,6 +53,7 @@
 
         img {
             @include auto-block;
+            @include general-content-images( $max-image-width )
         }
 
         a {
@@ -62,8 +63,6 @@
     }
 
     &__featured-image{
-        width: 100%;
-        max-width: 820px;
-        height: auto;
+        @include general-content-images( $max-image-width );
     }
 }
