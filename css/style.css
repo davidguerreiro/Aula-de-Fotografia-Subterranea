@@ -1319,7 +1319,8 @@ html, body {
     padding-bottom: 12px; }
 
 .notification {
-  font-size: 30px; }
+  font-size: 30px;
+  padding-top: 50px; }
   .notification i {
     font-size: 35px;
     padding-right: 3px; }
