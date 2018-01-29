@@ -7,15 +7,23 @@
  * @package aula/modules
  */
 
+if ( isset( $_GET['not'] ) && ! empty( $_GET['not']) ) :
+    $not_data = aula_display_user_notification( $_GET['not'] );
+     
+    if ( $not_data['type'] ==  'error' ) {
+        $class  = 'notification__error';
+        $icon   = 'fa-times-circle';
+    } else {
+        $class  = 'notification__success';
+        $icon   = 'fa-check-circle';
+    }
+
 ?>
 
 <div class="module m18">
-    <p class="notification notification__success">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
-        Tu mensaje se ha enviado correctamente.
-    </p>
-    <p class="notification notification__error">
-        <i class="fa fa-times-circle" aria-hidden="true"></i>
-        El campo del nombre esta vacion.
+    <p class="notification <?php echo $class; ?>">
+        <i class="fa <?php echo $icon; ?>" aria-hidden="true"></i>
+        <?php echo $not_data['message']; ?>
     </p>
 </div>
+<?php endif; ?>

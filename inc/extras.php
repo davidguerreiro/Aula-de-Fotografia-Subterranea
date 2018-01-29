@@ -140,18 +140,18 @@ add_action( 'login_enqueue_scripts', 'aula_login_logo' );
 function aula_process_contact_form() {
 
 	// correct form validation.
-	if ( ! isset( $_POST['action'] ) || ! isset( $_POST['nonce'] ) || ! isset( $page_id ) ) {
+	if ( ! isset( $_POST['action'] ) || ! isset( $_POST['nonce'] ) || ! isset( $_POST['page-id'] ) ) {
 		return;
 	}
 
 	if ( $_POST['action'] != 'contact-form' || ! wp_verify_nonce( $_POST['nonce'], 'contact-form' ) ) {
-		return;
+		aula_redirect_user( $_POST['page-id'] );
 	}
 
 	if ( ! isset( $_POST['name'] ) || ! isset( $_POST['message'] ) ) {
-		return;
+		aula_redirect_user( $_POST['page-id'] );
 	}
-	$page_id = (int) $_POST['page_id'];
+	$page_id = (int) $_POST['page-id'];
 
 	// validate data.
 	$name 		= sanitize_text_field( $_POST['name'] );
@@ -177,7 +177,7 @@ function aula_process_contact_form() {
 	$admins 		= get_users( $args );
 	$admin_emails 	= array();
 	foreach ( $admins as $admin_data ) {
-		$admin_emails[] = $admin_data->user_email;
+		$admin_emails[] = $admin_data->data->user_email;
 	}
 
 	// send email.
@@ -208,7 +208,7 @@ add_action( 'init', 'aula_process_contact_form' );
  * @return void
  */
 function aula_redirect_user( $post_id = 0, $not = null ) {
-	$base_url ( $post_id > 0 ) ? get_permalink( $post_id ) : get_home_url();
+	$base_url = ( $post_id > 0 ) ? get_permalink( $post_id ) : get_home_url();
 	
 	if ( ! is_null( $not ) ) {
 		$base_url = add_query_arg( 'not', $not, $base_url );
