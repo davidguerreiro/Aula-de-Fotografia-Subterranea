@@ -14,7 +14,10 @@ if ( have_posts() ) : ?>
 <?php while( have_posts() ) :
         the_post();
         $post_id = get_the_ID();
-        
+
+        // module 028.
+        include( locate_template( 'modules/m028-notifications.php' ) );
+
         // post content
         get_template_part( 'template-parts/content', 'post' );
 
