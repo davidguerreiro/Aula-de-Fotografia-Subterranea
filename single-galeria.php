@@ -16,18 +16,26 @@
  <div class="content-section">
 
  <?php
- 
- // module 018.
- include( locate_template( 'modules/m018-intro-text.php' ) );
 
- // module 020.
- include( locate_template( 'modules/m020-gallery-body.php' ) );
+ if ( have_posts() ) :
+    while ( have_posts() ) :
+        the_post();
+        
+        // module 018.
+        $intro_text = get_the_content();
+        include( locate_template( 'modules/m018-intro-text.php' ) );
 
- // module 015.
- include( locate_template( 'modules/m015-add-comment.php' ) );
+        // module 020.
+        include( locate_template( 'modules/m020-gallery-body.php' ) );
 
- // comments section.
- include( locate_template( 'comments.php' ) );
+        // module 015.
+        include( locate_template( 'modules/m015-add-comment.php' ) );
+
+        // comments section.
+        include( locate_template( 'comments.php' ) );
+
+    endwhile;
+endif;
 
  ?>
  </div>

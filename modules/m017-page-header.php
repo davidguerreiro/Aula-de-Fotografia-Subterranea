@@ -32,8 +32,12 @@
      // search page.
      $title      = 'Resultados de busqueda';
      $icon_class = aula_get_page_icon_class( 'search' );
+ } else if ( is_singular( 'galeria' ) ) {
+     // single gallery post page.
+     $post_id       = get_queried_object_id();
+     $title         = get_the_title( $post_id);
+     $icon_class    = aula_get_page_icon_class( 'galeria' );
  }
-
  ?>
 
 <div class="module m17">

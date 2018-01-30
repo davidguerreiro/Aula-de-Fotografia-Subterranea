@@ -8,55 +8,26 @@
  * @package aula/modules
  */
 
- $url = "http://lorempixel.com/500/300";
+ // $url = "http://lorempixel.com/500/300";
 
- ?>
+ $images = get_field( 'fotos' );
+
+ if ( ! empty( $images ) ) : ?>
 
 <div class="module m20">
 
     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
-            <a href="http://lorempixel.com/500/300/sports/david" itemprop="contentUrl" data-size="600x400">
-                <img src="http://lorempixel.com/500/300/sports/david" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description"></figcaption>
-        </figure>
-
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
-            <a href="http://lorempixel.com/500/300/sports/david2" itemprop="contentUrl" data-size="600x400">
-                <img src="http://lorempixel.com/500/300/sports/david2" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description"></figcaption>
-        </figure>
-
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
-            <a href="http://lorempixel.com/500/300" itemprop="contentUrl" data-size="600x400">
-                <img src="http://lorempixel.com/500/300" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description"></figcaption>
-        </figure>
-
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
-            <a href="http://lorempixel.com/500/300" itemprop="contentUrl" data-size="600x400">
-                <img src="http://lorempixel.com/500/300" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description"></figcaption>
-        </figure>
-
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
-            <a href="http://lorempixel.com/500/300" itemprop="contentUrl" data-size="600x400">
-                <img src="http://lorempixel.com/500/300" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description"></figcaption>
-        </figure>
-
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
-            <a href="http://lorempixel.com/500/300" itemprop="contentUrl" data-size="600x400">
-                <img src="http://lorempixel.com/500/300" itemprop="thumbnail" alt="Image description" />
-            </a>
-            <figcaption itemprop="caption description"></figcaption>
-        </figure>
+        <?php foreach ( $images as $image ) : ?>
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
+                <a href="<?php echo $image['imagen']['sizes']['large']; ?>" itemprop="contentUrl" data-size="600x400">
+                    <img src="<?php echo $image['imagen']['sizes']['thumbnail']; ?>" itemprop="thumbnail" alt="<?php echo $image['titulo']; ?>" />
+                </a>
+                <figcaption itemprop="caption description">
+                    <?php echo $image['titulo']; ?>
+                </figcaption>
+            </figure>
+        <?php endforeach; ?>
 
     </div>
 
@@ -127,3 +98,13 @@
         </div>
 
 </div>
+<?php endif; ?>
+
+<!--
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="my-gallery__item">
+            <a href="http://lorempixel.com/500/300/sports/david" itemprop="contentUrl" data-size="600x400">
+                <img src="http://lorempixel.com/500/300/sports/david" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description"></figcaption>
+        </figure>
+-->
