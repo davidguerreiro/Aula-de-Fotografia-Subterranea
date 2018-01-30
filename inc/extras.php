@@ -145,7 +145,7 @@ function aula_process_contact_form() {
 	}
 
 	if ( $_POST['action'] != 'contact-form' || ! wp_verify_nonce( $_POST['nonce'], 'contact-form' ) ) {
-		aula_redirect_user( $_POST['page-id'] );
+		return;
 	}
 
 	if ( ! isset( $_POST['name'] ) || ! isset( $_POST['message'] ) ) {
@@ -244,9 +244,58 @@ function aula_display_user_notification( $key ) {
 			$not_data['message'] = 'Su mensaje se ha enviado con exito';
 			$not_data['type']	 = 'success';
 			break;
+		case 'comment-published' : 
+			$not_data['message'] = 'Su comentario ha sido publicado con exito';
+			$not_data['type']    = 'success';
+			break;
 		default :
 			$not_data['message'] = 'Ha habido un error en el servidor. Prueba a mandar el mensaje otra vez y si el error persiste contacte via email con el adminsitrador del sitio';
 			break;
 	}
 	return $not_data;
-}  
+}
+
+/**
+ * Process comment form. Adds
+ * comment if successfull
+ * 
+ * @return void
+ */
+function aula_process_comment_form() {
+	if ( ! isset( $_POST['action'] ) || ! isset( $_POST['nonce'] ) || ! isset( $_POST['post-id'] ) || ! isset( $_POST['name'] ) || ! isset( $_POST['message'] ) ) {
+		return;
+	}
+
+	if ( $_POST['action'] !== 'comment-form' || ! wp_verify_nonce( $_POST['nonce'], 'comment-form' ) ) {
+		return;
+	}
+	$post_id = (int) $_POST['post-id'];
+
+	if ( empty( $_POST['name'] ) ) {
+		aula_redirect_user( $post_id, 'empty-name' );
+	}
+
+	if ( empty( $_POST['message'] ) ) {
+		aula_redirect_user( $post_id, 'empty-message' );
+	}
+
+	$name 		= sanitize_text_field( $_POST['name'] );
+	$content 	= sanitize_text_field( $_POST['message'] );
+
+	// insert comment into database.
+	$time = current_time( 'mysql' );
+	$args = array(
+		'comment_post_ID' => $post_id,
+		'comment_author'	=> $name,
+		'comment_content' 	=> $content,
+		'comment_date'		=> $time,
+		'comment_approved'	=> 1,
+	);
+
+	if ( wp_insert_comment( $args ) !== false ) {
+		aula_redirect_user( $post_id, 'comment-published' );
+	}
+	aula_redirect_user( $post_id, 'error-message' );
+}
+
+add_action( 'init', 'aula_process_comment_form' );

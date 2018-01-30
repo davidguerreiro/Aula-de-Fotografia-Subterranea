@@ -26,4 +26,8 @@ if ( isset( $_GET['not'] ) && ! empty( $_GET['not']) ) :
         <?php echo $not_data['message']; ?>
     </p>
 </div>
-<?php endif; ?>
+<?php
+unset( $not_data );
+unset( $class );
+unset( $icon );
+endif; ?>
