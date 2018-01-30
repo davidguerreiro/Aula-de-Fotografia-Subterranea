@@ -299,3 +299,20 @@ function aula_process_comment_form() {
 }
 
 add_action( 'init', 'aula_process_comment_form' );
+
+/**
+ * pre_get_posts function for aula
+ * theme
+ * 
+ * @param Object ( required ) $query
+ * @return Object $query
+ */
+function aula_pre_get_posts( $query ) {
+	if ( ! is_admin() && $query->is_main_query() && $query->is_search() ) {
+		$query->set( 'post_type', array( 'post', 'page', 'galeria' ) );
+		$query->set( 'posts_per_page', -1 );
+	}
+	return $query;
+}
+
+add_action( 'pre_get_posts', 'aula_pre_get_posts' );

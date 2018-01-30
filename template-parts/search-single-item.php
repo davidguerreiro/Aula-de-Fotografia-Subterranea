@@ -8,6 +8,7 @@
  */
 
  $post_date = date( 'd-m-Y' );
+ $post_id = get_the_ID();
 
  ?>
 
