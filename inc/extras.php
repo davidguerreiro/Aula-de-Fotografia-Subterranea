@@ -100,6 +100,8 @@ function aula_get_page_icon_class( $title ) {
 		'contacto'		=> 'fa-envelope-o',
 		'search'		=> 'fa-search',
 		'newsletter'	=> 'fa-paper-plane-o',
+		'post'			=> 'fa-thumb-tack',
+		'page'			=> 'fa-file-text-o',
 	);
 
 	$icon_class = ( isset( $icons[ $title ] ) ) ? $icons[ $title ] : 'fa-file-text-o';
