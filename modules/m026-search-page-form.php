@@ -14,7 +14,7 @@
  ?>
 
  <div class="module m26">
-    <form action="" method="get" class="<?php echo $form_class; ?>">
+    <form action="<?php echo get_home_url(); ?>" method="get" class="<?php echo $form_class; ?>">
         <input type="hidden" name="nonce" value="<?php echo $nonce; ?>">
         <input type="search" name="s" value="<?php echo $s_term; ?>"
         class="<?php echo $text_input_class; ?>" 
