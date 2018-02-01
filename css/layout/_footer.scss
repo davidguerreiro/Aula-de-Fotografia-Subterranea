@@ -5,7 +5,7 @@
     overflow: hidden;
     clear: both;
     /*background-color: #F6F0FF;*/
-    background-color: #423e3e;
+    background-color: $black-brown-4;
     color: $white;
 
     &__section {
@@ -18,11 +18,11 @@
             li {
                 padding: 10px;
 
-                a {
-                    color: $footer-link;
+                .author-a {
+                    color: $brown-2;
                     text-decoration: none;
                     display: inline-block;
-                    @include link-border-animated( $footer-link, 0 );
+                    @include link-border-animated( $brown-2, 0 );
                 }
             }
         }
@@ -30,6 +30,27 @@
         p {
             padding: 20px;
             text-align: center;
+        }
+    }
+
+    &__social-links {
+        width : 200px;
+        margin-left: auto;
+
+        li {
+            display: inline-block;
+
+            .social-a {
+                color: white;
+                font-size: 36px;
+                display: inline-block;
+                padding-right: 15px;
+                @include do-transition( color );
+
+                &:hover {
+                    color: $brown-1;
+                }
+            }
         }
     }
 

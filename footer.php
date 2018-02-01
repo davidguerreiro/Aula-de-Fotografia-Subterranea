@@ -18,26 +18,32 @@ $legal_page_link        = ( ! empty( $legal_page ) && ! is_null( $legal_page ) )
                     <ul>
                         <li>
                             Administrado por 
-                            <a href="https://www.facebook.com/angelavelinor" target="_blank">Angel Cascallana</a>
+                            <a href="https://www.facebook.com/angelavelinor" target="_blank" class="author-a">Angel Cascallana</a>
                         </li>
                         <li>
                             Desarrollado por
-                            <a href="https://github.com/davidguerreiro" target="_blank">David Guerreiro</a>
+                            <a href="https://github.com/davidguerreiro" target="_blank" class="author-a">David Guerreiro</a>
                         </li>
                         <?php if ( ! empty( $legal_page_link ) ) : ?>
                             <li>
-                                <a href="<?php echo $legal_page_link; ?>" target="_blank">Aviso Legal</a>
+                                <a href="<?php echo $legal_page_link; ?>" target="_blank" class="author-a">Aviso Legal</a>
                             </li>
                         <?php endif; ?>
                     </ul>
                 </section>
                 <section class="main-footer__section">
-                    <p>
-                        This is an open source project. Collaborate with us on Github !
-                    </p>
-                    <a href="https://github.com/davidguerreiro/Aula-de-Fotografia-Subterranea" class="git-link" title="Collaborate with us!" target="_blank">
-                        <i class="fa fa-github-alt" aria-hidden="true"></i>
-                    </a>
+                    <ul class="main-footer__social-links">
+                        <li>
+                            <a href="" target="_blank" class="social-a">
+                                <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank" class="social-a">
+                                <i class="fa fa-github-alt" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </section>
                 <section class="main-footer__bottom-section">
                     <?php if ( ! empty( $logo_image_url ) ) : ?>

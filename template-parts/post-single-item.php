@@ -81,7 +81,9 @@
             </ul>
         </section>
         <?php if ( ! empty( $featured_post_image ) ) : ?>
+        <a href="<?php the_permalink(); ?>">
             <img src="<?php echo $featured_post_image; ?>" alt="" class="post-wrapper__featured-image">
+        </a>
         <?php endif; ?>
         <section class="post-wrapper__post-content">
             <p>
