@@ -754,7 +754,7 @@ html, body {
     width: 50%;
     float: left; }
     .main-footer__section ul {
-      padding: 15px; }
+      padding: 25px 15px 15px 15px; }
       .main-footer__section ul li {
         padding: 10px; }
         .main-footer__section ul li .author-a {
@@ -801,7 +801,7 @@ html, body {
     .main-footer__bottom-section p {
       width: 100%;
       text-align: center;
-      padding: 14px 0;
+      padding: 14px 0 25px 0;
       line-height: 1.4; }
 
 .git-link {
