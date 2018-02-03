@@ -11,11 +11,22 @@
         float: right;
     }
 
+    @media screen and ( max-width: 970px ) {
+		&__section--icon {
+            width: 100px;
+        }
+	}
+
     &__title-content {
         @include float-container;
         float: left;
         width: 25%;
         min-width: 320px;
+
+        @media screen and ( max-width: 450px ) {
+            min-width: 220px;
+            padding-bottom: 11px;
+        }
 
         img, h1 {
             float: left;
@@ -25,12 +36,21 @@
             width:  160px;
             vertical-align:  top;
             font-size: 30px;
+
+            @media screen and ( max-width: 450px ) {
+                width: 90px;
+                font-size: 19px;
+            }
         }
 
         img {
             width: 130px;
             height: auto;
             padding: 8px 8px 0 8px;
+
+            @media screen and ( max-width: 450px ) {
+                width: 90px;
+            }
         }
     }
 }

@@ -63,6 +63,10 @@
 			outline: 0;
 			border-bottom-color: $form-pink;
 		}
+
+		@media screen and ( max-width: 565px ) {
+			width: 300px;
+		}
 	}
 
 	&__submit-input {
@@ -116,6 +120,10 @@
 
 		&:hover {
 			background-color: $form-pink;
+		}
+
+		@media screen and ( max-width: 1200px ) {
+			margin: 15px 0 0 24px;
 		}
 	}
 }

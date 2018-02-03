@@ -3,6 +3,10 @@
     padding: $general-margin-padding;
     max-width: 950px;
 
+    @media screen and ( min-width: 1400px ) {
+        padding-left: 70px;
+    }
+
     &__post-title {
         font-size: 40px;
         padding: 10px 0 20px 0;
@@ -31,6 +35,11 @@
         ul li {
             display: inline-block;
             margin-right: 15px;
+
+            @media screen and ( max-width: 450px ) {
+                display: block;
+                padding-bottom: 8px;
+            }
 
             .icon {
                 margin-right: 3px;

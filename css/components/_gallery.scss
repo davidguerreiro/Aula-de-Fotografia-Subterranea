@@ -5,9 +5,24 @@
     &__item {
         float: left;
 
+        a {
+            @include do-transition( opacity );
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
         img {
             width: 200px;
             height: auto;
+        }
+
+        @media screen and ( max-width: 570px ) {
+            float: none;
+            display: block;
+            width: 200px;
+            margin: 20px auto 30px auto;
         }
     }
 }

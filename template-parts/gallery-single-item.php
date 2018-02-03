@@ -33,18 +33,18 @@
                 <?php echo count( $comments ); ?>
            </li>
         </ul>
+        <?php if ( ! empty( $featured_post_image ) ) : ?>
+            <div class="gallery-item__section gallery-item__section--image">
+                <a href="<?php echo $permalink; ?>">
+                    <img src="<?php echo $featured_post_image; ?>" alt="" class="gallery-item__image">
+                </a>
+            </div>
+        <?php endif; ?>
         <p class="gallery-item__description">
         </p>
-        <a href="<?php echo $permalink; ?>" class="read-link">
+        <a href="<?php echo $permalink; ?>" class="gallery-item__view-link">
             Ver Galeria
             <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
      </div>
-     <?php if ( ! empty( $featured_post_image ) ) : ?>
-        <div class="gallery-item__section gallery-item__section--image">
-            <a href="<?php echo $permalink; ?>">
-                <img src="<?php echo $featured_post_image; ?>" alt="" class="gallery-item__image">
-            </a>
-        </div>
-    <?php endif; ?>
  </article>

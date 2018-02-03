@@ -11,4 +11,11 @@
             @include link-border-animated( $fb-background-color, 0 );
         }
     }
+
+    img {
+        display: block;
+        width: 90%;
+        height: auto;
+        margin: $auto;
+    }
 }

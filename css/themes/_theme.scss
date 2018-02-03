@@ -10,6 +10,7 @@
     @media screen and ( max-width: 1400px ) {
         width: 70%;
     }
+
 }
 
 .sidebar {
@@ -19,6 +20,12 @@
 
     @media screen and ( max-width: 1400px ) {
         width: 30%;
+    }
+}
+
+@media screen and ( max-width: 900px ) {
+    .content-section, .sidebar {
+        @include non-float-anymore;
     }
 }
 

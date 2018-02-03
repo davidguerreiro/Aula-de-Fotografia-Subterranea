@@ -65,6 +65,10 @@
                     <i class="fa fa-clock-o icon" aria-hidden="true"></i>
                     <?php echo get_the_date(); ?>
                 </li>
+                <li>
+                    <i class="fa fa-comment-o icon" aria-hidden="true"></i>
+                    <?php echo ' ' .  count( $comments ); ?>
+                </li>
                 <?php if ( ! empty( $categories ) && is_array( $categories ) && ! is_wp_error( $categories ) ) : 
                     $cat_icon = aula_get_page_icon_class( $categories[0]->slug ); ?>
                     <li>
@@ -74,10 +78,6 @@
                         </a>
                     </li>
                 <?php endif; ?>
-                <li>
-                    <i class="fa fa-comment-o icon" aria-hidden="true"></i>
-                    <?php echo ' ' .  count( $comments ); ?>
-                </li>
             </ul>
         </section>
         <?php if ( ! empty( $featured_post_image ) ) : ?>

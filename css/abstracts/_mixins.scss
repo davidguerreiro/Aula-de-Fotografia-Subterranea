@@ -102,3 +102,10 @@
     max-width: $max-width;
     height: auto;
 }
+
+// display previous float elements as a non-float elements
+@mixin non-float-anymore {
+    float: none;
+    display: block;
+    width: 100%;
+}

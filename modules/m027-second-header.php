@@ -27,7 +27,7 @@ $args = array(
             </h1>
         </div>
     </a>
-    <div class="m27__section">
+    <div class="m27__section m27__section--icon">
         <?php echo wp_nav_menu( $args ); ?>
         <span id="mobile-menu-icon" class="mobile-menu-icon-wrapper">
             <i class="fa fa-bars" aira-hidden="true"></i>
