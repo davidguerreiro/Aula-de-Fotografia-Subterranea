@@ -1,6 +1,10 @@
 .search-item {
     margin: 0 0 30px 35px;
 
+    @media screen and ( max-width: 540px ) {
+        width: 80%;
+    }
+
     &__wrapper-link {
         display: block;
         text-decoration: none;

@@ -87,6 +87,13 @@
 		width: 50%;
 		margin: 0 auto;
 		margin: 30px auto 60px auto;
+
+		@media screen and ( max-width: 1066px ) {
+			.btn-search-page-submit {
+				margin: 15px 0 0 39px !important;
+			}
+		}
+
 	}
 
 
@@ -101,6 +108,10 @@
 
 		&:hover, &:focus {
 			border-color: $black;
+		}
+
+		@media screen and ( max-width: 740px ) {
+			width: 200px;
 		}
 	}
 
