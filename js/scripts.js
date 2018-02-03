@@ -243,22 +243,33 @@ $(document).ready( function() {
     }
 
     // Sidebar history.
-    $('.year-parent').click( function(){
+    $('.year-parent').click(function(){
         const year = $(this).data('year');
         const $month_list = $('#' + year + '-months');
         do_slide( $month_list );
     });
 
-    $('.month').click( function(){
+    $('.month').click(function(){
         const month = $(this).data('month');
         const $posts_list = $('#' + month );
         do_slide( $posts_list );
     });
 
     // disable link
-    $('.link-disabled').click( function(e){
+    $('.link-disabled').click(function(e){
         e.preventDefault();
      });
+
+     // open - close mobile menu.
+     $('#mobile-menu-icon').on('click', function(e){
+        $mobile_section = $('.mobile-menu');
+        console.log( 'yolo' );
+        if ( $mobile_section.css('display') === 'none') {
+            $mobile_section.slideDown();
+        } else {
+            $mobile_section.slideUp();
+        }
+     });  
 
   
 });

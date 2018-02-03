@@ -29,5 +29,8 @@
  // module 003.
  // include( locate_template( 'modules/m003-main-menu.php' ) );      
 
- // test new header.
+ // final header - module 28.
 include( locate_template( 'modules/m027-second-header.php' ) );
+
+// mobile menu module - module 29.
+include( locate_template( 'modules/m028-mobile-menu.php' ) );

@@ -5,13 +5,21 @@
 
 .content-section {
     float: left;
-    width: 70%;
+    width: calc( 100% - 420px );
+
+    @media screen and ( max-width: 1400px ) {
+        width: 70%;
+    }
 }
 
 .sidebar {
-    float: left;
-    width: 30%;
+    float: right;
     background-color: $mobile-menu-background-color;
+    width: 420px;
+
+    @media screen and ( max-width: 1400px ) {
+        width: 30%;
+    }
 }
 
 .content-section, .sidebar {

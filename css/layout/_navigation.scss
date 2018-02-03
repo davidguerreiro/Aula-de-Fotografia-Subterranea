@@ -52,6 +52,10 @@
 }
 
 .main-menu {
+
+	@media screen and ( max-width: 970px ) {
+		display: none;
+	}
 	ul {
 		width: 500px;
 		margin: 0 80px 0 auto;
@@ -84,4 +88,82 @@
 .animated-bottom-link {
 	@include baselink( $fb-background-color );
 	@include link-border-animated( $fb-background-color, 0 );
+}
+
+.mobile-menu-icon-wrapper {
+	padding: 16px;
+    border: 2px solid;
+    margin: 39px 47px 0 auto;
+    display: block;
+	width: 15px;
+	display: none;
+
+	&__activated {
+		background-color: $black;
+
+		i {
+			color: $white;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+
+    @keyframes shake {
+        10%, 90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+        
+        20%, 80% {
+          transform: translate3d(2px, 0, 0);
+        }
+      
+        30%, 50%, 70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+      
+        40%, 60% {
+          transform: translate3d(4px, 0, 0);
+        }
+      }
+
+	@media screen and ( max-width: 970px ) {
+		display: block;
+	}	
+}
+
+.mobile-menu {
+	display: none;
+	ul {
+		background-color: $black;
+		width: 100%;
+		@include float-container;
+
+		li {
+			float: left;
+
+			@media screen and ( max-width: 600px ) {
+				float: none;
+				display: block;
+			}
+
+			a {
+				display: block;
+				padding: 20px;
+				color: $white;
+				text-decoration: none;
+				@include do-transition( background-color );
+
+				&:hover {
+					background-color: $hover-menu;
+				}
+				
+			}
+		}
+	}
 }

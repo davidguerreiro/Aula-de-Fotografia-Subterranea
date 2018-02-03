@@ -29,5 +29,12 @@ $args = array(
     </a>
     <div class="m27__section">
         <?php echo wp_nav_menu( $args ); ?>
+        <span id="mobile-menu-icon" class="mobile-menu-icon-wrapper">
+            <i class="fa fa-bars" aira-hidden="true"></i>
+        </span>
     </div>
 </div>
+<?php
+unset( $logo_image_url );
+unset( $site_title );
+unset( $args );
