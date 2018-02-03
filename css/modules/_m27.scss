@@ -1,6 +1,6 @@
 .m27 {
     @include float-container;
-    max-width: $content-max-width;
+    width: 100%;
 
     &__title-link {
         color: $black;

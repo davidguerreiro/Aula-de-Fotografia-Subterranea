@@ -977,6 +977,8 @@ html, body {
   text-decoration: none; }
 
 .main-menu ul {
+  width: 500px;
+  margin: 0 80px 0 auto;
   padding-top: 28px; }
   .main-menu ul li {
     display: inline-block; }
@@ -2009,7 +2011,7 @@ ul, li {
 .m27 {
   overflow: hidden;
   clear: both;
-  max-width: 1400px; }
+  width: 100%; }
   .m27__title-link {
     color: #000000; }
   .m27__section {
