@@ -7,9 +7,10 @@
  */
 
 $logo_image_url         = wp_get_attachment_url( 1267 );
-$year                   = date( 'Y' );
 $legal_page             = get_page_by_title( 'Aviso Legal' );
 $legal_page_link        = ( ! empty( $legal_page ) && ! is_null( $legal_page ) ) ? get_permalink( $legal_page ) : '';
+$face_link              = get_field( 'facebook_link', 'option' );
+$git_link               = get_field( 'github_link', 'option' );
 
  ?>
 
@@ -33,16 +34,21 @@ $legal_page_link        = ( ! empty( $legal_page ) && ! is_null( $legal_page ) )
                 </section>
                 <section class="main-footer__section">
                     <ul class="main-footer__social-links">
+                    <?php if ( ! empty( $face_link ) ) : ?>
                         <li>
-                            <a href="" target="_blank" class="social-a">
+                            <a href="<?php echo esc_url( $face_link ); ?>" target="_blank" class="social-a">
                                 <i class="fa fa-facebook-f" aria-hidden="true"></i>
                             </a>
                         </li>
+                    <?php endif; 
+                    
+                    if ( ! empty( $git_link ) ) : ?>
                         <li>
-                            <a href="" target="_blank" class="social-a">
+                            <a href="<?php echo esc_html( $git_link ); ?>" target="_blank" class="social-a">
                                 <i class="fa fa-github-alt" aria-hidden="true"></i>
                             </a>
                         </li>
+                    <?php endif; ?>
                     </ul>
                 </section>
                 <section class="main-footer__bottom-section">
@@ -50,9 +56,9 @@ $legal_page_link        = ( ! empty( $legal_page ) && ! is_null( $legal_page ) )
                         <img src="<?php echo $logo_image_url; ?>" alt="">
                     <?php endif; ?>
                     <p>
-                        Aula de Fotografia Subterranea
+                        Aula de Fotografía Subterránea
                         </br>
-                        &copy; 2014 - <?php echo $year; ?>
+                        &copy; 2014 - <?php echo date( 'Y' ); ?>
                     </p>
 
                 </section>
