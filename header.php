@@ -6,8 +6,6 @@
  * @package aula
  */
 
- aula_php_display_all_errors();
-
  ?>
 
 <!DOCTYPE html>

@@ -60,6 +60,8 @@ add_action( 'init', 'aula_init_menus' );
  * @return Array $data
  */
 function aula_get_history_posts() {
+	// display months in Spanish.
+	setlocale( LC_ALL, "es_ES", 'Spanish_Spain', 'Spanish' );
 	$data 	= array();
 	$args 	= array(
 		'post_type' 		=> array( 'post', 'galeria' ),
@@ -77,7 +79,7 @@ function aula_get_history_posts() {
 			'title' 	=> get_the_title(),
 			'permalink' => get_permalink(),
 		);
-		$data[ date( 'Y', $parsed_date ) ][ date( 'F', $parsed_date ) ][] = $post_data;
+		$data[ date( 'Y', $parsed_date ) ][ iconv('ISO-8859-2', 'UTF-8', strftime( '%B', $parsed_date ) ) ][] = $post_data;
 	}
 	wp_reset_postdata();
 	return $data;
