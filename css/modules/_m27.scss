@@ -15,7 +15,13 @@
 		&__section--icon {
             width: 100px;
         }
-	}
+    }
+    
+    @media screen and ( max-width: 550px ) {
+        &__section--icon {
+            width: 70px;
+        }
+    }
 
     &__title-content {
         @include float-container;

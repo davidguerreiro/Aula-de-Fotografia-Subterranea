@@ -1538,6 +1538,10 @@ ul, li {
     .m2__video {
       max-height: 600px; } }
 
+@media screen and (max-width: 580px) {
+  .m2 {
+    display: none; } }
+
 .m3__main-menu {
   overflow: hidden;
   clear: left;
@@ -1940,7 +1944,7 @@ ul, li {
     color: #000000; }
     .m13__section h3 {
       font-size: 30px;
-      width: 400px;
+      width: 100%;
       text-align: center;
       padding: 30px 0;
       margin: 0 auto; }
@@ -2186,6 +2190,9 @@ ul, li {
   @media screen and (max-width: 970px) {
     .m27__section--icon {
       width: 100px; } }
+  @media screen and (max-width: 550px) {
+    .m27__section--icon {
+      width: 70px; } }
   .m27__title-content {
     overflow: hidden;
     clear: both;
