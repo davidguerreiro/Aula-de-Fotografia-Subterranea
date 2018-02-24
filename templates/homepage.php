@@ -25,15 +25,12 @@ include( locate_template( 'modules/m002-header-video.php' ) );
 
 // posts to be displayed across de homepage modules.
 $args = array(
-    'post_type'         => array( 'post', 'galerias' ),
+    'post_type'         => array( 'post', 'galeria' ),
     'posts_per_page'    => 6,
     'post_status'       => 'publish',
 );
 $home_posts             = new WP_Query( $args );
 $home_posts_displayed   = array();
-
-// module 004.
-// include( locate_template( 'modules/m004-featured-post.php' ) );
 
 // module 005.
 include( locate_template( 'modules/m005-main-posts-area.php' ) );
