@@ -244,6 +244,9 @@ function aula_display_user_notification( $key ) {
 		case 'error-message' :
 			$not_data['message'] = 'Ha habido un error en el servidor. Prueba a mandar el mensaje otra vez y si el error persiste contacte via email con el adminsitrador del sitio';
 			break;
+		case 'empty-ga-captcha' :
+			$not_data['message'] = 'Por favor complete el reCaptcha';
+			break;
 		case 'message-sent' :
 			$not_data['message'] = 'Su mensaje se ha enviado con exito';
 			$not_data['type']	 = 'success';
@@ -266,7 +269,7 @@ function aula_display_user_notification( $key ) {
  * @return void
  */
 function aula_process_comment_form() {
-	if ( ! isset( $_POST['action'] ) || ! isset( $_POST['nonce'] ) || ! isset( $_POST['post-id'] ) || ! isset( $_POST['name'] ) || ! isset( $_POST['message'] ) ) {
+	if ( ! isset( $_POST['action'] ) || ! isset( $_POST['nonce'] ) || ! isset( $_POST['post-id'] ) || ! isset( $_POST['name'] ) || ! isset( $_POST['message'] ) || ! isset( $_POST['g-recaptcha-response'] ) ) {
 		return;
 	}
 
@@ -274,6 +277,10 @@ function aula_process_comment_form() {
 		return;
 	}
 	$post_id = (int) $_POST['post-id'];
+
+	if ( $_POST['g-recaptcha-response'] == '' ) {
+		aula_redirect_user( $post_id, 'empty-ga-captcha' );
+	}
 
 	if ( empty( $_POST['name'] ) ) {
 		aula_redirect_user( $post_id, 'empty-name' );

@@ -25,6 +25,7 @@
         <input type="hidden" name="post-id" value="<?php echo $post_id; ?>">
         <input type="text" name="name" placeholder="Nombre" class="comment-form__input-text" required>
         <textarea name="message" class="comment-form__textarea" placeholder="Mensaje" rows="1" required></textarea>
+        <div class="g-recaptcha" data-sitekey="6LfUxQcUAAAAALjbqmc1Km4DM5tUpfd9eniyESR7"></div>	
         <input type="submit" value="Comentar" class="comment-form__input-submit">
     </form>
     <div class="comment-sent">

@@ -15,8 +15,6 @@
         while ( $home_posts->have_posts() && $i < 3 ) {
             $home_posts->the_post();
             $post_id = get_the_ID();
-            var_dump( get_the_title() );
-            die( 'herethere');
             
             // check homepage displayed posts.
             if ( in_array( $post_id, $home_posts_displayed ) ) {

@@ -37,6 +37,7 @@
         &__input-submit {
             @include base-submit-input( 310px, 10px 0, $git-purple, $white );
             @include do-transition( background-color );
+            margin-top: 35px;
 
             &:hover {
                 background-color: $black-grey;

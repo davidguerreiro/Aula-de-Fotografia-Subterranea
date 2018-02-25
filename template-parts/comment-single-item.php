@@ -5,6 +5,7 @@
  * 
  * @package aula/template-parts
  */
+setlocale( LC_ALL, "es_ES", 'Spanish_Spain', 'Spanish' );
 
 if ( isset( $comment ) && ! empty( $comment ) ) : ?>
 
@@ -15,7 +16,7 @@ if ( isset( $comment ) && ! empty( $comment ) ) : ?>
          <?php echo ucfirst( esc_html( $comment->comment_author ) ) ?> :
         <span class="comment__date">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <?php echo date( 'd F Y', strtotime( $comment->comment_date ) ); ?>
+            <?php echo iconv('ISO-8859-2', 'UTF-8', strftime( '%d %B %Y', strtotime( $comment->comment_date ) ) ); ?>
         </span>
     </h3>
     <p>

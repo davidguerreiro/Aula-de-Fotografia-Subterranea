@@ -951,6 +951,9 @@ html, body {
     .search-page-form .btn-search-page-submit {
       margin: 15px 0 0 24px; } }
 
+.g-recaptcha {
+  margin-top: 35px; }
+
 .panel {
   position: fixed;
   left: -15.6em;
@@ -1170,7 +1173,7 @@ html, body {
   width: 100%;
   max-width: 600px;
   line-height: 1.4;
-  padding: 15px 0 15px 35px; }
+  padding: 15px 0 15px 5px; }
 
 .pagination {
   overflow: hidden;
@@ -2065,7 +2068,8 @@ ul, li {
       color: #ffffff;
       border: none;
       transition: background-color 0.5s ease;
-      -webkit-transition: background-color 0.5s ease; }
+      -webkit-transition: background-color 0.5s ease;
+      margin-top: 35px; }
       .m15 .comment-form__input-submit:hover {
         background-color: #2E3137; }
   .m15 .comment-sent {
