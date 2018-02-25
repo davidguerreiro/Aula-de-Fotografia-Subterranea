@@ -9,6 +9,12 @@
 
  get_header();
 
+ // get current category intro text.
+ $category      = get_queried_object();
+ $intro_text    = get_field( $category->slug . '_texto_de_introduccion', 'option' );
+ 
+ unset( $category );
+
  // module 017.
  include( locate_template( 'modules/m017-page-header.php' ) );
 
@@ -19,6 +25,7 @@
 
     // module 18.
     include( locate_template( 'modules/m018-intro-text.php' ) );
+    unset( $intro_text );
     
     if ( have_posts() ) :
         ?>
