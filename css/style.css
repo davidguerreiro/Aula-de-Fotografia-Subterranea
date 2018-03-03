@@ -952,7 +952,48 @@ html, body {
       margin: 15px 0 0 24px; } }
 
 .g-recaptcha {
-  margin-top: 35px; }
+  margin-top: 35px;
+  margin-top: 20px; }
+
+.basic-comment {
+  padding-bottom: 39px; }
+  .basic-comment__section {
+    padding-bottom: 30px; }
+  .basic-comment__field-name {
+    display: inline-block;
+    min-width: 200px; }
+    @media screen and (max-width: 565px) {
+      .basic-comment__field-name {
+        padding-bottom: 15px; } }
+  .basic-comment__field-name--comment-field {
+    vertical-align: top; }
+  .basic-comment__basic-text, .basic-comment__comment-field {
+    padding: 10px;
+    width: 100%;
+    max-width: 350px;
+    outline-width: 0;
+    outline: none; }
+    @media screen and (max-width: 565px) {
+      .basic-comment__basic-text, .basic-comment__comment-field {
+        max-width: 250px;
+        margin: 0 auto; } }
+  .basic-comment__comment-field {
+    min-height: 200px; }
+  .basic-comment__recaptcha {
+    display: inline-block;
+    margin-top: 2px; }
+  .basic-comment__submit {
+    display: block;
+    max-width: 100%;
+    width: 310px;
+    padding: 10px 0;
+    background-color: #4D3B70;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease; }
+    .basic-comment__submit:hover {
+      background-color: #2E3137; }
 
 .panel {
   position: fixed;
@@ -2232,3 +2273,9 @@ ul, li {
       @media screen and (max-width: 450px) {
         .m27__title-content img {
           width: 90px; } }
+
+.m29 {
+  background-color: #e3eae9;
+  padding-left: 25px; }
+  .m29__title {
+    padding: 30px 0; }

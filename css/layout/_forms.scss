@@ -141,4 +141,58 @@
 
 .g-recaptcha {
 	margin-top: 35px;
+	margin-top: 20px;
 }
+
+.basic-comment {
+	padding-bottom: 39px;
+
+	&__section {
+		padding-bottom: 30px;
+	}
+
+	&__field-name {
+		display: inline-block;
+		min-width: 200px;
+		
+		@media screen and ( max-width: 565px ) {
+			padding-bottom: 15px;
+		}
+	}
+
+	&__field-name--comment-field {
+		vertical-align: top;
+	}
+
+	&__basic-text, &__comment-field {
+		padding: 10px;
+		width: 100%;
+		max-width: 350px;
+		outline-width: 0;
+		outline: none;
+
+		@media screen and ( max-width: 565px ) {
+			max-width: 250px;
+			margin: 0 auto;
+		}
+	}
+
+	&__comment-field {
+		min-height: 200px;
+	}
+
+	&__recaptcha {
+		display: inline-block;
+		margin-top: 2px;
+	}
+
+	&__submit {
+		@include base-submit-input( 310px, 10px 0, $git-purple, $white );
+		@include do-transition( background-color );
+
+		&:hover {
+			background-color: $black-grey;
+		}
+	}
+}
+
