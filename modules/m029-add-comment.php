@@ -6,6 +6,12 @@
  * @package aula/modules
  */
 
+if ( ! isset( $post_id ) ) {
+    $post_id = get_the_ID();
+}
+
+$nonce = wp_create_nonce( 'comment-form' );
+
 ?>
 
 <div class="module m29">
