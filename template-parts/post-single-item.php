@@ -52,9 +52,11 @@
 -->
 
 <article class="post-wrapper">
-        <h2 class="post-wrapper__post-title">
-            <?php echo get_the_title(); ?>
-        </h2>
+        <a href="<?php the_permalink(); ?>" class="post-wrapper__title-link">
+            <h2 class="post-wrapper__post-title">
+                <?php echo get_the_title(); ?>
+            </h2>
+        </a>
         <section class="post-wrapper__post-data">
             <ul>
                 <li>

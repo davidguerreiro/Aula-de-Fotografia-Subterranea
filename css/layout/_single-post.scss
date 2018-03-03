@@ -7,6 +7,15 @@
         padding-left: 70px;
     }
 
+    &__title-link {
+        @include baselink;
+        @include do-transition( color );
+
+        &:hover {
+            color: $hover-menu;
+        }
+    }
+
     &__post-title {
         font-size: 40px;
         padding: 10px 0 20px 0;

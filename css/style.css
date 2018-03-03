@@ -785,8 +785,8 @@ html, body {
         font-size: 36px;
         display: inline-block;
         padding-right: 15px;
-        transition: color 0.5s ease;
-        -webkit-transition: color 0.5s ease; }
+        transition: color 0.3s ease;
+        -webkit-transition: color 0.3s ease; }
         .main-footer__social-links li .social-a:hover {
           color: #E6C977; }
   .main-footer__bottom-section {
@@ -871,8 +871,8 @@ html, body {
     background-color: transparent;
     color: #000000;
     border: none;
-    transition: border-bottom-color 0.5s ease;
-    -webkit-transition: border-bottom-color 0.5s ease;
+    transition: border-bottom-color 0.3s ease;
+    -webkit-transition: border-bottom-color 0.3s ease;
     border-bottom: 2px solid #C393CC; }
     .contact-form__text-input:hover, .contact-form__text-input:focus {
       outline: 0;
@@ -885,8 +885,8 @@ html, body {
     background-color: transparent;
     color: #000000;
     border: none;
-    transition: border-bottom-color 0.5s ease;
-    -webkit-transition: border-bottom-color 0.5s ease;
+    transition: border-bottom-color 0.3s ease;
+    -webkit-transition: border-bottom-color 0.3s ease;
     border-bottom: 2px solid #C393CC; }
     .contact-form__textarea:hover, .contact-form__textarea:focus {
       outline: 0;
@@ -902,8 +902,8 @@ html, body {
     background-color: #9846A7;
     color: #ffffff;
     border: none;
-    transition: background-color 0.5s ease;
-    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
     margin: 35px 0 15px 0 !important; }
     .contact-form__submit-input:hover {
       background-color: #621271; }
@@ -924,8 +924,8 @@ html, body {
   border-radius: 15px;
   border: 1px solid #D4D1C0;
   outline: 0;
-  transition: border-color 0.5s ease;
-  -webkit-transition: border-color 0.5s ease; }
+  transition: border-color 0.3s ease;
+  -webkit-transition: border-color 0.3s ease; }
   .search-page-form__input-text:hover, .search-page-form__input-text:focus {
     border-color: #000000; }
   @media screen and (max-width: 740px) {
@@ -943,8 +943,8 @@ html, body {
   border: 1px solid transparent;
   color: white;
   background-color: #4D3B70;
-  transition: background-color 0.5s ease;
-  -webkit-transition: background-color 0.5s ease; }
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease; }
   .search-page-form .btn-search-page-submit:hover {
     background-color: #9846A7; }
   @media screen and (max-width: 1200px) {
@@ -1008,8 +1008,8 @@ html, body {
       font-size: 20px;
       padding: 8px;
       border-bottom: 2px solid #808080;
-      transition: border-bottom-color 0.5s ease;
-      -webkit-transition: border-bottom-color 0.5s ease; }
+      transition: border-bottom-color 0.3s ease;
+      -webkit-transition: border-bottom-color 0.3s ease; }
       .main-menu ul li a:hover {
         border-bottom-color: #FF650F; }
 
@@ -1085,8 +1085,8 @@ html, body {
         padding: 20px;
         color: #ffffff;
         text-decoration: none;
-        transition: background-color 0.5s ease;
-        -webkit-transition: background-color 0.5s ease; }
+        transition: background-color 0.3s ease;
+        -webkit-transition: background-color 0.3s ease; }
         .mobile-menu ul li a:hover {
           background-color: #6A7EFF; }
 
@@ -1096,6 +1096,14 @@ html, body {
   @media screen and (min-width: 1400px) {
     .post-wrapper {
       padding-left: 70px; } }
+  .post-wrapper__title-link {
+    text-decoration: none;
+    color: #000000;
+    display: inline-block;
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease; }
+    .post-wrapper__title-link:hover {
+      color: #6A7EFF; }
   .post-wrapper__post-title {
     font-size: 40px;
     padding: 10px 0 20px 0; }
@@ -1196,8 +1204,8 @@ html, body {
     border-top: 1px solid #d8d3d3; }
     .pagination .previous i {
       margin-right: 5px;
-      transition: margin-right 0.5s ease;
-      -webkit-transition: margin-right 0.5s ease; }
+      transition: margin-right 0.3s ease;
+      -webkit-transition: margin-right 0.3s ease; }
     .pagination .previous:hover i {
       margin-right: 10px; }
   .pagination .next {
@@ -1205,8 +1213,8 @@ html, body {
     background-color: #522C70; }
     .pagination .next i {
       margin-left: 5px;
-      transition: margin-left 0.5s ease;
-      -webkit-transition: margin-left 0.5s ease; }
+      transition: margin-left 0.3s ease;
+      -webkit-transition: margin-left 0.3s ease; }
     .pagination .next:hover i {
       margin-left: 10px; }
 
@@ -1275,8 +1283,8 @@ html, body {
   text-decoration: none; }
   .read-link i {
     margin-left: 5px;
-    transition: margin-left 0.5s ease;
-    -webkit-transition: margin-left 0.5s ease; }
+    transition: margin-left 0.3s ease;
+    -webkit-transition: margin-left 0.3s ease; }
   .read-link:hover i {
     margin-left: 10px; }
   .read-link--home {
@@ -1331,8 +1339,8 @@ html, body {
     padding: 10px 0 10px 15px; }
     .gallery-item__view-link i {
       margin-left: 5px;
-      transition: margin-left 0.5s ease;
-      -webkit-transition: margin-left 0.5s ease; }
+      transition: margin-left 0.3s ease;
+      -webkit-transition: margin-left 0.3s ease; }
     .gallery-item__view-link:hover i {
       margin-left: 10px; }
 
@@ -1342,8 +1350,8 @@ html, body {
   .my-gallery__item {
     float: left; }
     .my-gallery__item a {
-      transition: opacity 0.5s ease;
-      -webkit-transition: opacity 0.5s ease; }
+      transition: opacity 0.3s ease;
+      -webkit-transition: opacity 0.3s ease; }
       .my-gallery__item a:hover {
         opacity: 0.5; }
     .my-gallery__item img {
@@ -1370,8 +1378,8 @@ html, body {
     color: #000000;
     overflow: hidden;
     clear: both;
-    transition: background-color 0.5s ease;
-    -webkit-transition: background-color 0.5s ease; }
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease; }
     .search-item__wrapper-link:hover {
       background-color: #D4D1C0; }
   .search-item__title {
@@ -1762,8 +1770,8 @@ ul, li {
     font-size: 22px; }
     .m8__section a i {
       margin-left: 5px;
-      transition: margin-left 0.5s ease;
-      -webkit-transition: margin-left 0.5s ease; }
+      transition: margin-left 0.3s ease;
+      -webkit-transition: margin-left 0.3s ease; }
     .m8__section a:hover i {
       margin-left: 10px; }
 
@@ -1842,8 +1850,8 @@ ul, li {
       font-size: 20px;
       margin-left: 5px;
       font-weight: bold;
-      transition: margin-left 0.5s ease;
-      -webkit-transition: margin-left 0.5s ease; }
+      transition: margin-left 0.3s ease;
+      -webkit-transition: margin-left 0.3s ease; }
     .m10__face-link:hover i {
       margin-left: 10px; }
   .m10__small-text {
@@ -1968,8 +1976,8 @@ ul, li {
           background-color: transparent;
           padding: 5px;
           border-bottom: 1px solid #9AA6C0;
-          transition: border-bottom-color 0.5s ease;
-          -webkit-transition: border-bottom-color 0.5s ease; }
+          transition: border-bottom-color 0.3s ease;
+          -webkit-transition: border-bottom-color 0.3s ease; }
           .m13__section--form input[type="email"]:focus, .m13__section--form input[type="email"]:hover {
             outline: 0;
             border-bottom-color: #2E3137; }
@@ -1982,8 +1990,8 @@ ul, li {
           background-color: #CA0651;
           color: #ffffff;
           border: none;
-          transition: background-color 0.5s ease;
-          -webkit-transition: background-color 0.5s ease; }
+          transition: background-color 0.3s ease;
+          -webkit-transition: background-color 0.3s ease; }
           .m13__section--form input[type="submit"]:hover {
             background-color: #8A0638; }
 
@@ -2041,8 +2049,8 @@ ul, li {
       border: none;
       border-bottom: 1px solid #000000;
       outline: 0;
-      transition: border-color 0.5s ease;
-      -webkit-transition: border-color 0.5s ease; }
+      transition: border-color 0.3s ease;
+      -webkit-transition: border-color 0.3s ease; }
       .m15 .comment-form__input-text:hover, .m15 .comment-form__input-text:focus {
         border-color: #CA0651; }
     .m15 .comment-form__textarea {
@@ -2054,8 +2062,8 @@ ul, li {
       border: none;
       border-bottom: 1px solid #000000;
       outline: 0;
-      transition: border-color 0.5s ease;
-      -webkit-transition: border-color 0.5s ease;
+      transition: border-color 0.3s ease;
+      -webkit-transition: border-color 0.3s ease;
       overflow: hidden; }
       .m15 .comment-form__textarea:hover, .m15 .comment-form__textarea:focus {
         border-color: #CA0651; }
@@ -2067,8 +2075,8 @@ ul, li {
       background-color: #4D3B70;
       color: #ffffff;
       border: none;
-      transition: background-color 0.5s ease;
-      -webkit-transition: background-color 0.5s ease;
+      transition: background-color 0.3s ease;
+      -webkit-transition: background-color 0.3s ease;
       margin-top: 35px; }
       .m15 .comment-form__input-submit:hover {
         background-color: #2E3137; }
