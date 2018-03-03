@@ -7,16 +7,16 @@
  * @package aula/template-parts
  */
 
- $featured_post_image_url   = get_the_post_thumbnail_url( get_the_ID(), 'medium' );
- $role                      = get_field( 'team_role' );
- $email                     = get_field( 'team_email' );
- $location                  = get_field( 'team_location' );
+ $featured_post_image_url   = get_the_post_thumbnail_url( $member->ID, 'medium' );
+ $role                      = get_field( 'team_role', $member->ID );
+ $email                     = get_field( 'team_email', $member->ID );
+ $location                  = get_field( 'team_location', $member->ID );
 
  ?>
 
  <article class="team-item">
     <h3 class="team-item__title">
-        <?php echo get_the_title(); ?>
+        <?php echo $member->post_title; ?>
     </h3>
     <div class="team-item__wrapper">
         <?php if ( ! empty( $featured_post_image_url ) ) : ?>
@@ -50,8 +50,13 @@
                 <?php endif; ?>
             </ul>
             <p class="team-item__description">
-                <?php echo get_the_content(); ?>
+                <?php echo $member->post_content; ?>
             </p>
         </div>
     </div>
  </article>
+ <?php
+ unset( $featured_post_image_url );
+ unset( $role );
+ unset( $email );
+ unset( $location );
