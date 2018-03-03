@@ -68,7 +68,7 @@ function aula_get_history_posts() {
 		'posts_per_page' 	=> -1,
 		'post_status' 		=> 'publish',
 		'orderby'			=> 'date',
-		'order'				=> 'ASC',
+		'order'				=> 'DESC',
 	);
 	$posts = new WP_Query( $args );
 
@@ -150,6 +150,10 @@ function aula_process_contact_form() {
 
 	if ( $_POST['action'] != 'contact-form' || ! wp_verify_nonce( $_POST['nonce'], 'contact-form' ) ) {
 		return;
+	}
+
+	if ( empty( $_POST['g-recaptcha-response'] ) ) {
+		aula_redirect_user( $_POST['page-id'], 'empty-ga-captcha' );
 	}
 
 	if ( ! isset( $_POST['name'] ) || ! isset( $_POST['message'] ) ) {
@@ -327,3 +331,14 @@ function aula_pre_get_posts( $query ) {
 }
 
 add_action( 'pre_get_posts', 'aula_pre_get_posts' );
+
+/**
+ * Move Yoast SEO metabox to the bottom
+ * 
+ * @return String
+ */
+function aula_move_yoast_seo_metabox() {
+	return 'low';
+}
+
+add_filter( 'wpseo_metabox_prio', 'aula_move_yoast_seo_metabox' );

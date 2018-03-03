@@ -21,6 +21,7 @@
         <input type="email" name="email" class="contact-form__text-input"
         placeholder="Email ( privado )">
         <textarea name="message" rows="1" placeholder="Mensaje" class="contact-form__textarea" required></textarea>
+        <div class="g-recaptcha" data-sitekey="6LfUxQcUAAAAALjbqmc1Km4DM5tUpfd9eniyESR7"></div>	
         <input type="submit" value="Enviar" class="contact-form__submit-input">
     </form>
  </div>
