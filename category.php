@@ -38,6 +38,8 @@
     ?>
         </div>
     <?php
+    // pagination.
+    include( locate_template( 'template-parts/pagination.php' ) );
     else :
         $no_content = "No hay posts para mostrar en esta categoria.";
         include( locate_template( 'template-parts/content-none.php' ) );
@@ -56,9 +58,6 @@
 <div class="bottom-modules-wrapper">
 
 <?php
-
- // pagination.
- include( locate_template( 'template-parts/pagination.php' ) );
 
  // module 013.
  include( locate_template( 'modules/m013-newsletter-section.php' ) );

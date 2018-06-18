@@ -31,7 +31,10 @@ get_header();
                 get_template_part( 'template-parts/gallery', 'single-item' );
             endwhile; ?>
     </div>
-<?php else : 
+<?php 
+    // pagination.
+    include( locate_template( 'template-parts/pagination.php' ) );
+else : 
     $no_content = "No hay ninguna galeria de fotografia disponible";
     include( locate_template( 'template-parts/content-none.php' ) );
 endif;
@@ -45,9 +48,6 @@ endif;
  ?>
 <div class="bottom-modules-wrapper">
 <?php
-
- // pagination.
- include( locate_template( 'template-parts/pagination.php' ) );
 
  // module 013.
  include( locate_template( 'modules/m013-newsletter-section.php' ) );

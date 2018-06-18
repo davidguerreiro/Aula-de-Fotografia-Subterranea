@@ -1218,6 +1218,46 @@ html, body {
 .search_term {
   color: #4267b2; }
 
+.main-pagination {
+  font-size: 14px;
+  color: #2E3137;
+  margin: 20px auto 75px 70px; }
+  .main-pagination .nav-inline-dash {
+    display: inline-block;
+    font-weight: normal;
+    color: #2E3137; }
+  .main-pagination .page-numbers, .main-pagination .dots, .main-pagination .current {
+    display: inline-block;
+    font-weight: bold;
+    padding: 18px 22px;
+    border: 1px solid #2E3137;
+    border-radius: 2px;
+    text-decoration: none;
+    margin-right: 11.55px;
+    letter-spacing: 2.5px; }
+  .main-pagination a {
+    transition: all .5s ease;
+    -moz-tranistion: all .5s ease;
+    color: #2E3137; }
+    .main-pagination a:hover {
+      color: #FFFFFF;
+      background-color: #2E3137; }
+  .main-pagination .current {
+    border: none;
+    color: #FFFFFF;
+    background-color: #2E3137; }
+  .main-pagination .dots {
+    border: none;
+    padding: 18px 0; }
+  @media (max-width: 900px) {
+    .main-pagination .page-numbers {
+      display: none; }
+    .main-pagination .first, .main-pagination .last, .main-pagination .prev, .main-pagination .next {
+      display: inline-block; } }
+  @media (max-width: 520px) {
+    .main-pagination .first, .main-pagination .last {
+      display: none; } }
+
 .no-content-notification {
   width: 100%;
   max-width: 600px;

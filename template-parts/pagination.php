@@ -5,42 +5,46 @@
  * 
  * @package aula/template-parts
  */
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-global $wp_query;
+
+global $wp_query, $wp;
+$total_pages = $wp_query->max_num_pages;
+
+if ( $total_pages > 1  ) {
+    $current_page = max( 1, get_query_var( 'paged' ) );
+
+    // current category / taxonomy / archive url for first link.
+    //$first_page = home_url( add_query_arg( array(),$wp->request ) );
+    $first_page = get_pagenum_link( 1 );
+
+    // last page link.
+    if ( $current_page > 1 ) {
+        $last_page = str_replace( strval( $current_page), strval( $total_pages), $first_page );
+    } else  {
+        $last_page = $first_page . 'page/' . $total_pages;
+    }
 
 
- $next_page_link        = get_next_posts_page_link( $wp_query->max_num_pages );
- $previous_page_link    = get_previous_posts_page_link();
+        $args = [
+            'base' 			=> get_pagenum_link( 1 ) . '%_%',
+            'format' 		=> 'page/%#%',
+            'current' 	=> $current_page,
+            'total' 		=> $total_pages,
+            'prev_text' => 'ANTERIOR',
+            'next_text' => 'SIGUIENTE',
+        ];
 
-// check if there are previous posts.
-if ( $wp_query->max_num_pages > 1 && $paged > 1 ) {
-    $previous_page_link_class = 'pagination__link previous';
-} else {
-    $previous_page_link_class = 'pagination__link previous link-disabled';
+        echo "<nav class='main-pagination'>";
+
+        // display first link - not done automatically by the function.
+        if ( $current_page > 1 ) :
+            echo "<a href='" . esc_url( $first_page ) . "' class='prev page-numbers first'>PRIMERO</a>";
+        endif;
+
+        echo paginate_links( $args );
+
+        // display last link  - not done automatically by the function.
+        if ( $current_page < $total_pages ) :
+            echo "<a href='" . esc_url( $last_page ) . "' class='next page-numbers last'>ULTIMO</a>";
+        endif;
+        echo '</nav>';
 }
-
-// check if there are more posts.
-if ( $wp_query->max_num_pages > 1 && $paged < $wp_query->max_num_pages ){
-    $next_page_link_class = 'pagination__link next';
-} else {
-    $next_page_link_class = 'pagination__link next link-disabled';
-}
-
-
-if ( $wp_query->max_num_pages > 1 ) : ?>
-
-<div class="pagination">
-    <div class="pagination__link-wrapper">
-        <a href="<?php echo $previous_page_link; ?>" class="<?php echo $previous_page_link_class; ?>">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            Anterior
-        </a>
-    </div>
-    <div class="pagination__link-wrapper">
-        <a href="<?php echo $next_page_link; ?>" class="<?php echo $next_page_link_class; ?>">
-            Siguiente
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-        </a>
-    </div>
-</div>
-<?php endif; ?>
