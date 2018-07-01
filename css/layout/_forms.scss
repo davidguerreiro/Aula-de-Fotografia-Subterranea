@@ -118,6 +118,7 @@
 	&__input-text--sidebar {
 		width: 200px;
 		margin: 0 0 0 20px;
+		border-color: transparent;
 	}
 	
 	.btn-search-page-submit {
@@ -128,6 +129,10 @@
 		color: white;
 		background-color: $git-purple;
 		@include do-transition( background-color );
+
+		&--sidebar {
+			background-color: #8f6ad6;
+		}
 
 		&:hover {
 			background-color: $form-pink;

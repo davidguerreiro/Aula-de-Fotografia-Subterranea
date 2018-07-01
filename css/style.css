@@ -934,7 +934,8 @@ html, body {
 
 .search-page-form__input-text--sidebar {
   width: 200px;
-  margin: 0 0 0 20px; }
+  margin: 0 0 0 20px;
+  border-color: transparent; }
 
 .search-page-form .btn-search-page-submit {
   padding: 7px 25px;
@@ -945,6 +946,8 @@ html, body {
   background-color: #4D3B70;
   transition: background-color 0.3s ease;
   -webkit-transition: background-color 0.3s ease; }
+  .search-page-form .btn-search-page-submit--sidebar {
+    background-color: #8f6ad6; }
   .search-page-form .btn-search-page-submit:hover {
     background-color: #9846A7; }
   @media screen and (max-width: 1200px) {
@@ -1832,8 +1835,8 @@ ul, li {
   height: auto; }
 
 .m8__section {
-  background-color: #f7f5f1;
-  color: #000000;
+  background-color: #21458c;
+  color: #ffffff;
   /*border-left: 1px solid $light-grey;*/ }
   .m8__section h2 {
     font-size: 25px;
@@ -2077,8 +2080,8 @@ ul, li {
             background-color: #8A0638; }
 
 .m14 {
-  background-color: #f7f5f1;
-  color: #000000;
+  background-color: #21458c;
+  color: #ffffff;
   /*border-left: 1px solid $light-grey;*/ }
   .m14 h2 {
     font-size: 25px;
