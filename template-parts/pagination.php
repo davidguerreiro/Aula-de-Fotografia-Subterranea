@@ -44,7 +44,7 @@ if ( $total_pages > 1  ) {
 
         // display last link  - not done automatically by the function.
         if ( $current_page < $total_pages ) :
-            echo "<a href='" . esc_url( $last_page ) . "' class='next page-numbers last'>ULTIMO</a>";
+            echo "<a href='" . esc_url( $last_page ) . "' class='next page-numbers last'>'ÚLTIMO</a>";
         endif;
         echo '</nav>';
 }
