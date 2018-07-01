@@ -19,7 +19,7 @@ $nonce = wp_create_nonce( 'comment-form' );
         <i class="fa fa-commenting-o icon" aria-hidden="true"></i>
         Comentar esta entrada
     </h2>
-    <form action="" method="post" class="basic-comment" method="post">
+    <form action="" method="post" class="basic-comment">
         <input type="hidden" name="nonce" id="nonce" value="<?php echo $nonce; ?>">
         <input type="hidden" name="action" value="comment-form">
         <input type="hidden" name="post-id" value="<?php echo $post_id; ?>">

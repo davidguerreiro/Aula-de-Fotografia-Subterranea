@@ -998,6 +998,71 @@ html, body {
     .basic-comment__submit:hover {
       background-color: #2E3137; }
 
+.comment-form__title {
+  text-align: center;
+  padding: 35px 0 55px 0;
+  font-size: 35px; }
+  .comment-form__title i {
+    padding-right: 5px;
+    font-size: 37px; }
+
+.comment-form .form {
+  widows: 100%;
+  max-width: 550px;
+  margin: 0 auto; }
+  .comment-form .form__section {
+    margin-bottom: 20px; }
+  .comment-form .form__basic-label, .comment-form .form__basic-text, .comment-form .form__content {
+    display: block; }
+  .comment-form .form__basic-label {
+    font-style: italic;
+    color: #656161; }
+  .comment-form .form__basic-text, .comment-form .form__content, .comment-form .form__btn {
+    width: 100%;
+    max-width: 600px;
+    padding: 8px 5px;
+    border-radius: 5px; }
+  .comment-form .form__basic-text, .comment-form .form__content {
+    margin-top: 8px;
+    border: 1px solid grey; }
+  .comment-form .form__content {
+    min-height: 250px; }
+  .comment-form .form__basic-checkbox, .comment-form .form__privacy-text {
+    display: inline-block; }
+  .comment-form .form__basic-checkbox {
+    vertical-align: top;
+    margin-left: 5px; }
+  .comment-form .form__privacy-text {
+    width: 80%;
+    padding-left: 10px;
+    font-size: 13px; }
+    .comment-form .form__privacy-text a {
+      text-decoration: none;
+      color: #44999a; }
+      .comment-form .form__privacy-text a:hover {
+        text-decoration: underline; }
+  .comment-form .form__btn {
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    -webkit-appearance: button;
+    /* for input */
+    -webkit-user-select: none;
+    /* for button */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    color: #ffffff;
+    background-color: #515caf;
+    margin-top: 10px;
+    padding: 10px 5px;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease; }
+    .comment-form .form__btn:hover {
+      background-color: #202654; }
+
 .panel {
   position: fixed;
   left: -15.6em;

@@ -201,3 +201,100 @@
 	}
 }
 
+.comment-form {
+
+	&__title {
+		text-align: center;
+		padding: 35px 0 55px 0;
+		font-size: 35px;
+
+		i {
+			padding-right: 5px;
+			font-size: 37px;
+		}
+	}
+
+	.form {
+		widows: 100%;
+		max-width: 550px;
+		margin: $auto;
+
+		&__section {
+			margin-bottom: 20px;
+		}
+
+		&__basic-label, &__basic-text, &__content {
+			display: block;
+		}
+
+		&__basic-label {
+			font-style: italic;
+			color: #656161;
+		}
+
+		&__basic-text, &__content, &__btn {
+			width: 100%;
+			max-width: 600px;
+			padding: 8px 5px;
+			border-radius: 5px;
+		}
+
+		&__basic-text, &__content {
+			margin-top: 8px;
+			border: 1px solid grey;
+		}
+
+		&__content {
+			min-height: 250px;
+		}
+
+		&__basic-checkbox, &__privacy-text {
+			display: inline-block;
+		}
+
+		&__basic-checkbox {
+			vertical-align: top;
+			margin-left: 5px;
+		}
+
+		&__privacy-text {
+			width: 80%;
+			padding-left: 10px;
+			font-size: 13px;
+
+			a {
+				text-decoration: none;
+				color: #44999a;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&__btn {
+			background: none;
+			border: 0;
+			color: inherit;
+			font: inherit;
+			line-height: normal;
+			overflow: visible;
+			-webkit-appearance: button; /* for input */
+			-webkit-user-select: none; /* for button */
+			-moz-user-select: none;
+			-ms-user-select: none;
+			color: $white;
+			background-color: #515caf;
+			margin-top: 10px;
+			padding: 10px 5px;
+			@include do-transition( background-color, 0.3s, ease );
+			
+			&:hover {
+				background-color: #202654;
+			}
+		}
+	}
+}
+
+
+
