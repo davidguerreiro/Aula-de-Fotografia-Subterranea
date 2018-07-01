@@ -37,6 +37,12 @@
      $post_id       = get_queried_object_id();
      $title         = get_the_title( $post_id);
      $icon_class    = aula_get_page_icon_class( 'galeria' );
+ } else if ( is_home() ) {
+     // blog index page.
+     $title = 'Blog';
+ } else {
+    // default fallback.
+    $title = get_the_title();
  }
  ?>
 

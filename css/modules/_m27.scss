@@ -7,8 +7,12 @@
     }
 
     &__section {
-        width: 50%;
+        width: 40%;
         float: right;
+
+        &--icon {
+            width: 60%;
+        }
     }
 
     @media screen and ( max-width: 970px ) {

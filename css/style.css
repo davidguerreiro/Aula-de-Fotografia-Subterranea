@@ -1037,7 +1037,7 @@ html, body {
     display: none; } }
 
 .main-menu ul {
-  width: 500px;
+  width: 550px;
   margin: 0 80px 0 auto;
   padding-top: 28px; }
   .main-menu ul li {
@@ -2278,8 +2278,10 @@ ul, li {
   .m27__title-link {
     color: #000000; }
   .m27__section {
-    width: 50%;
+    width: 40%;
     float: right; }
+    .m27__section--icon {
+      width: 60%; }
   @media screen and (max-width: 970px) {
     .m27__section--icon {
       width: 100px; } }
