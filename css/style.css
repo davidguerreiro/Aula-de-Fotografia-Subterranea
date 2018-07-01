@@ -1005,13 +1005,21 @@ html, body {
   .comment-form__title i {
     padding-right: 5px;
     font-size: 37px; }
+  @media screen and (max-width: 600px) {
+    .comment-form__title {
+      padding: 15px 0 35px 0;
+      font-size: 25px; } }
 
 .comment-form .form {
-  widows: 100%;
+  width: 100%;
   max-width: 550px;
   margin: 0 auto; }
   .comment-form .form__section {
     margin-bottom: 20px; }
+    @media screen and (max-width: 600px) {
+      .comment-form .form__section {
+        width: 80%;
+        margin: 0 auto 20px auto; } }
   .comment-form .form__basic-label, .comment-form .form__basic-text, .comment-form .form__content {
     display: block; }
   .comment-form .form__basic-label {

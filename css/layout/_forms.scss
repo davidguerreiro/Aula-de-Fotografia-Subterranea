@@ -212,15 +212,25 @@
 			padding-right: 5px;
 			font-size: 37px;
 		}
+
+		@media screen and ( max-width: 600px ) {
+			padding: 15px 0 35px 0;
+			font-size: 25px;
+		}
 	}
 
 	.form {
-		widows: 100%;
+		width: 100%;
 		max-width: 550px;
 		margin: $auto;
 
 		&__section {
 			margin-bottom: 20px;
+
+			@media screen and ( max-width: 600px ) {
+				width: 80%;
+				margin: 0 auto 20px auto;
+			}
 		}
 
 		&__basic-label, &__basic-text, &__content {
