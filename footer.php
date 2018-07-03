@@ -12,6 +12,9 @@ $legal_page_link        = ( ! empty( $legal_page ) && ! is_null( $legal_page ) )
 $face_link              = get_field( 'facebook_link', 'option' );
 $git_link               = get_field( 'github_link', 'option' );
 
+// cookies consent.
+get_template_part( 'template-parts/cookies', 'consent' );
+
  ?>
 
             <footer class="main-footer">
