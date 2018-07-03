@@ -1,0 +1,59 @@
+.cookie-box {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $black-grey;
+    z-index: 999999;
+
+    &__section {
+        display: inline-block;
+        color: $white;
+        padding: 35px 25px;
+
+        &--text {
+            width: 60%;
+
+            p {
+                line-height: 1.5;
+
+                a {
+                    text-decoration: none;
+                    color: #6adaff;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &--links { 
+            width: 30%;
+
+            li {
+                display: inline-block;
+            }
+
+            a {
+                @include do-transition( opacity 1s ease );
+                display: block;
+                width: 150px;
+                color: grey;
+                text-decoration: none;
+                padding: 10px;
+                background-color: yellow;
+                text-align: center;
+                visibility: visible;
+                opacity: 1;
+                margin: 0 15px 15px 15px;
+
+                &:hover {
+                    visibility: visible;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

@@ -1634,6 +1634,48 @@ html, body {
   .notification__error i {
     color: #c71515; }
 
+.cookie-box {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2E3137;
+  z-index: 999999; }
+  .cookie-box__section {
+    display: inline-block;
+    color: #ffffff;
+    padding: 35px 25px; }
+    .cookie-box__section--text {
+      width: 60%; }
+      .cookie-box__section--text p {
+        line-height: 1.5; }
+        .cookie-box__section--text p a {
+          text-decoration: none;
+          color: #6adaff; }
+          .cookie-box__section--text p a:hover {
+            text-decoration: underline; }
+    .cookie-box__section--links {
+      width: 30%; }
+      .cookie-box__section--links li {
+        display: inline-block; }
+      .cookie-box__section--links a {
+        transition: opacity 1s ease 0.3s ease;
+        -webkit-transition: opacity 1s ease 0.3s ease;
+        display: block;
+        width: 150px;
+        color: grey;
+        text-decoration: none;
+        padding: 10px;
+        background-color: yellow;
+        text-align: center;
+        visibility: visible;
+        opacity: 1;
+        margin: 0 15px 15px 15px; }
+        .cookie-box__section--links a:hover {
+          visibility: visible;
+          opacity: 0.8; }
+
 .newsletter-return-link {
   margin-top: 25px; }
 
