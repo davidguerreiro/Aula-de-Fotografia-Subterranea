@@ -271,6 +271,13 @@ $(document).ready( function() {
         }
      }); 
 
+     // remove cookies message.
+     $('#accept').click( function(e){
+         e.preventDefault();
+         console.log( 'yese here' );
+         $('.cookie-box').fadeOut();
+     })
+
 });
 
 /*

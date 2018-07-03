@@ -6,15 +6,20 @@
  * @package aula/template-parts
  */
 
+ $cookie_message = get_field( 'aula_cookies_message', 'options' );
+
+ if ( ! isset( $_COOKIE["cookies_not"] ) ) {
+     $domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : false;
+     setcookie( 'cookies_not', '1', time()+60*60*24*365, $domain, false );
+ }
+
 ?>
 
 <div class="cookie-box">
     <div class="cookie-box__section cookie-box__section--text">
-        <p>
-            Este sitio web utiliza cookies propios y de terceros para mejorar el funcionamiento del sitio web.
-            Si necesita mas informacion sobre que tipo de cookies e informacion de usuario es recolectada, por favor
-            visite la pagina de <a href="">Politica de Privacidad</a>
-        </p>
+    <?php if ( ! empty( $cookie_message ) ) : ?>
+            <?php echo $cookie_message; ?>
+    <?php endif; ?>
     </div>
     <div class="cookie-box__section cookie-box__section--links">
         <ul>
