@@ -280,7 +280,30 @@ $(document).ready( function() {
      // process comment form.
      $('#post-comment-form').submit( function(e){
         e.preventDefault();
+        let errors = false;
+        $('.form__error-message').slideUp();
         console.log('Form submited here');
+
+
+        const $submitButton = $('.form__btn');
+        const $animatedAjax = $('#loader');
+        $submitButton.val( 'Procesando Formulario ... ' );
+        $submitButton.addClass( 'form__btn--in-use');
+        $animatedAjax.slideDown();
+
+        if ( $('#name').val() === '' ) {
+            errors = true;
+            $('.name-error-message').slideDown();
+        }
+
+        if ( $('#comment').val() === '' ) {
+            errors = true;
+            $('.comment-error-message').slideDown();
+        }
+
+
+        let data = $(this).serialize();
+        console.log( data );
      });
 
 });

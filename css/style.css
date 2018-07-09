@@ -997,6 +997,10 @@ html, body {
     -webkit-transition: background-color 0.3s ease; }
     .basic-comment__submit:hover {
       background-color: #2E3137; }
+    .basic-comment__submit--in-use {
+      transition: opacity 0.3s ease;
+      -webkit-transition: opacity 0.3s ease;
+      opacity: 0.5; }
 
 .comment-form__title {
   text-align: center;
@@ -1054,13 +1058,16 @@ html, body {
     color: #E03131;
     font-size: 13px;
     padding-top: 7px; }
-  .comment-form .form__loader {
-    display: none;
+  .comment-form .form__loader-wrapper {
+    width: 120px;
     margin: 0 auto;
     padding-top: 10px; }
+  .comment-form .form__loader {
+    display: none; }
   .comment-form .form__btn {
     background: none;
     border: 0;
+    opacity: 1;
     color: inherit;
     font: inherit;
     line-height: normal;
@@ -1079,6 +1086,10 @@ html, body {
     -webkit-transition: background-color 0.3s ease; }
     .comment-form .form__btn:hover {
       background-color: #202654; }
+    .comment-form .form__btn--in-use {
+      transition: opacity 0.3s ease;
+      -webkit-transition: opacity 0.3s ease;
+      opacity: 0.5; }
 
 .panel {
   position: fixed;

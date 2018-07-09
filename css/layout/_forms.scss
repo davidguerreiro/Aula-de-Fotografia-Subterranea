@@ -198,6 +198,11 @@
 		&:hover {
 			background-color: $black-grey;
 		}
+
+		&--in-use {
+			@include do-transition( opacity );
+			opacity: 0.5;
+		}
 	}
 }
 
@@ -289,15 +294,20 @@
 			padding-top: 7px;
 		}
 
-		&__loader {
-			display: none;
+		&__loader-wrapper {
+			width: 120px;
 			margin: 0 auto;
 			padding-top: 10px;
+		}
+
+		&__loader {
+			display: none;
 		}
 
 		&__btn {
 			background: none;
 			border: 0;
+			opacity: 1;
 			color: inherit;
 			font: inherit;
 			line-height: normal;
@@ -312,8 +322,14 @@
 			padding: 10px 5px;
 			@include do-transition( background-color, 0.3s, ease );
 			
+			
 			&:hover {
 				background-color: #202654;
+			}
+
+			&--in-use {
+				@include do-transition( opacity );
+				opacity: 0.5;
 			}
 		}
 	}
