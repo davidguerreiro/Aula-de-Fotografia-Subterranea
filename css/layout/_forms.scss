@@ -282,6 +282,19 @@
 			}
 		}
 
+		&__error-message {
+			display: none;
+			color: #E03131;
+			font-size: 13px;
+			padding-top: 7px;
+		}
+
+		&__loader {
+			display: none;
+			margin: 0 auto;
+			padding-top: 10px;
+		}
+
 		&__btn {
 			background: none;
 			border: 0;

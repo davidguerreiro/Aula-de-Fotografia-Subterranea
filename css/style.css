@@ -1049,6 +1049,15 @@ html, body {
       color: #44999a; }
       .comment-form .form__privacy-text a:hover {
         text-decoration: underline; }
+  .comment-form .form__error-message {
+    display: none;
+    color: #E03131;
+    font-size: 13px;
+    padding-top: 7px; }
+  .comment-form .form__loader {
+    display: none;
+    margin: 0 auto;
+    padding-top: 10px; }
   .comment-form .form__btn {
     background: none;
     border: 0;

@@ -274,9 +274,14 @@ $(document).ready( function() {
      // remove cookies message.
      $('#accept').click( function(e){
          e.preventDefault();
-         console.log( 'yese here' );
          $('.cookie-box').fadeOut();
      })
+
+     // process comment form.
+     $('#post-comment-form').submit( function(e){
+        e.preventDefault();
+        console.log('Form submited here');
+     });
 
 });
 
