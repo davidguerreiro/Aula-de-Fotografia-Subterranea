@@ -23,7 +23,7 @@ $privacy_policy_page    = get_field( 'aula_privacy_policy_page', 'option' );
         </h2>
         <form action="" method="post" class="form" id="post-comment-form">
             <input type="hidden" name="nonce" id="nonce" value="<?php echo $nonce; ?>">
-            <input type="hidden" name="action" value="comment-form">
+            <input type="hidden" name="action" id="action" value="comment-form">
             <input type="hidden" name="post-id" value="<?php echo $post_id; ?>">
             <div class="form__section">
                 <label for="name" class="form__basic-label"> - Nombre :</label>
@@ -41,11 +41,11 @@ $privacy_policy_page    = get_field( 'aula_privacy_policy_page', 'option' );
                     Acepto que mis datos sean almacenados en este sitio de forma privada y acepto haber leido
                     los <a href="<?php echo esc_url( $privacy_policy_page ); ?>">Términos y condiciones</a> de uso de este sitio web.
                 </label>
-                <p class="form__error-message comment-error-message">* Es obligatorio aceptar los Términos y Condiciones para publicar un comentario.</p>
+                <p class="form__error-message terms-and-conditions-error-message">* Es obligatorio aceptar los Términos y Condiciones para publicar un comentario.</p>
             </div>
             <div class="form__section">
                 <div class="g-recaptcha form__antispam" data-sitekey="6LfUxQcUAAAAALjbqmc1Km4DM5tUpfd9eniyESR7"></div>
-                <p class="form__error-message comment-error-message">* Este campo es obligatorio.</p>                
+                <p class="form__error-message google-antispam-error-message">* Este campo es obligatorio.</p>                
             </div>
             <div class="form__section">
                 <input type="submit" value="Publicar Comentario" class="form__btn">

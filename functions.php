@@ -40,7 +40,8 @@ if ( function_exists( 'acf_add_options_page' ) ) {
     wp_enqueue_script( '_photoswipe-default-ui-js', get_template_directory_uri() . '/js/photoswipe/dist/photoswipe-ui-default.min.js', array(), true );
 
     // main scripts.
-    wp_enqueue_script( '_main-script', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1232312431129', true );
+    wp_enqueue_script( '_main-script', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1232312431142', true );
+    wp_localize_script( '_main-script', 'ajaxObject', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) );  
   }
 
   add_action( 'wp_enqueue_scripts', 'aula_enqueue_scripts' );

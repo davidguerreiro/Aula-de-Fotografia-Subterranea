@@ -137,12 +137,19 @@ function aula_login_logo() {
 add_action( 'login_enqueue_scripts', 'aula_login_logo' );
 
 /**
- * Process contact form and send email to admins
+ * Process contact form and send email to admins.
+ * This function can work with both AJAX and normal HTTP requests.
+ * 
+ * When using AJAX response is sent back to the client using a JSON
+ * object containing request status and comment data if success.
+ * 
+ * When using normal HTTP request user is redirected to the same page where
+ * the form was originally submited and a status message will be displayed
+ * there.
  * 
  * @return Array $response
  */
 function aula_process_contact_form() {
-
 	// correct form validation.
 	if ( ! isset( $_POST['action'] ) || ! isset( $_POST['nonce'] ) || ! isset( $_POST['page-id'] ) ) {
 		return;
@@ -204,6 +211,7 @@ function aula_process_contact_form() {
 	aula_redirect_user( $page_id, 'error-message' );
 }
 
+// basic process contact form when JS or Ajax request fails.
 add_action( 'init', 'aula_process_contact_form' );
 
 /**
@@ -259,6 +267,9 @@ function aula_display_user_notification( $key ) {
 			$not_data['message'] = 'Su comentario ha sido publicado con exito';
 			$not_data['type']    = 'success';
 			break;
+		case 'empty-terms' :
+			$not_data['message'] = 'Es obligatorio aceptar los Terminos y Condiciones para usar un formulario en este sitio web';
+			break;
 		default :
 			$not_data['message'] = 'Ha habido un error en el servidor. Prueba a mandar el mensaje otra vez y si el error persiste contacte via email con el adminsitrador del sitio';
 			break;
@@ -272,8 +283,22 @@ function aula_display_user_notification( $key ) {
  * 
  * @return void
  */
-function aula_process_comment_form() {
-	if ( ! isset( $_POST['action'] ) || ! isset( $_POST['nonce'] ) || ! isset( $_POST['post-id'] ) || ! isset( $_POST['name'] ) || ! isset( $_POST['message'] ) || ! isset( $_POST['g-recaptcha-response'] ) ) {
+function aula_process_comment_form() {	
+	$is_ajax = false;
+	if ( isset( $_REQUEST['action'] ) && $_REQUEST['action'] == 'comment-form' ) {
+		$is_ajax 	= true;
+		$data 		= [];
+		parse_str( $_POST['data'], $data );
+
+		/**
+		 * Overwrite post values with ajax-data values to ensure
+		 * the sript works with ajax too.
+		 */
+		foreach ( $data as $key => $value ) {
+			$_POST[ $key ] = $value;
+		}
+	}
+	if ( ! isset( $_POST['action'] ) || ! isset( $_POST['nonce'] ) || ! isset( $_POST['post-id'] ) || ! isset( $_POST['name'] ) || ! isset( $_POST['message'] ) || ! isset( $_POST['g-recaptcha-response'] ) || ! isset( $_POST['terms_and_conditions'] ) ) {
 		return;
 	}
 
@@ -283,14 +308,30 @@ function aula_process_comment_form() {
 	$post_id = (int) $_POST['post-id'];
 
 	if ( $_POST['g-recaptcha-response'] == '' ) {
+		if ( $is_ajax ) {
+			aula_ajax_send_response( false, array( 'error-code' => 'empy-ga-captcha') );
+		}
 		aula_redirect_user( $post_id, 'empty-ga-captcha' );
 	}
 
+	if ( ! isset( $_POST['terms_and_conditions'] ) || $_POST['terms_and_conditions'] == '' ) {
+		if ( $is_ajax ) {
+			aula_ajax_send_response( false, array( 'error-code' => 'empty-terms') );
+		}
+		aula_redirect_user( $post_id, 'empty-terms' );
+	}
+
 	if ( empty( $_POST['name'] ) ) {
+		if ( $is_ajax ) {
+			aula_ajax_send_response( false, array( 'error-code' => 'empy-name') );
+		}
 		aula_redirect_user( $post_id, 'empty-name' );
 	}
 
 	if ( empty( $_POST['message'] ) ) {
+		if ( $is_ajax ) {
+			aula_ajax_send_response( false, array( 'error-code' => 'empty-message' ) );
+		}
 		aula_redirect_user( $post_id, 'empty-message' );
 	}
 
@@ -308,12 +349,37 @@ function aula_process_comment_form() {
 	);
 
 	if ( wp_insert_comment( $args ) !== false ) {
+		if ( $is_ajax ) {
+			// TODO: Complete ajax from here.
+			aula_ajax_send_response( true, $args );
+		}
 		aula_redirect_user( $post_id, 'comment-published' );
 	}
 	aula_redirect_user( $post_id, 'error-message' );
 }
 
+// ajax process comment form.
+add_action( 'wp_ajax_comment-form', 'aula_process_comment_form' );
+add_action( 'wp_ajax_nopriv_comment-form', 'aula_process_comment_form' );
+
+// standard http request process comment form.
 add_action( 'init', 'aula_process_comment_form' );
+
+/**
+ * Set ajax response
+ * 
+ * @param boolean $status Response status.
+ * @param array $data Extra data to be sent back to the client.
+ * @return object
+ */
+function aula_ajax_send_response( $status, $data ) {
+	$response = [
+		'status' => $status,
+		'data' 	 => $data,
+	];
+	echo json_encode( $response );
+	exit;
+}
 
 /**
  * pre_get_posts function for aula

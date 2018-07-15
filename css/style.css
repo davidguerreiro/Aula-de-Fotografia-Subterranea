@@ -1038,7 +1038,7 @@ html, body {
     margin-top: 8px;
     border: 1px solid grey; }
   .comment-form .form__content {
-    min-height: 250px; }
+    min-height: 150px; }
   .comment-form .form__basic-checkbox, .comment-form .form__privacy-text {
     display: inline-block; }
   .comment-form .form__basic-checkbox {
@@ -1970,7 +1970,7 @@ ul, li {
   height: auto; }
 
 .m8__section {
-  background-color: #21458c;
+  background-color: #ab7312b5;
   color: #ffffff;
   /*border-left: 1px solid $light-grey;*/ }
   .m8__section h2 {

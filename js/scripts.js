@@ -287,6 +287,7 @@ $(document).ready( function() {
 
         const $submitButton = $('.form__btn');
         const $animatedAjax = $('#loader');
+        const action        = $('#action').val();
         $submitButton.val( 'Procesando Formulario ... ' );
         $submitButton.addClass( 'form__btn--in-use');
         $animatedAjax.slideDown();
@@ -301,9 +302,42 @@ $(document).ready( function() {
             $('.comment-error-message').slideDown();
         }
 
+        if ( ! $('#terms_and_conditions').is(':checked') ) {
+            errors = true;
+            $('.terms-and-conditions-error-message').slideDown();
+        }
+
+        if ( errors ) {
+            $animatedAjax.slideUp( 400, 'linear', function() {
+                $submitButton.val( 'Publicar Comentario' );
+                $submitButton.removeClass( 'form__btn--in-use' );
+                $('.form-error-message').slideDown();
+                return;
+            });
+        }
 
         let data = $(this).serialize();
         console.log( data );
+        console.log( ajaxObject.ajaxUrl );
+        console.log( $('#action').val() );
+
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: ajaxObject.ajaxUrl,
+            data: {
+                action: action,
+                data: data,
+            },
+            success: function(e) {
+                console.log(e);
+                console.log(1);
+            },
+            error: function(e) {
+                console.log(e);
+                console.log(2);
+            }, 
+        });
      });
 
 });
