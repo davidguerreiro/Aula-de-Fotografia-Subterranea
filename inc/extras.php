@@ -307,12 +307,14 @@ function aula_process_comment_form() {
 	}
 	$post_id = (int) $_POST['post-id'];
 
+	/*
 	if ( $_POST['g-recaptcha-response'] == '' ) {
 		if ( $is_ajax ) {
 			aula_ajax_send_response( false, array( 'error-code' => 'empy-ga-captcha') );
 		}
 		aula_redirect_user( $post_id, 'empty-ga-captcha' );
 	}
+	*/
 
 	if ( ! isset( $_POST['terms_and_conditions'] ) || $_POST['terms_and_conditions'] == '' ) {
 		if ( $is_ajax ) {
@@ -350,7 +352,8 @@ function aula_process_comment_form() {
 
 	if ( wp_insert_comment( $args ) !== false ) {
 		if ( $is_ajax ) {
-			// TODO: Complete ajax from here.
+			// parse date.
+			$args['comment_date'] = iconv('ISO-8859-2', 'UTF-8', strftime( '%d %B %Y', strtotime( $args['comment_date'] ) ) );
 			aula_ajax_send_response( true, $args );
 		}
 		aula_redirect_user( $post_id, 'comment-published' );

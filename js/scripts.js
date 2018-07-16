@@ -277,6 +277,26 @@ $(document).ready( function() {
          $('.cookie-box').fadeOut();
      })
 
+     /**
+      * Create comment html when a comment
+      * is published using AJAX
+      * 
+      * @param {object} data Response comment data.
+      * @return {string} html HTML code to be appended. 
+      */
+     var getHtml = function(data) {
+        var html = "<div class='comment comment--hidden' id='comment-" + data.comment_post_id + "'>";
+        html += "<h3><i class='fa fa-user-circle-o comment__icon' aria-hidden='true;></i>";
+        html += data.comment_author;
+        html += "<span class='comment_date'>";
+        html += "<i class='fa fa-clock-o' aria-hidden='true'></i>";
+        html += data.comment_date;
+        html += "</span></h3>";
+        html += "<p>" + data.comment_content + "</p>";
+        html += "</div>";
+        return html;
+     }
+
      // process comment form.
      $('#post-comment-form').submit( function(e){
         e.preventDefault();
@@ -288,6 +308,7 @@ $(document).ready( function() {
         const $submitButton = $('.form__btn');
         const $animatedAjax = $('#loader');
         const action        = $('#action').val();
+        const $errorMessage = $('.form-error-message');
         $submitButton.val( 'Procesando Formulario ... ' );
         $submitButton.addClass( 'form__btn--in-use');
         $animatedAjax.slideDown();
@@ -311,7 +332,7 @@ $(document).ready( function() {
             $animatedAjax.slideUp( 400, 'linear', function() {
                 $submitButton.val( 'Publicar Comentario' );
                 $submitButton.removeClass( 'form__btn--in-use' );
-                $('.form-error-message').slideDown();
+                $errorMessage.slideDown();
                 return;
             });
         }
@@ -329,9 +350,27 @@ $(document).ready( function() {
                 action: action,
                 data: data,
             },
-            success: function(e) {
-                console.log(e);
+            success: function(response) {
+                console.log(response);
                 console.log(1);
+
+                if (response.status) {
+
+                    // remove no comments text if required.
+                    var $noComments = $('.no-content-notification');
+                    $noComments.slideUp();
+
+                    // var html = getHtml(response.data);
+                } else {
+                    $errorMessage.innerHTML('Ha habido un error publicando tu comentario. Por favor reintentelo de nuevo mas tarde o pongase en contacto con el adminsitrador de este sitio web.' );
+                    $animatedAjax.slideUp( 400, 'linear', function() {
+                        $submitButton.val( 'Publicar Comentario' );
+                        $submitButton.removeClass( 'form__btn--in-use' );
+                        $errorMessage.slideDown();
+                        return;
+                    });
+                }
+
             },
             error: function(e) {
                 console.log(e);
