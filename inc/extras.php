@@ -292,7 +292,7 @@ function aula_process_comment_form() {
 
 		/**
 		 * Overwrite post values with ajax-data values to ensure
-		 * the sript works with ajax too.
+		 * the script works with ajax too.
 		 */
 		foreach ( $data as $key => $value ) {
 			$_POST[ $key ] = $value;
