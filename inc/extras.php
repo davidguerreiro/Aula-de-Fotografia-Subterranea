@@ -353,6 +353,7 @@ function aula_process_comment_form() {
 	if ( wp_insert_comment( $args ) !== false ) {
 		if ( $is_ajax ) {
 			// parse date.
+			setlocale( LC_ALL, "es_ES", 'Spanish_Spain', 'Spanish' );
 			$args['comment_date'] = iconv('ISO-8859-2', 'UTF-8', strftime( '%d %B %Y', strtotime( $args['comment_date'] ) ) );
 			aula_ajax_send_response( true, $args );
 		}
