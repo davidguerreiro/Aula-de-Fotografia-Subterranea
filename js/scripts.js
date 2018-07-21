@@ -263,7 +263,6 @@ $(document).ready( function() {
      // open - close mobile menu.
      $('#mobile-menu-icon').on('click', function(e){
         $mobile_section = $('.mobile-menu');
-        console.log( 'yolo' );
         if ( $mobile_section.css('display') === 'none') {
             $mobile_section.slideDown();
         } else {
