@@ -361,7 +361,7 @@ $(document).ready( function() {
                             $submitButton.val( 'Publicar Comentario');
                             $submitButton.removeClass('form__btn--in-use');
                             $errorMessage.addClass('form__error-message--success')
-                                .html('Su comentario se ha publicado con exito y ya esta disponible en la seccion de "Comentarios"')
+                                .html('Su comentario se ha publicado con éxito y ya esta disponible en la sección de "Comentarios"')
                                 .slideDown(time);
                             
                             // remove comments text if required.
