@@ -292,6 +292,10 @@
 			color: #E03131;
 			font-size: 13px;
 			padding-top: 7px;
+			
+			&--success {
+				color: #0a940a;
+			}
 		}
 
 		&__loader-wrapper {

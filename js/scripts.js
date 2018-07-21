@@ -284,10 +284,10 @@ $(document).ready( function() {
       * @return {string} html HTML code to be appended. 
       */
      var getHtml = function(data) {
-        var html = "<div class='comment comment--hidden' id='comment-" + data.comment_post_id + "'>";
-        html += "<h3><i class='fa fa-user-circle-o comment__icon' aria-hidden='true;></i>";
+        var html = "<div class='comment'>";
+        html += "<h3><i class='fa fa-user-circle-o comment__icon' aria-hidden='true'></i>";
         html += data.comment_author;
-        html += "<span class='comment_date'>";
+        html += "<span class='comment__date'>";
         html += "<i class='fa fa-clock-o' aria-hidden='true'></i>";
         html += data.comment_date;
         html += "</span></h3>";
@@ -300,6 +300,7 @@ $(document).ready( function() {
      $('#post-comment-form').submit( function(e){
         e.preventDefault();
         let errors = false;
+        const time = 650;
         $('.form__error-message').slideUp();
         console.log('Form submited here');
 
@@ -310,7 +311,7 @@ $(document).ready( function() {
         const $errorMessage = $('.form-error-message');
         $submitButton.val( 'Procesando Formulario ... ' );
         $submitButton.addClass( 'form__btn--in-use');
-        $animatedAjax.slideDown();
+        $animatedAjax.slideDown(time);
 
         if ( $('#name').val() === '' ) {
             errors = true;
@@ -350,19 +351,28 @@ $(document).ready( function() {
                 data: data,
             },
             success: function(response) {
-                console.log(response);
-                console.log(1);
 
                 if (response.status) {
+                    var html = getHtml(response.data);
+                    $('.m16__comments-wrapper').prepend(html);
+                        console.log( 'in response ');
 
-                    // remove no comments text if required.
-                    var $noComments = $('.no-content-notification');
-                    $noComments.slideUp();
-
-                    // var html = getHtml(response.data);
+                        $animatedAjax.slideUp(time, 'linear', function() {
+                            $submitButton.val( 'Publicar Comentario');
+                            $submitButton.removeClass('form__btn--in-use');
+                            $errorMessage.addClass('form__error-message--success')
+                                .html('Su comentario se ha publicado con exito y ya esta disponible en la seccion de "Comentarios"')
+                                .slideDown(time);
+                            
+                            // remove comments text if required.
+                            var $noComments = $('.no-content-notification');
+                            if ($noComments.length > 0) {
+                                $noComments.slideUp();
+                            }
+                        });
                 } else {
                     $errorMessage.innerHTML('Ha habido un error publicando tu comentario. Por favor reintentelo de nuevo mas tarde o pongase en contacto con el adminsitrador de este sitio web.' );
-                    $animatedAjax.slideUp( 400, 'linear', function() {
+                    $animatedAjax.slideUp( time, 'linear', function() {
                         $submitButton.val( 'Publicar Comentario' );
                         $submitButton.removeClass( 'form__btn--in-use' );
                         $errorMessage.slideDown();
@@ -374,6 +384,13 @@ $(document).ready( function() {
             error: function(e) {
                 console.log(e);
                 console.log(2);
+                $errorMessage.innerHTML('Ha habido un error publicando tu comentario. Por favor reintentelo de nuevo mas tarde o pongase en contacto con el adminsitrador de este sitio web.' );
+                $animatedAjax.slideUp( time, 'linear', function() {
+                    $submitButton.val( 'Publicar Comentario' );
+                    $submitButton.removeClass( 'form__btn--in-use' );
+                    $errorMessage.slideDown();
+                    return;
+                });
             }, 
         });
      });

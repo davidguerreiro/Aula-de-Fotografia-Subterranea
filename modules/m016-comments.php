@@ -22,18 +22,22 @@
         Comentarios
     </h2>
 
+    <section class="m16__comments-wrapper">
+
     <?php
 
-    // no comments.
-    if ( ! is_array( $comments ) || is_wp_error( $comments ) || empty( $comments ) ) {
-        $no_content = 'No hay ningun comentario. Animate y se el primero en comentar esta entrada.';
-        include( locate_template( 'template-parts/content-none.php' ) );
-    } else {
-        foreach ( $comments as $comment ) {
-            include( locate_template( 'template-parts/comment-single-item.php' ) );
+        // no comments.
+        if ( ! is_array( $comments ) || is_wp_error( $comments ) || empty( $comments ) ) {
+            $no_content = 'No hay ningun comentario. Animate y se el primero en comentar esta entrada.';
+            include( locate_template( 'template-parts/content-none.php' ) );
+        } else {
+            foreach ( $comments as $comment ) {
+                include( locate_template( 'template-parts/comment-single-item.php' ) );
+            }
         }
-    }
 
     ?>
+
+    </section>
 
  </div>

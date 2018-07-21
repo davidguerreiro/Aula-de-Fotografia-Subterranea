@@ -23,6 +23,10 @@
             }
         }
 
+        &--hidden {
+            display: none;
+        }
+
         h3 {
             font-size: 25px;
             border-bottom: 2px solid $dark-red;

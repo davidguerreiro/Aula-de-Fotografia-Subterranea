@@ -1058,6 +1058,8 @@ html, body {
     color: #E03131;
     font-size: 13px;
     padding-top: 7px; }
+    .comment-form .form__error-message--success {
+      color: #0a940a; }
   .comment-form .form__loader-wrapper {
     width: 120px;
     margin: 0 auto;
@@ -2337,6 +2339,8 @@ ul, li {
         float: none;
         display: block;
         padding-left: 4px; } }
+  .m16 .comment--hidden {
+    display: none; }
   .m16 .comment h3 {
     font-size: 25px;
     border-bottom: 2px solid #8A0638;
