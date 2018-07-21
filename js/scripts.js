@@ -296,13 +296,17 @@ $(document).ready( function() {
         return html;
      }
 
-     // process comment form.
+     /**
+      * Process contact form,
+      * send AJAX request to publish comment
+      * and get comment data to automatically
+      * publish the comment on the front end.
+      */
      $('#post-comment-form').submit( function(e){
         e.preventDefault();
         let errors = false;
         const time = 650;
         $('.form__error-message').slideUp();
-        console.log('Form submited here');
 
 
         const $submitButton = $('.form__btn');
@@ -338,9 +342,6 @@ $(document).ready( function() {
         }
 
         let data = $(this).serialize();
-        console.log( data );
-        console.log( ajaxObject.ajaxUrl );
-        console.log( $('#action').val() );
 
         $.ajax({
             type: 'post',
@@ -395,6 +396,78 @@ $(document).ready( function() {
         });
      });
 
+
+     /**
+      * Process contact form submit.
+      * Send contact message by ajax and
+      * update form response dynamicaly
+      */
+      $('#contact-form').submit( function(e) {
+        e.preventDefault();
+        let errors = false;
+        const time = 650;
+        $('.form__error-message').slideUp();
+
+
+        const $submitButton = $('.form__btn');
+        const $animatedAjax = $('#loader');
+        const action        = $('#action').val();
+        const $errorMessage = $('.form-error-message');
+        const email         = $('#email').val(); 
+
+        $submitButton.val( 'Procesando Formulario ... ' );
+        $submitButton.addClass( 'form__btn--in-use');
+        $animatedAjax.slideDown(time);
+
+        if ( $('#name').val() === '' ) {
+            errors = true;
+            $('.name-error-message').slideDown();
+        }
+
+        if ( $('#comment').val() === '' ) {
+            errors = true;
+            $('.comment-error-message').slideDown();
+        }
+
+        if ( email !== '' && email.indexOf('@') === -1 ) {
+            errors = true;
+            $('.email-error-message').slideDown();
+        }
+
+        if ( ! $('#terms_and_conditions').is(':checked') ) {
+            errors = true;
+            $('.terms-and-conditions-error-message').slideDown();
+        }
+
+        if ( errors ) {
+            $animatedAjax.slideUp( 400, 'linear', function() {
+                $submitButton.val( 'Enviar mensaje' );
+                $submitButton.removeClass( 'form__btn--in-use' );
+                $errorMessage.slideDown();
+                return;
+            });
+        }
+
+        let data = $(this).serialize();
+        
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: ajaxObject.ajaxUrl,
+            data: {
+                action: action,
+                data: data,
+            },
+            success: function(response) {
+                console.log(1);
+                console.log(response);
+            },
+            error: function(response) {
+                console.log(2);
+                console.log(response);
+            }
+        });
+      });
 });
 
 /*

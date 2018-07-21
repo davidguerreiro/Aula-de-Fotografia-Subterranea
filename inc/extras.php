@@ -150,6 +150,20 @@ add_action( 'login_enqueue_scripts', 'aula_login_logo' );
  * @return Array $response
  */
 function aula_process_contact_form() {
+	$is_ajax = false;
+	if ( isset( $_REQUEST['action'] ) && $_REQUEST['action'] == 'contact-form' ) {
+		$is_ajax 	= true;
+		$data 		= [];
+		parse_str( $_POST['data'], $data );
+
+		/**
+		 * Overwrite post values with ajax-data values to ensure
+		 * the script works with ajax too.
+		 */
+		foreach ( $data as $key => $value ) {
+			$_POST[ $key ] = $value;
+		}
+	}
 	// correct form validation.
 	if ( ! isset( $_POST['action'] ) || ! isset( $_POST['nonce'] ) || ! isset( $_POST['page-id'] ) ) {
 		return;
@@ -173,11 +187,24 @@ function aula_process_contact_form() {
 	$message 	= sanitize_text_field( $_POST['message'] );
 	$user_email = ( isset( $_POST['email'] ) && ! empty( $_POST['email'] ) && is_email( $_POST['email'] ) ) ? sanitize_email( $_POST['email'] ) : false;
 
+	if ( ! isset( $_POST['terms_and_conditions'] ) || $_POST['terms_and_conditions'] == '' ) {
+		if ( $is_ajax ) {
+			aula_ajax_send_response( false, array( 'error-code' => 'empty-terms') );
+		}
+		aula_redirect_user( $post_id, 'empty-terms' );
+	}
+
 	if ( empty( $name ) ) {
+		if ( $is_ajax ) {
+			aula_ajax_send_response( false, array( 'error-code' => 'empty-name') );
+		}
 		aula_redirect_user( $page_id, 'empty-name' );
 	}
 
 	if ( empty( $message ) ) {
+		if ( $is_ajax ) {
+			aula_ajax_send_response( false, array( 'error-code' => 'empty-message' ) );
+		}
 		aula_redirect_user( $page_id, 'empty-message' );
 	}
 
@@ -206,12 +233,22 @@ function aula_process_contact_form() {
 	 <p>'" . $message . "'</p>";
 	
 	if ( wp_mail( $to, $subject, $body, $headers ) !== false ) {
+		if ( $is_ajax ) {
+			aula_ajax_send_response( true );
+		}
 		aula_redirect_user( $page_id, 'message-sent' );
+	}
+	if ( $is_ajax ) {
+		aula_ajax_send_response( false, array( 'error-code' => 'error-message' ) );
 	}
 	aula_redirect_user( $page_id, 'error-message' );
 }
 
-// basic process contact form when JS or Ajax request fails.
+// ajax process comment form.
+add_action( 'wp_ajax_contact-form', 'aula_process_contact_form' );
+add_action( 'wp_ajax_nopriv_contact-form', 'aula_process_contact_form' );
+
+// standard HTTP request process contact form - used as a fallback when JS fails or is disabled.
 add_action( 'init', 'aula_process_contact_form' );
 
 /**
