@@ -21,9 +21,6 @@ if ( have_posts() ) : ?>
         // post content
         get_template_part( 'template-parts/content', 'post' );
 
-        // module 029.
-        // include( locate_template( 'modules/m029-add-comment.php' ) );
-
         // module 030.
         include( locate_template( 'modules/m030-add-comment.php' ) );
 

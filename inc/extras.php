@@ -164,6 +164,7 @@ function aula_process_contact_form() {
 			$_POST[ $key ] = $value;
 		}
 	}
+	
 	// correct form validation.
 	if ( ! isset( $_POST['action'] ) || ! isset( $_POST['nonce'] ) || ! isset( $_POST['page-id'] ) ) {
 		return;
@@ -208,6 +209,7 @@ function aula_process_contact_form() {
 		aula_redirect_user( $page_id, 'empty-message' );
 	}
 
+
 	if ( $user_email !== false ) {
 		$name .= ' ( ' . $user_email . ')';
 	}
@@ -234,7 +236,7 @@ function aula_process_contact_form() {
 	
 	if ( wp_mail( $to, $subject, $body, $headers ) !== false ) {
 		if ( $is_ajax ) {
-			aula_ajax_send_response( true );
+			aula_ajax_send_response( true , [] );
 		}
 		aula_redirect_user( $page_id, 'message-sent' );
 	}
@@ -344,14 +346,12 @@ function aula_process_comment_form() {
 	}
 	$post_id = (int) $_POST['post-id'];
 
-	/*
 	if ( $_POST['g-recaptcha-response'] == '' ) {
 		if ( $is_ajax ) {
 			aula_ajax_send_response( false, array( 'error-code' => 'empy-ga-captcha') );
 		}
 		aula_redirect_user( $post_id, 'empty-ga-captcha' );
 	}
-	*/
 
 	if ( ! isset( $_POST['terms_and_conditions'] ) || $_POST['terms_and_conditions'] == '' ) {
 		if ( $is_ajax ) {

@@ -349,6 +349,7 @@ $(document).ready( function() {
             url: ajaxObject.ajaxUrl,
             data: {
                 action: action,
+                is_ajax: action,
                 data: data,
             },
             success: function(response) {
@@ -356,7 +357,6 @@ $(document).ready( function() {
                 if (response.status) {
                     var html = getHtml(response.data);
                     $('.m16__comments-wrapper').prepend(html);
-                        console.log( 'in response ');
 
                         $animatedAjax.slideUp(time, 'linear', function() {
                             $submitButton.val( 'Publicar Comentario');
@@ -415,6 +415,7 @@ $(document).ready( function() {
         const $errorMessage = $('.form-error-message');
         const email         = $('#email').val(); 
 
+        console.log(action);
         $submitButton.val( 'Procesando Formulario ... ' );
         $submitButton.addClass( 'form__btn--in-use');
         $animatedAjax.slideDown(time);
@@ -424,9 +425,9 @@ $(document).ready( function() {
             $('.name-error-message').slideDown();
         }
 
-        if ( $('#comment').val() === '' ) {
+        if ( $('#message').val() === '' ) {
             errors = true;
-            $('.comment-error-message').slideDown();
+            $('.message-error-message').slideDown();
         }
 
         if ( email !== '' && email.indexOf('@') === -1 ) {
@@ -449,6 +450,7 @@ $(document).ready( function() {
         }
 
         let data = $(this).serialize();
+        console.log(data);
         
         $.ajax({
             type: 'post',
@@ -456,15 +458,43 @@ $(document).ready( function() {
             url: ajaxObject.ajaxUrl,
             data: {
                 action: action,
+                is_ajax: action,
                 data: data,
             },
             success: function(response) {
                 console.log(1);
                 console.log(response);
+
+                if (response.status) {
+                    $animatedAjax.slideUp(time, 'linear', function() {
+                        $submitButton.val( 'Enviar mensaje');
+                        $submitButton.removeClass('form__btn--in-use');
+                        $errorMessage.addClass('form__error-message--success')
+                            .html('Su mensaje se ha enviado con éxito. Pronto nos pondremos en contacto con usted')
+                            .slideDown(time);        
+                    });
+                } else {
+                    $errorMessage.html('Ha habido un error enviando su mensaje. Por favor inténtelo otra vez en unos minutos' );
+                    $animatedAjax.slideUp( time, 'linear', function() {
+                        $submitButton.val( 'Enviar mensaje' );
+                        $submitButton.removeClass( 'form__btn--in-use' );
+                        $errorMessage.slideDown();
+                        return;
+                    });
+                }
+
             },
             error: function(response) {
                 console.log(2);
                 console.log(response);
+
+                $errorMessage.html('Ha habido un error enviando su mensaje. Por favor inténtelo otra vez en unos minutos' );
+                $animatedAjax.slideUp( time, 'linear', function() {
+                    $submitButton.val( 'Enviar mensaje' );
+                    $submitButton.removeClass( 'form__btn--in-use' );
+                    $errorMessage.slideDown();
+                    return;
+                });
             }
         });
       });

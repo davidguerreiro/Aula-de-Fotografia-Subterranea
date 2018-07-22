@@ -28,8 +28,8 @@
         // module 020.
         include( locate_template( 'modules/m020-gallery-body.php' ) );
 
-        // module 029.
-        include( locate_template( 'modules/m029-add-comment.php' ) );
+        // module 030.
+        include( locate_template( 'modules/m030-add-comment.php' ) );
 
         // comments section.
         include( locate_template( 'comments.php' ) );

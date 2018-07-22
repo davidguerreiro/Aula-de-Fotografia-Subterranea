@@ -37,7 +37,7 @@
             <input type="hidden" name="page-id" value="<?php echo $page_id; ?>">
             <div class="form__section">
                 <label for="name" class="form__basic-label"> - Nombre :</label>
-                <input type="text" name="name" class="form__basic-text" id="name" required>
+                <input type="text" name="name" class="form__basic-text" id="name" >
                 <p class="form__error-message name-error-message">* Este campo es obligatorio</p>
             </div>
             <div class="form__section">
@@ -47,16 +47,16 @@
             </div>
             <div class="form__section">
                 <label for="comment"class="form__basic-label"> - Contenido :</label>
-                <textarea name="message" id="message" class="form__content" rows="1" placeholder="Escribe aquí el contenido de tu mensaje" required></textarea>
+                <textarea name="message" id="message" class="form__content" rows="1" placeholder="Escribe aquí el contenido de tu mensaje" ></textarea>
                 <p class="form__error-message message-error-message">* Este campo es obligatorio</p>
             </div>
             <div class="form__section">
-                <input type="checkbox" value="true" name="terms_and_conditions" id="terms_and_conditions" class="form__basic-checkbox" required>
+                <input type="checkbox" value="true" name="terms_and_conditions" id="terms_and_conditions" class="form__basic-checkbox">
                 <label for="terms_and_conditions" class="form__privacy-text">
                     Acepto que mis datos sean almacenados en este sitio de forma privada y acepto haber leido
                     los <a href="<?php echo esc_url( $privacy_policy_page ); ?>">Términos y condiciones</a> de uso de este sitio web.
                 </label>
-                <p class="form__error-message terms-and-conditions-error-message">* Es obligatorio aceptar los Términos y Condiciones para publicar un comentario.</p>
+                <p class="form__error-message terms-and-conditions-error-message">* Es obligatorio aceptar los Términos y Condiciones para enviar un mensaje.</p>
             </div>
             <div class="form__section">
                 <div class="g-recaptcha form__antispam" data-sitekey="6LfUxQcUAAAAALjbqmc1Km4DM5tUpfd9eniyESR7"></div>
