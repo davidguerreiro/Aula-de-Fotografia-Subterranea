@@ -8,12 +8,7 @@
 
  $cookie_message = get_field( 'aula_cookies_message', 'options' );
 
- if ( ! isset( $_COOKIE["cookies_not"] ) ) {
-     $domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : false;
-     setcookie( 'cookies_not', '1', time()+60*60*24*365, $domain, false );
- }
-
-?>
+if ( ! isset( $_COOKIE['cookies_not'] ) ) : ?>
 
 <div class="cookie-box">
     <div class="cookie-box__section cookie-box__section--text">
@@ -32,3 +27,6 @@
         </ul>
     </div>
 </div>
+<?php 
+setcookie( 'cookies_not', '1', time()+60*60*24*365 );
+endif; ?>
