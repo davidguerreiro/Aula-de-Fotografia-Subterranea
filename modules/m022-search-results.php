@@ -16,8 +16,7 @@
         endwhile;
     ?>
     <?php else : 
-        $no_content = "No hay ningun resultado que coincida con el termino <span class='search_term'> Test </span>.
-                        Prueba a realizar la busqueda utilizando otro termino.";
+        $no_content = "No hay ningun resultado que coincida con el termino <span class='search_term'>" . esc_html( $_GET['s'] ) . "</span>. Prueba a realizar la busqueda utilizando otro termino.";
         include( locate_template( 'template-parts/content-none.php' ) );
         unset( $no_content );
     endif;
