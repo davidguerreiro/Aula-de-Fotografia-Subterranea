@@ -11,6 +11,7 @@ $legal_page             = get_page_by_title( 'Aviso Legal' );
 $legal_page_link        = ( ! empty( $legal_page ) && ! is_null( $legal_page ) ) ? get_permalink( $legal_page ) : '';
 $face_link              = get_field( 'facebook_link', 'option' );
 $git_link               = get_field( 'github_link', 'option' );
+$instagram_link         = get_field( 'instagram_link', 'option' );
 
 // cookies consent.
 // get_template_part( 'template-parts/cookies', 'consent' );
@@ -43,8 +44,15 @@ $git_link               = get_field( 'github_link', 'option' );
                                 <i class="fa fa-facebook-f" aria-hidden="true"></i>
                             </a>
                         </li>
-                    <?php endif; 
+                    <?php endif;
                     
+                    if ( ! empty( $instagram_link ) ) : ?>
+                        <li>
+                            <a href="<?php echo esc_url( $instagram_link ); ?>" target="_blank" class="social-a">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    <?php endif;
                     if ( ! empty( $git_link ) ) : ?>
                         <li>
                             <a href="<?php echo esc_html( $git_link ); ?>" target="_blank" class="social-a">
