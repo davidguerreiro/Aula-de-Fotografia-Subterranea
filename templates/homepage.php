@@ -61,6 +61,9 @@ get_sidebar();
 
 <?php
 
+// module 032
+include( locate_template( 'modules/m033-instagram-carousel.php' ) );
+
 // module 013.
 include( locate_template( 'modules/m013-newsletter-section.php' ) );
 
