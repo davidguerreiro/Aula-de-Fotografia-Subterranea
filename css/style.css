@@ -2465,3 +2465,26 @@ ul, li {
   padding-left: 25px; }
   .m29__title {
     padding: 30px 0; }
+
+.m32__icon-link {
+  background-color: #8362fd;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease; }
+  .m32__icon-link:hover {
+    opacity: 0.8; }
+
+.m32__main-icon {
+  display: block !important;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 94px !important;
+  padding: 85px 0 50px 0; }
+
+.m32__text {
+  color: #ffffff;
+  padding: 25px 0 27px 25px;
+  line-height: 1.4; }

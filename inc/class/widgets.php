@@ -17,13 +17,18 @@ require get_template_directory() . '/widgets/w-most-comment-posts.php';
 // facebook group sidebar.
 require get_template_directory() . '/widgets/w-facebook-sidebar.php';
 
+// instagram widget sideabr.
+require get_template_directory() . '/widgets/w-instagram-sidebar.php';
+
 // history sidebar.
 require get_template_directory() . '/widgets/w-history.php';
+
 /**
  * Init all widgets.
  *
  * @return void
  */
+
 function aula_init_widgets() {
 
     // module 08 author data.
@@ -38,9 +43,13 @@ function aula_init_widgets() {
     // module 12 facebook sidebar.
     register_widget( 'Aula_Facebook_Group' );
 
+    // module 32 instagram sidebar.
+    register_widget( 'Aula_Instagram_Group' );
+
     // module 11 history.
     register_widget( 'Aula_History' );
 }
+
 
 add_action( 'widgets_init', 'aula_init_widgets' );
 

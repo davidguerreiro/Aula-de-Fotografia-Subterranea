@@ -1,0 +1,29 @@
+.m32 {
+
+    &__icon-link {
+        background-color: #8362fd;
+        display: block;
+        text-decoration: none;
+        width: 100%;
+        @include do-transition( opacity );
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &__main-icon {
+        display: block !important;
+        width: 100%;
+        color: #ffffff;
+        text-align: center;
+        font-size: 94px !important;
+        padding: 85px 0 50px 0;
+    }
+
+    &__text {
+        color : #ffffff;
+        padding: 25px 0 27px 25px;
+        line-height: $general-line-height;
+    }
+}
