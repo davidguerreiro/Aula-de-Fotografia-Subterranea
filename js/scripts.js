@@ -270,11 +270,26 @@ $(document).ready( function() {
         }
      }); 
 
-     // remove cookies message.
+     /**
+      * Remove cookies message and save the
+      * accepted cookie state in localstorage.
+      */
      $('#accept').click( function(e){
          e.preventDefault();
+         localStorage.setItem( 'cookie-accepted', 'true' );
          $('.cookie-box').fadeOut();
      })
+
+     /**
+      * Check if the cookies have been accepted
+      * in the current client browser
+      */
+      var checkCookieMessage = function() {
+        var cookieValue = localStorage.getItem( 'cookie-accepted' );
+        if ( cookieValue !== 'true' ) {
+            $('.cookie-box').fadeIn();
+        }
+      };
 
      /**
       * Create comment html when a comment
@@ -498,6 +513,9 @@ $(document).ready( function() {
             }
         });
       });
+
+    // check if cookie popup has to be displayed
+    checkCookieMessage();
 });
 
 /*

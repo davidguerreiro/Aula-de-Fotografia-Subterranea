@@ -14,7 +14,7 @@ $git_link               = get_field( 'github_link', 'option' );
 $instagram_link         = get_field( 'instagram_link', 'option' );
 
 // cookies consent.
-// get_template_part( 'template-parts/cookies', 'consent' );
+get_template_part( 'template-parts/cookies', 'consent' );
 
  ?>
 
