@@ -26,4 +26,7 @@ if ( isset( $args ) ) :
     </a>
 </div>
 <?php endif;
+    unset( $key );
+    unset( $text );
+    unset( $external_link );
 endif; ?>
