@@ -4,6 +4,19 @@
  add_theme_support( 'post-thumbnails' );
 
  /**
+  * Calculate current time in seconds to be used as a 
+  * placeholder in loading scripts
+  *
+  * @return int $time_seconds
+  */
+  function aula_get_version_number() {
+    $str_time = date( 'H:i' );
+    sscanf($str_time, "%d:%d:%d", $hours, $minutes, $seconds);
+    $time_seconds = isset($seconds) ? $hours * 3600 + $minutes * 60 + $seconds : $hours * 60 + $minutes;
+    return $time_seconds;
+  }
+
+ /**
  * Create admin options page to
  * be used by ACF.
  */
@@ -17,9 +30,12 @@ if ( function_exists( 'acf_add_options_page' ) ) {
   * @return void
   */
   function aula_enqueue_scripts() {
+
+    $version = 122342344324;
+    $version = aula_get_version_number();   // Do not let this value to go to production -- just comment this line.
       
     // main css
-    wp_enqueue_style( '_theme-style', get_template_directory_uri() . '/css/style.css', array(), false, 'all' );
+    wp_enqueue_style( '_theme-style', get_template_directory_uri() . '/css/style.css', array(), $version, 'all' );
 
     // font awesome
     wp_enqueue_style( '_font-awesome', get_template_directory_uri() . '/css/awesome/css/font-awesome.min.css', array(), false, 'all' );
@@ -40,7 +56,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
     wp_enqueue_script( '_photoswipe-default-ui-js', get_template_directory_uri() . '/js/photoswipe/dist/photoswipe-ui-default.min.js', array(), true );
 
     // main scripts.
-    wp_enqueue_script( '_main-script', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1232312431156', true );
+    wp_enqueue_script( '_main-script', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), $version, true );
     wp_localize_script( '_main-script', 'ajaxObject', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) );  
   }
 
