@@ -2493,7 +2493,8 @@ ul, li {
   padding: 25px; }
   .m34__title {
     margin-bottom: 25px;
-    font-size: 30px; }
+    font-size: 30px;
+    width: 90%; }
     @media screen and (max-width: 650px) {
       .m34__title {
         font-size: 24px; } }
@@ -2538,11 +2539,14 @@ ul, li {
       padding-right: 10px;
       font-size: 16px; }
   .m34 .posts-list__excerpt {
-    padding: 10px 0; }
+    padding: 10px 0;
+    width: 90%; }
   .m34 .posts-list__read-more {
-    position: absolute;
-    bottom: 0;
-    right: 75px;
+    display: block;
+    max-width: 550px;
+    margin-right: 0;
+    margin-top: 15px;
+    width: 100%;
     color: #000000;
     text-decoration: none; }
     .m34 .posts-list__read-more::after {
@@ -2564,4 +2568,5 @@ ul, li {
         position: relative;
         bottom: initial;
         right: initial;
-        margin-top: 20px; } }
+        margin-top: 20px;
+        max-width: 550px; } }

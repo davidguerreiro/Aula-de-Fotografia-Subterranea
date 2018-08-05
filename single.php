@@ -21,7 +21,7 @@ if ( have_posts() ) : ?>
         // post content
         get_template_part( 'template-parts/content', 'post' );
 
-        // module 032 - related content.
+        // module 034 - related content.
         include( locate_template( 'modules/m034-recommended-content.php' ) );
 
         // module 030.
