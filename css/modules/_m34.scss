@@ -1,0 +1,22 @@
+.m34 {
+    padding: $general-margin-padding;
+
+    &__title  {
+        margin-bottom: 15px;
+    }
+
+    .posts-list {
+        
+        &__post-link {
+            display: block;
+            text-decoration: none;
+            color: $black;
+        }
+
+        &__section {
+            width: 48%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}

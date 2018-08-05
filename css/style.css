@@ -2488,3 +2488,15 @@ ul, li {
   color: #ffffff;
   padding: 25px 0 27px 25px;
   line-height: 1.4; }
+
+.m34 {
+  padding: 25px; }
+  .m34__title {
+    margin-bottom: 15px; }
+  .m34 .posts-list__post-link {
+    display: block;
+    text-decoration: none;
+    color: #000000; }
+  .m34 .posts-list__section {
+    width: 48%;
+    display: inline-block; }

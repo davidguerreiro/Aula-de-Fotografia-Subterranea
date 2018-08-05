@@ -8,17 +8,17 @@
 ?>
 
 <div class="module m34">
-    <h3 class="m34__title">
-        <i class="far fa-thumbs-up" aria-hidden="true"></i> También te puede interesar ...
-    </h3>
+    <h2 class="m34__title">
+        También te puede interesar ...
+    </h2>
     <ul class="posts-list">
         <li>
             <a href="#" class="posts-list__post-link">
                 <div class="posts-list__section posts-list__section--image-wrapper">
-                    <img src="https://placebear.com/200/300" alt="">
+                    <img src="https://placebear.com/300/200" alt="">
                 </div>
                 <div class="posts-list__section">
-                    <h4>Titulo del post</h4>
+                    <h3>Titulo del post</h3>
                     <ul class="posts-list__post-data-list">
                         <li>
                             <i class="fa fa-sun-o" aria-hidden="true"></i> Actividades
