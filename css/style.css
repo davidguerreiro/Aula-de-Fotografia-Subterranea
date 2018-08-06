@@ -2519,7 +2519,8 @@ ul, li {
           padding-top: 10px; } }
     .m34 .posts-list__section--image-wrapper {
       width: 37%;
-      min-width: 350px; }
+      min-width: 350px;
+      max-width: 400px; }
       .m34 .posts-list__section--image-wrapper img {
         max-width: 350px;
         height: auto; }
@@ -2543,7 +2544,7 @@ ul, li {
     width: 90%; }
   .m34 .posts-list__read-more {
     display: block;
-    max-width: 550px;
+    max-width: 90px;
     margin-right: 0;
     margin-top: 15px;
     width: 100%;
