@@ -2498,76 +2498,78 @@ ul, li {
     @media screen and (max-width: 650px) {
       .m34__title {
         font-size: 24px; } }
-  .m34 .posts-list__post-link {
-    display: block;
-    position: relative;
-    text-decoration: none;
-    color: #000000;
-    margin-bottom: 30px; }
-  .m34 .posts-list__section {
-    width: 58%;
-    display: inline-block;
-    vertical-align: top; }
-    .m34 .posts-list__section h3 {
-      font-size: 25px;
-      padding-bottom: 5px;
-      border-bottom: 2px solid #8A0638;
-      width: 100%;
-      max-width: 500px; }
-      @media screen and (max-width: 1200px) {
-        .m34 .posts-list__section h3 {
-          padding-top: 10px; } }
-    .m34 .posts-list__section--image-wrapper {
-      width: 37%;
-      min-width: 350px;
-      max-width: 400px; }
-      .m34 .posts-list__section--image-wrapper img {
-        max-width: 350px;
-        height: auto; }
-        @media screen and (max-width: 1200px) {
-          .m34 .posts-list__section--image-wrapper img {
-            width: 100%;
-            height: auto; } }
-    @media screen and (max-width: 1200px) {
-      .m34 .posts-list__section {
-        display: block;
-        width: 100%; } }
-  .m34 .posts-list__post-data-list {
-    margin-top: 5px; }
-    .m34 .posts-list__post-data-list li {
-      display: inline-block;
-      color: #635f5f;
-      padding-right: 10px;
-      font-size: 16px; }
-  .m34 .posts-list__excerpt {
-    padding: 10px 0;
-    width: 90%; }
-  .m34 .posts-list__read-more {
-    display: block;
-    max-width: 90px;
-    margin-right: 0;
-    margin-top: 15px;
-    width: 100%;
-    color: #000000;
-    text-decoration: none; }
-    .m34 .posts-list__read-more::after {
-      content: '';
+  .m34 .posts-list {
+    margin-top: 40px; }
+    .m34 .posts-list__post-link {
       display: block;
-      width: 0;
-      height: 2px;
-      background: #8A0638;
-      margin-top: 5px;
-      transition: width 0.3s;
-      -webkit-transition: width 0.3s; }
-    .m34 .posts-list__read-more:hover::after {
-      width: 100%; }
-    .m34 .posts-list__read-more i {
-      color: #8A0638;
-      padding-left: 5px; }
-    @media screen and (max-width: 1200px) {
-      .m34 .posts-list__read-more {
-        position: relative;
-        bottom: initial;
-        right: initial;
-        margin-top: 20px;
-        max-width: 550px; } }
+      position: relative;
+      text-decoration: none;
+      color: #000000;
+      margin-bottom: 30px; }
+    .m34 .posts-list__section {
+      width: 58%;
+      display: inline-block;
+      vertical-align: top; }
+      .m34 .posts-list__section h3 {
+        font-size: 25px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #8A0638;
+        width: 100%;
+        max-width: 500px; }
+        @media screen and (max-width: 1200px) {
+          .m34 .posts-list__section h3 {
+            padding-top: 10px; } }
+      .m34 .posts-list__section--image-wrapper {
+        width: 37%;
+        min-width: 350px;
+        max-width: 400px; }
+        .m34 .posts-list__section--image-wrapper img {
+          max-width: 350px;
+          height: auto; }
+          @media screen and (max-width: 1200px) {
+            .m34 .posts-list__section--image-wrapper img {
+              width: 100%;
+              height: auto; } }
+      @media screen and (max-width: 1200px) {
+        .m34 .posts-list__section {
+          display: block;
+          width: 100%; } }
+    .m34 .posts-list__post-data-list {
+      margin-top: 5px; }
+      .m34 .posts-list__post-data-list li {
+        display: inline-block;
+        color: #635f5f;
+        padding-right: 10px;
+        font-size: 16px; }
+    .m34 .posts-list__excerpt {
+      padding: 10px 0;
+      width: 90%; }
+    .m34 .posts-list__read-more {
+      display: block;
+      max-width: 90px;
+      margin-right: 0;
+      margin-top: 15px;
+      width: 100%;
+      color: #000000;
+      text-decoration: none; }
+      .m34 .posts-list__read-more::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #8A0638;
+        margin-top: 5px;
+        transition: width 0.3s;
+        -webkit-transition: width 0.3s; }
+      .m34 .posts-list__read-more:hover::after {
+        width: 100%; }
+      .m34 .posts-list__read-more i {
+        color: #8A0638;
+        padding-left: 5px; }
+      @media screen and (max-width: 1200px) {
+        .m34 .posts-list__read-more {
+          position: relative;
+          bottom: initial;
+          right: initial;
+          margin-top: 20px;
+          max-width: 550px; } }

@@ -31,7 +31,7 @@ if ( $related_posts->have_posts() ) : ?>
         <?php while ( $related_posts->have_posts() ) : 
             $related_posts->the_post();
             $post_title              = get_the_title();
-            $post_featured_image_url = get_the_post_thumbnail_url( $post_id, 'medium' );
+            $post_featured_image_url = get_the_post_thumbnail_url( get_the_ID(), 'medium' );
             $categories              = get_the_category();
         ?>
         <li>
