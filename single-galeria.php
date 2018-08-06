@@ -28,6 +28,9 @@
         // module 020.
         include( locate_template( 'modules/m020-gallery-body.php' ) );
 
+        // module 034 - related content.
+        include( locate_template( 'modules/m034-recommended-content.php' ) );
+
         // module 030.
         include( locate_template( 'modules/m030-add-comment.php' ) );
 
