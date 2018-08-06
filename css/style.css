@@ -2490,11 +2490,13 @@ ul, li {
   line-height: 1.4; }
 
 .m34 {
-  padding: 25px; }
+  padding: 25px;
+  background-color: #f3f3f3; }
   .m34__title {
     margin-bottom: 25px;
     font-size: 30px;
-    width: 90%; }
+    width: 90%;
+    padding-top: 10px; }
     @media screen and (max-width: 650px) {
       .m34__title {
         font-size: 24px; } }

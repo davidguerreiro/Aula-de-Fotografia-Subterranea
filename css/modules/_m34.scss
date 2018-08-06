@@ -1,10 +1,12 @@
 .m34 {
     padding: $general-margin-padding;
+    background-color: #f3f3f3;
 
     &__title  {
         margin-bottom: 25px;
         font-size: 30px;
         width: 90%;
+        padding-top: 10px;
 
         @media screen and ( max-width: 650px ) {
             font-size: 24px;
