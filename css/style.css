@@ -2544,8 +2544,9 @@ ul, li {
         padding-right: 10px;
         font-size: 16px; }
     .m34 .posts-list__excerpt {
-      padding: 10px 0;
-      width: 90%; }
+      padding: 20px 0 10px 0;
+      width: 90%;
+      line-height: 1.2; }
     .m34 .posts-list__read-more {
       display: block;
       max-width: 90px;
