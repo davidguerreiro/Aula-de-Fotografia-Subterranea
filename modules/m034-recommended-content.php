@@ -4,15 +4,16 @@
  * 
  * @package aula/modules
  */
-aula_php_display_all_errors();
 
  $categories = get_the_category();
+ $post_id    = get_the_ID();
 
 if ( is_array( $categories ) && ! empty( $categories ) && ! is_wp_error( $categories ) ) :
     $args = [
         'post_type'         => [ 'post', 'galleria' ],
         'post_status'       => 'publish',
         'posts_per_page'    => 3,
+        'post__not_in'      => [ $post_id ],
         'cat'               => $categories[0]->term_id,
         'orderby'           => 'rand'
     ];
@@ -30,7 +31,7 @@ if ( $related_posts->have_posts() ) : ?>
         <?php while ( $related_posts->have_posts() ) : 
             $related_posts->the_post();
             $post_title              = get_the_title();
-            $post_featured_image_url = get_the_post_thumbnail_url( get_the_ID(), 'medium' );
+            $post_featured_image_url = get_the_post_thumbnail_url( $post_id, 'medium' );
             $categories              = get_the_category();
         ?>
         <li>
