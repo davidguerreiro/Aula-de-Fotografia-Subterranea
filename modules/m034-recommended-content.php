@@ -10,7 +10,7 @@
 
 if ( is_array( $categories ) && ! empty( $categories ) && ! is_wp_error( $categories ) ) :
     $args = [
-        'post_type'         => [ 'post', 'galleria' ],
+        'post_type'         => [ 'post', 'galeria' ],
         'post_status'       => 'publish',
         'posts_per_page'    => 3,
         'post__not_in'      => [ $post_id ],
