@@ -2521,6 +2521,9 @@ ul, li {
         @media screen and (max-width: 1200px) {
           .m34 .posts-list__section h3 {
             padding-top: 10px; } }
+        @media screen and (max-width: 650px) {
+          .m34 .posts-list__section h3 {
+            max-width: 250px; } }
       .m34 .posts-list__section--image-wrapper {
         width: 37%;
         min-width: 350px;
